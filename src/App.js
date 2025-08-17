@@ -8,10 +8,14 @@ import Footer from './components/Footer';
 import Blog from './components/Blog';
 import Frames from './components/Frames';
 import Contact from './components/Contacts';
+import Services from './components/Services';
+import Stats from './components/Stats';
+
 
 
 
 import Contacts from './components/Contacts';
+import Testimonials from './components/Testimonials';
 
 const App = () => {
   return (
@@ -29,11 +33,16 @@ const App = () => {
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <BannerSlider />
-                  <Portfolio />
-                  <Blog/>
-                  <Frames/>
-                  <Contacts/>
+                
+          <BannerSlider />
+          <Services />
+          <Portfolio />
+          <Stats />
+          <Testimonials />
+          
+          
+
+                  
                   
                   
                 </motion.div>
@@ -100,7 +109,7 @@ const App = () => {
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <Contact />
+                  
                 </motion.div>
               }
             />

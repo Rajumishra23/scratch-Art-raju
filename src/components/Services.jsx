@@ -1,54 +1,77 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { PenTool, Monitor, UserCheck } from 'react-feather'; // Feather icons
 
 const Services = () => {
   const services = [
     {
-      icon: 'web-design-graphic-tools',
-      title: 'graphic design',
-      subtitle: 'Starting from the concept up to the Final Result',
-      description: 'Proin tempor nulla eget turpis blandit vulputate. Donec vitae libero justo. Cras ut est nec orci ultrices volutpat.',
-      link: '/gallery',
-      linkText: 'see graphics',
+      icon: <PenTool size={40} strokeWidth={1.5} className="text-white mb-6 mx-auto icon-glow" />,
+      title: "GRAPHIC DESIGN",
+      subtitle: "Starting from the concept up to the Final Result",
+      desc: "Proin tempor nulla eget turpis blandit vulputate. Donec vitae libero justo. Cras ut est nec orci ultrices volutpat.",
+      link: "#",
+      linkLabel: "SEE GRAPHICS",
     },
     {
-      icon: 'web-design-interface',
-      title: 'web design',
-      subtitle: 'Creating Websites that focused on Clients Needs',
-      description: 'Proin tempor nulla eget turpis blandit vulputate. Donec vitae libero justo. Cras ut est nec orci ultrices volutpat.',
-      link: '/gallery',
-      linkText: 'see websites',
+      icon: <Monitor size={40} strokeWidth={1.5} className="text-white mb-6 mx-auto icon-glow" />,
+      title: "WEB DESIGN",
+      subtitle: "Creating Websites that focused on Clients Needs",
+      desc: "Proin tempor nulla eget turpis blandit vulputate. Donec vitae libero justo. Cras ut est nec orci ultrices volutpat.",
+      link: "#",
+      linkLabel: "SEE WEBSITES",
     },
     {
-      icon: 'web-design-idea',
-      title: 'User Experience',
-      subtitle: 'We analyze experience and Achieve Results.',
-      description: 'Proin tempor nulla eget turpis blandit vulputate. Donec vitae libero justo. Cras ut est nec orci ultrices volutpat.',
-      link: '/gallery',
-      linkText: 'see ui projects',
+      icon: <UserCheck size={40} strokeWidth={1.5} className="text-white mb-6 mx-auto icon-glow" />,
+      title: "USER EXPERIENCE",
+      subtitle: "We analyze experience and <span class='text-yellow-400 font-semibold'>Achieve Results.</span>",
+      desc: "Proin tempor nulla eget turpis blandit vulputate. Donec vitae libero justo. Cras ut est nec orci ultrices volutpat.",
+      link: "#",
+      linkLabel: "SEE PROJECTS",
     },
   ];
 
   return (
-    <section id="services" className="py-16 bg-gray-100">
+    <section
+      className="bg-black text-white py-20"
+      style={{
+        backgroundImage: "url(https://promo-theme.com/luxa/wp-content/uploads/2019/03/bg-services.jpg)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {services.map((service, index) => (
-            <motion.div
+            <div
               key={index}
-              className="bg-white p-6 rounded-lg shadow-lg text-center"
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ delay: index * 0.2, duration: 0.5 }}
-              viewport={{ once: true }}
+              className="bg-black p-8 rounded-lg text-center border border-gray-800 hover:border-yellow-400 transition duration-300"
             >
-              <i className={`text-4xl mb-4 ${service.icon}`}></i>
-              <h3 className="text-xl uppercase mb-2">{service.title}</h3>
-              <h5 className="text-lg font-semibold mb-4">{service.subtitle}</h5>
-              <p className="text-gray-600 mb-4">{service.description}</p>
-              <Link to={service.link} className="text-blue-600 hover:underline">{service.linkText}</Link>
-            </motion.div>
+              {/* Top Icon */}
+              <div>{service.icon}</div>
+
+              {/* Title */}
+              <div className="uppercase text-sm tracking-widest text-yellow-400 font-semibold mb-2">
+                {service.title}
+              </div>
+
+              {/* Subtitle */}
+              <h5
+                className="text-lg font-bold leading-snug mb-4"
+                dangerouslySetInnerHTML={{ __html: service.subtitle }}
+              ></h5>
+
+              {/* Description */}
+              <p className="text-sm text-gray-400 mb-6">
+                {service.desc}
+              </p>
+
+              {/* Link */}
+              <a
+                href={service.link}
+                className="uppercase text-xs text-white underline hover:text-yellow-400 transition"
+              >
+                {service.linkLabel}
+              </a>
+            </div>
           ))}
         </div>
       </div>
