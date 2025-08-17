@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import header4 from "../assets/portfolio/header4.jpg";
-import header3 from "../assets/portfolio/header3.jpg";
+import header5 from "../assets/portfolio/header5.jpg";
 
 const BannerSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -10,7 +10,7 @@ const BannerSlider = () => {
 
   const slides = [
     { image: header4 },
-    { image: header3 },
+    { image: header5 },
   ];
 
   useEffect(() => {
