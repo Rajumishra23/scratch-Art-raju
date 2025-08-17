@@ -1,5 +1,6 @@
 import React from 'react';
-import { PenTool, Monitor, UserCheck } from 'react-feather'; // Feather icons
+import { PenTool, Monitor, UserCheck } from 'react-feather';
+import { motion } from 'framer-motion';
 
 const Services = () => {
   const services = [
@@ -39,14 +40,34 @@ const Services = () => {
       }}
     >
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                staggerChildren: 0.2,
+              },
+            },
+          }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-10"
+        >
           {services.map((service, index) => (
-            <div
+            <motion.div
               key={index}
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.6 }}
               className="bg-black p-8 rounded-lg text-center border border-gray-800 hover:border-yellow-400 transition duration-300"
             >
               {/* Top Icon */}
-              <div>{service.icon}</div>
+              <motion.div whileHover={{ scale: 1.2 }} transition={{ duration: 0.3 }}>
+                {service.icon}
+              </motion.div>
 
               {/* Title */}
               <div className="uppercase text-sm tracking-widest text-yellow-400 font-semibold mb-2">
@@ -65,15 +86,16 @@ const Services = () => {
               </p>
 
               {/* Link */}
-              <a
+              <motion.a
+                whileHover={{ scale: 1.05 }}
                 href={service.link}
                 className="uppercase text-xs text-white underline hover:text-yellow-400 transition"
               >
                 {service.linkLabel}
-              </a>
-            </div>
+              </motion.a>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

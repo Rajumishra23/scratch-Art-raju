@@ -23,7 +23,7 @@ const Testimonials = () => {
       <div className="container mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-12">
-          <div className="uppercase text-sm tracking-widest text-yellow-400">what clients say</div>
+          <div className="uppercase text-sm tracking-widest font-bold text-yellow-400">what clients say</div>
           <h3 className="text-3xl md:text-4xl font-bold">Testimonials</h3>
         </div>
 

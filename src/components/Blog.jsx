@@ -21,7 +21,7 @@ export default function BlogShowcase() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-4xl font-bold font-serif text-white mb-4"
+            className="text-4xl font-bold font-serif text-yellow-400 mb-4"
           >
             BLOG
           </motion.h2>

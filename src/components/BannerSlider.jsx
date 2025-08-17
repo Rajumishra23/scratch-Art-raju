@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import bg1 from '../assets/portfolio/bg1.webp';
 
 const BannerSlider = () => {
   const banners = [
     {
-      bg: "https://promo-theme.com/luxa/wp-content/uploads/2019/03/bg1.jpg",
+      bg: bg1,
       subTitle: "LUXURY AGENCY",
       title: `Designed for you<br>Faster, easier and<br>Safer <span class='text-yellow-400'>than ever</span>`,
     },
@@ -30,34 +32,52 @@ const BannerSlider = () => {
 
   return (
     <section className="relative h-[100vh] overflow-hidden font-sans">
-      {/* Background */}
+      {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center transition-all duration-700"
+        className="absolute inset-0 bg-cover bg-center transition-transform duration-[5000ms] scale-105"
         style={{ backgroundImage: `url(${banners[currentBanner].bg})` }}
       >
+        {/* Overlays */}
         <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div className="absolute inset-0 bg-white bg-opacity-5 mix-blend-screen"></div>
+        <div className="absolute inset-0 bg-gradient-to-tr from-white/2.5 to-transparent mix-blend-screen"></div>
 
-        {/* Content */}
-        <div className="relative z-10 h-full flex flex-col justify-center items-start px-6 md:px-20 text-white animate-fade-in">
-          {/* Subtitle */}
-          <div className="uppercase text-sm tracking-widest mb-4 text-yellow-400 font-semibold">
-            {banners[currentBanner].subTitle}
-          </div>
-
-          {/* Title */}
-          <h2
-            className="text-[1.75rem] md:text-[2.5rem] font-bold leading-tight max-w-3xl"
-            dangerouslySetInnerHTML={{ __html: banners[currentBanner].title }}
-          ></h2>
-
-          {/* Button */}
-          <a
-            href="#"
-            className="mt-8 inline-flex items-center gap-2 border border-white text-white px-6 py-2 uppercase text-sm tracking-wider hover:bg-white hover:text-black transition"
+        {/* Text Content */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentBanner}
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -50 }}
+            transition={{ duration: 0.6 }}
+            className="relative z-10 h-full flex flex-col justify-center items-start px-6 md:px-20 text-white"
           >
-            Work With Us <span className="text-lg">→</span>
-          </a>
-        </div>
+            {/* Subtitle with Accent Line */}
+            <div className="flex items-center gap-3 mb-2">
+              <div className="w-6 h-[1px] bg-yellow-400"></div>
+              <div className="uppercase text-sm tracking-widest text-yellow-400 font-semibold">
+                {banners[currentBanner].subTitle}
+              </div>
+            </div>
+
+            {/* Title (Smaller Text) */}
+            <h2
+              className="text-[1.25rem] md:text-[1.75rem] font-semibold leading-snug max-w-2xl"
+              dangerouslySetInnerHTML={{ __html: banners[currentBanner].title }}
+            ></h2>
+
+            {/* Button with Accent Line */}
+            <div className="mt-8">
+              <div className="w-20 h-[1px] bg-yellow-400 mb-3"></div>
+              <a
+                href="#"
+                className="inline-block border border-white text-white px-6 py-2 uppercase text-sm tracking-wider hover:bg-white hover:text-black transition-transform transform hover:scale-105 duration-300"
+              >
+                Work With Us
+              </a>
+            </div>
+          </motion.div>
+        </AnimatePresence>
       </div>
 
       {/* Dots */}
@@ -67,7 +87,9 @@ const BannerSlider = () => {
             key={index}
             aria-label={`Go to slide ${index + 1}`}
             className={`w-3 h-3 rounded-full transition duration-300 ${
-              index === currentBanner ? 'bg-yellow-400 scale-125' : 'bg-gray-500 hover:bg-yellow-400'
+              index === currentBanner
+                ? 'bg-yellow-400 scale-125'
+                : 'bg-gray-500 hover:bg-yellow-400'
             }`}
             onClick={() => setCurrentBanner(index)}
           ></button>

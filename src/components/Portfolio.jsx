@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const Portfolio = () => {
   const portfolioItems = [
@@ -91,17 +92,27 @@ const Portfolio = () => {
     <section className="bg-black text-white py-16">
       <div className="container mx-auto px-4">
         {/* Heading */}
-        <div className="text-center mb-12">
-          <div className="uppercase text-sm tracking-widest text-yellow-400">our portfolio</div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <div className="uppercase text-sm  font-bold tracking-widest text-yellow-400">our portfolio</div>
           <h2 className="text-3xl md:text-4xl font-bold">Latest Projects</h2>
-        </div>
+        </motion.div>
 
         {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="flex flex-wrap justify-center gap-4 mb-8"
+        >
           <button
-            className={`px-4 py-2 rounded ${
-              filter === "*" ? "bg-blue-600" : "bg-gray-700"
-            }`}
+            className={`px-4 py-2 rounded ${filter === "*" ? "bg-blue-600" : "bg-gray-700"}`}
             onClick={() => setFilter("*")}
           >
             All
@@ -117,12 +128,33 @@ const Portfolio = () => {
               {cat.charAt(0).toUpperCase() + cat.slice(1)}
             </button>
           ))}
-        </div>
+        </motion.div>
 
         {/* Portfolio Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                staggerChildren: 0.15,
+              },
+            },
+          }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
           {filteredItems.map((item) => (
-            <div key={item.id} className="relative group overflow-hidden rounded-lg shadow-lg">
+            <motion.div
+              key={item.id}
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.5 }}
+              className="relative group overflow-hidden rounded-lg shadow-lg"
+            >
               <div
                 className="bg-cover bg-center h-64 transition-transform duration-300 group-hover:scale-105"
                 style={{ backgroundImage: `url(${item.img})` }}
@@ -138,19 +170,25 @@ const Portfolio = () => {
                 <div className="text-sm text-gray-400">{item.category.join(", ")}</div>
                 <a href={item.link} className="absolute inset-0 z-10"></a>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Load More Button */}
-        <div className="text-center mt-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="text-center mt-10"
+        >
           <a
             href="#"
             className="inline-block bg-blue-600 text-white py-2 px-6 rounded hover:bg-blue-700 transition"
           >
             Load More
           </a>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

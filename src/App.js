@@ -10,7 +10,8 @@ import Frames from './components/Frames';
 import Contact from './components/Contacts';
 import Services from './components/Services';
 import Stats from './components/Stats';
-
+import Artstyle from './components/Artstyle';
+import Artwork from './components/Artwork';
 
 
 
@@ -35,10 +36,15 @@ const App = () => {
                 >
                 
           <BannerSlider />
+          <Artstyle/>
+          <Artwork/>
           <Services />
           <Portfolio />
           <Stats />
           <Testimonials />
+          <Blog/>
+          <Frames/>
+          <Contact/>
           
           
 

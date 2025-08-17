@@ -20,7 +20,7 @@ export default function FrameSection() {
 
   return (
     <section id="frames" className="bg-black text-white py-20">
-      <div className="max-w-7xl mx-auto px-4 space-y-12">
+      <div className="max-w-7xl mx-auto px-4 space-y-16">
 
         {/* Heading */}
         <motion.div
@@ -35,18 +35,18 @@ export default function FrameSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-4xl font-bold text-white font-serif mb-4"
+            className="text-5xl font-serif text-yellow-400 font-bold tracking-wide uppercase mb-4"
           >
-            FRAMES
+            Frames
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-gray-300 text-lg max-w-xl mx-auto"
+            className="text-gray-400 text-lg max-w-xl mx-auto"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+            Explore our curated collection of handcrafted frames across materials and styles.
           </motion.p>
         </motion.div>
 
@@ -62,10 +62,10 @@ export default function FrameSection() {
             <button
               key={cat}
               onClick={() => setSelected(cat)}
-              className={`px-4 py-2 rounded-full border ${
+              className={`px-5 py-2 rounded-full border text-sm tracking-wide uppercase font-medium ${
                 selected === cat
-                  ? "bg-[#e63946] text-white border-[#e63946]"
-                  : "bg-transparent text-gray-300 border-gray-500"
+                  ? "bg-[#e63946] text-white border-[#e63946] shadow-md"
+                  : "bg-transparent text-gray-400 border-gray-600 hover:border-white hover:text-white"
               } transition duration-300`}
             >
               {cat}
@@ -74,21 +74,24 @@ export default function FrameSection() {
         </motion.div>
 
         {/* Frame Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
           {filteredFrames.map((frame) => (
             <motion.div
               key={frame.id}
-              initial={{ opacity: 0, scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="relative group rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
             >
               <img
                 src={frame.image}
                 alt={`Frame ${frame.id}`}
-                className="w-full h-64 object-cover"
+                className="w-full h-72 object-cover transform group-hover:scale-105 transition-transform duration-500"
               />
+              <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 text-white text-sm uppercase tracking-wider py-2 px-4 font-semibold">
+                {frame.type}
+              </div>
             </motion.div>
           ))}
         </div>
@@ -99,7 +102,7 @@ export default function FrameSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className="text-center text-gray-400 italic max-w-3xl mx-auto pt-10"
+          className="text-center text-gray-500 italic max-w-3xl mx-auto pt-10 text-lg leading-relaxed"
         >
           “The secret to so many artists living so long is that every painting is a new adventure. So, you see, they're always looking ahead to something new and exciting. The secret is not to look back.”
         </motion.p>
