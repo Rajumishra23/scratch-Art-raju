@@ -6,8 +6,9 @@ export default function GalleryGrid() {
     "G2.png",
     "G3.png",
     "G4.png",
-    "G5.png",
     "G6.png",
+    "G7.png"
+    
   ];
 
   return (
