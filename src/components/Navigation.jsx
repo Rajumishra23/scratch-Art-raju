@@ -2,6 +2,25 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
+const TypewriterText = () => {
+  const fullText = "Scratch Art";
+  const [displayedText, setDisplayedText] = useState("");
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDisplayedText((prev) => {
+        if (index >= fullText.length) return "";
+        return prev + fullText[index];
+      });
+      setIndex((prev) => (prev >= fullText.length ? 0 : prev + 1));
+    }, 200);
+    return () => clearInterval(interval);
+  }, [index]);
+
+  return <span>{displayedText}</span>;
+};
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -64,16 +83,32 @@ const Navbar = () => {
   return (
     <header className="bg-black text-white sticky top-0 z-50 shadow-md">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        {/* Logo */}
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <Link to="/" className="text-2xl font-bold tracking-wide hover:text-blue-400">
-            Scratch Art
-          </Link>
-        </motion.div>
+        {/* Animated Logo */}
+        <Link to="/" className="flex items-center relative h-10 overflow-hidden">
+          {/* Typewriter Text */}
+          <motion.span
+            className="text-2xl font-bold tracking-wide text-white-400 font-serif"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <TypewriterText />
+          </motion.span>
+
+          {/* Moving Pencil */}
+          <motion.span
+            className="absolute top-1 text-xl"
+            animate={{ x: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 0] }}
+            transition={{
+              duration: 2.5,
+              ease: "easeInOut",
+              repeat: Infinity,
+              repeatType: "loop",
+            }}
+          >
+            
+          </motion.span>
+        </Link>
 
         {/* Right Section */}
         <div className="flex items-center space-x-6">

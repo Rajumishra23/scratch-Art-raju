@@ -7,15 +7,18 @@ import Portfolio from './components/Portfolio';
 import Footer from './components/Footer';
 import Blog from './components/Blog';
 import Frames from './components/Frames';
-import Contact from './components/Contacts';
+import Contacts from './components/Contacts';
 import Services from './components/Services';
 import Stats from './components/Stats';
 import Artstyle from './components/Artstyle';
 import Artwork from './components/Artwork';
+import Pricing from './components/Pricing';
+import Occasion from './components/Occasion';
+import Gallery from './components/Gallery';
 
 
 
-import Contacts from './components/Contacts';
+import Contact from './components/Contacts';
 import Testimonials from './components/Testimonials';
 
 const App = () => {
@@ -38,6 +41,9 @@ const App = () => {
           <BannerSlider />
           <Artstyle/>
           <Artwork/>
+          <Pricing/>
+          <Occasion/>
+          <Gallery/>
           <Services />
           <Portfolio />
           <Stats />
