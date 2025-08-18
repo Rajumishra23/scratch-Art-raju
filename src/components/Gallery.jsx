@@ -4,7 +4,7 @@ export default function GalleryGrid() {
   const images = [
     "G1.png",
     "G2.png",
-    "g3.png",
+    "G3.png",
     "G4.png",
     "G5.png",
     "G6.png",
