@@ -1,50 +1,37 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-
 export default function AboutSection() {
   return (
-    <section
-      id=""
-      className="relative w-full bg-black text-white py-20"
-    >
+    <section className="relative w-full bg-black text-white py-20">
       {/* Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-60 z-0" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 space-y-16">
-        {/* Main Heading */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-4xl font-bold text-yellow-400 font-serif mb-4"
-          >
-            ABOUT US
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="text-gray-300 text-lg max-w-xl mx-auto"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          </motion.p>
-        </motion.div>
-
         {/* Grid Sections */}
         <div className="grid md:grid-cols-2 gap-12">
-          {/* Left Column */}
+          {/* Left Column - Animated Image */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="flex items-center justify-center"
+          >
+            <motion.img
+              src="girl.png"
+              alt="ScratchArt"
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="rounded-lg shadow-lg object-cover w-full h-full max-h-[500px]"
+            />
+          </motion.div>
+
+          {/* Right Column - Text Content */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -57,7 +44,7 @@ export default function AboutSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="text-2xl font-serif text-yellow-400 mb-2 text-[#b85c38]"
+                className="text-2xl font-serif text-yellow-400 mb-2"
               >
                 A LITTLE INTRO
               </motion.h3>
@@ -68,7 +55,7 @@ export default function AboutSection() {
                 viewport={{ once: true }}
                 className="text-gray-300"
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...
+                We create timeless scratch art that blends emotion, elegance, and storytelling. Each piece is hand-crafted to evoke a personal connection.
               </motion.p>
             </div>
 
@@ -79,7 +66,7 @@ export default function AboutSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="text-2xl font-serif mb-2 text-yellow-400"
+                className="text-2xl font-serif text-yellow-400 mb-2"
               >
                 MY EXHIBITIONS
               </motion.h3>
@@ -90,7 +77,7 @@ export default function AboutSection() {
                 viewport={{ once: true }}
                 className="text-gray-300"
               >
-                Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...
+                Our work has been featured in galleries across India, from intimate showcases to large-scale exhibitions celebrating modern sketch artistry.
               </motion.p>
             </div>
 
@@ -101,7 +88,7 @@ export default function AboutSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="text-2xl font-serif mb-2 text-yellow-400"
+                className="text-2xl font-serif text-yellow-400 mb-2"
               >
                 NEWSLETTER
               </motion.h3>
@@ -110,30 +97,27 @@ export default function AboutSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="text-gray-300"
+                className="text-gray-300 mb-4"
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Stay updated with our latest exhibitions, offers, and sketch drops.
               </motion.p>
-            </div>
-          </motion.div>
 
-          {/* Right Column - Animated Image */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="flex items-center justify-center"
-          >
-            <motion.img
-              src="G1.png"
-              alt="About ScratchArt"
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="rounded-lg shadow-lg object-cover w-full h-full max-h-[500px]"
-            />
+              {/* Email Input + Button */}
+              <div className="flex gap-2">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  className="bg-[#2a2a2a] text-white px-4 py-2 rounded w-full placeholder-gray-400 focus:outline-none"
+                />
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded font-semibold"
+                >
+                  SUBSCRIBE
+                </motion.button>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>
