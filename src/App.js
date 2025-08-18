@@ -7,7 +7,7 @@ import Portfolio from './components/Portfolio';
 import Footer from './components/Footer';
 import Blog from './components/Blog';
 import Frames from './components/Frames';
-import Contacts from './components/Contacts';
+import About from './components/About';
 import Services from './components/Services';
 import Stats from './components/Stats';
 import Artstyle from './components/Artstyle';
@@ -18,7 +18,7 @@ import Gallery from './components/Gallery';
 
 
 
-import Contact from './components/Contacts';
+
 import Testimonials from './components/Testimonials';
 
 const App = () => {
@@ -50,7 +50,8 @@ const App = () => {
           <Testimonials />
           <Blog/>
           <Frames/>
-          <Contact/>
+          <About/>
+          
           
           
 

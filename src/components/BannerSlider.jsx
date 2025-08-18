@@ -39,8 +39,9 @@ const BannerSlider = () => {
       >
         {/* Overlays */}
         <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-        <div className="absolute inset-0 bg-white bg-opacity-5 mix-blend-screen"></div>
-        <div className="absolute inset-0 bg-gradient-to-tr from-white/2.5 to-transparent mix-blend-screen"></div>
+        <div className="absolute inset-0 bg-white/5 mix-blend-screen"></div>
+        <div className="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent mix-blend-screen"></div>
+        <div className="absolute inset-0 bg-white/10 mix-blend-overlay"></div>
 
         {/* Text Content */}
         <AnimatePresence mode="wait">
@@ -60,13 +61,13 @@ const BannerSlider = () => {
               </div>
             </div>
 
-            {/* Title (Smaller Text) */}
+            {/* Title */}
             <h2
               className="text-[1.25rem] md:text-[1.75rem] font-semibold leading-snug max-w-2xl"
               dangerouslySetInnerHTML={{ __html: banners[currentBanner].title }}
             ></h2>
 
-            {/* Button with Accent Line */}
+            {/* Button */}
             <div className="mt-8">
               <div className="w-20 h-[1px] bg-yellow-400 mb-3"></div>
               <a

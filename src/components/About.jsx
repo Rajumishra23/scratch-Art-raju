@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Img2 from "../assets/portfolio/2.jpg"; // ✅ Your image
+
 
 export default function AboutSection() {
   return (
@@ -25,7 +25,7 @@ export default function AboutSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-4xl font-bold font-serif mb-4"
+            className="text-4xl font-bold text-yellow-400 font-serif mb-4"
           >
             ABOUT US
           </motion.h2>
@@ -57,7 +57,7 @@ export default function AboutSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="text-2xl font-serif mb-2 text-[#b85c38]"
+                className="text-2xl font-serif text-yellow-400 mb-2 text-[#b85c38]"
               >
                 A LITTLE INTRO
               </motion.h3>
@@ -79,7 +79,7 @@ export default function AboutSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="text-2xl font-serif mb-2 text-[#b85c38]"
+                className="text-2xl font-serif mb-2 text-yellow-400"
               >
                 MY EXHIBITIONS
               </motion.h3>
@@ -101,7 +101,7 @@ export default function AboutSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="text-2xl font-serif mb-2 text-[#b85c38]"
+                className="text-2xl font-serif mb-2 text-yellow-400"
               >
                 NEWSLETTER
               </motion.h3>
@@ -126,7 +126,7 @@ export default function AboutSection() {
             className="flex items-center justify-center"
           >
             <motion.img
-              src={Img2}
+              src="G1.png"
               alt="About ScratchArt"
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
