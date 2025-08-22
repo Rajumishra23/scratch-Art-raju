@@ -26,12 +26,12 @@ export default function PricingSection() {
   ];
 
   return (
-    <section className="bg-[#0f0f0f] text-white py-20 px-6 md:px-20">
+    <section className="bg-[#fefcf9] text-black py-20 px-6 md:px-20">
       <motion.h2
-        initial={{ opacity: 0, scale: 0.8 }}
+        initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        className="text-4xl text-yellow-400 font-bold font-serif text-center mb-12"
+        transition={{ duration: 0.6 }}
+        className="text-4xl font-bold text-center text-yellow-600 mb-12 font-serif"
       >
         Pricing
       </motion.h2>
@@ -51,52 +51,51 @@ export default function PricingSection() {
         {plans.map((plan, idx) => (
           <motion.div
             key={idx}
-            className="border border-gray-700 rounded-xl p-6 relative bg-[#1a1a1a] hover:shadow-xl transition"
+            className="bg-white border border-gray-200 rounded-xl p-6 relative shadow-sm hover:shadow-lg transition-all duration-300"
             variants={{
-              hidden: { opacity: 0, scale: 0.9 },
+              hidden: { opacity: 0, scale: 0.95 },
               visible: { opacity: 1, scale: 1 },
             }}
-            whileHover={{ y: -5, boxShadow: "0px 10px 20px rgba(255, 255, 0, 0.2)" }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
+            whileHover={{ y: -4 }}
           >
             {/* Discount Badge */}
             <motion.div
-              className="absolute top-4 left-4 bg-yellow-500 text-black text-xs px-2 py-1 rounded-full font-semibold"
+              className="absolute top-4 left-4 bg-yellow-400 text-black text-xs px-2 py-1 rounded-full font-semibold shadow"
               initial={{ x: -20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ delay: 0.4 }}
+              transition={{ delay: 0.3 }}
             >
               {plan.discount}
             </motion.div>
 
-            {/* Image Preview */}
+            {/* Image */}
             <motion.img
               src={plan.image}
               alt="Sketch Preview"
-              className="w-full h-64 object-cover rounded mb-4"
-              whileHover={{ scale: 1.03 }}
-              transition={{ duration: 0.4 }}
+              className="w-full h-64 object-cover rounded mb-4 border border-gray-100"
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
             />
 
             {/* Description */}
-            <p className="text-sm text-gray-400 mb-4">{plan.description}</p>
+            <p className="text-sm text-gray-600 mb-4">{plan.description}</p>
 
-            {/* Price with Strike-through */}
+            {/* Price */}
             <div className="mb-6">
-              <span className="text-yellow-500 text-3xl font-bold mr-2">
+              <span className="text-yellow-600 text-3xl font-bold mr-2">
                 {plan.price}
               </span>
-              <span className="line-through text-gray-500 text-lg">
+              <span className="line-through text-gray-400 text-lg">
                 {plan.original}
               </span>
             </div>
 
-            {/* Buy Now Button */}
+            {/* Button */}
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="w-full py-2 bg-yellow-500 text-black rounded hover:bg-yellow-600 transition"
+              className="w-full py-2 bg-yellow-500 text-black rounded font-medium hover:bg-yellow-600 transition"
             >
               Buy Now
             </motion.button>

@@ -89,7 +89,7 @@ const Portfolio = () => {
   const categories = ["apps", "branding", "social", "websites"];
 
   return (
-    <section className="bg-black text-white py-16">
+    <section className="bg-[#f3f4f6] text-black py-16">
       <div className="container mx-auto px-4">
         {/* Heading */}
         <motion.div
@@ -99,7 +99,7 @@ const Portfolio = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <div className="uppercase text-sm  font-bold tracking-widest text-yellow-400">our portfolio</div>
+          <div className="uppercase text-sm font-bold tracking-widest text-yellow-400">our portfolio</div>
           <h2 className="text-3xl md:text-4xl font-bold">Latest Projects</h2>
         </motion.div>
 
@@ -112,7 +112,7 @@ const Portfolio = () => {
           className="flex flex-wrap justify-center gap-4 mb-8"
         >
           <button
-            className={`px-4 py-2 rounded ${filter === "*" ? "bg-blue-600" : "bg-gray-700"}`}
+            className={`px-4 py-2 rounded ${filter === "*" ? "bg-blue-600 text-white" : "bg-gray-300 text-black"}`}
             onClick={() => setFilter("*")}
           >
             All
@@ -121,7 +121,7 @@ const Portfolio = () => {
             <button
               key={cat}
               className={`px-4 py-2 rounded ${
-                filter === `.category-${cat}` ? "bg-blue-600" : "bg-gray-700"
+                filter === `.category-${cat}` ? "bg-blue-600 text-white" : "bg-gray-300 text-black"
               }`}
               onClick={() => setFilter(`.category-${cat}`)}
             >
@@ -165,9 +165,9 @@ const Portfolio = () => {
                   </div>
                 )}
               </div>
-              <div className="p-4 bg-gray-900">
+              <div className="p-4 bg-white">
                 <h3 className="text-lg font-semibold mb-1">{item.title}</h3>
-                <div className="text-sm text-gray-400">{item.category.join(", ")}</div>
+                <div className="text-sm text-gray-700">{item.category.join(", ")}</div>
                 <a href={item.link} className="absolute inset-0 z-10"></a>
               </div>
             </motion.div>

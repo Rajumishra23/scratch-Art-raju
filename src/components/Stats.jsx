@@ -9,14 +9,17 @@ const Stats = () => {
   ];
 
   return (
-    <section className="bg-black border-t border-b border-gray-600 py-16">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-white text-center">
+    <section className="bg-[#fefcf9] py-16 border-t border-b border-gray-200 text-black">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
           {stats.map((stat, index) => (
-            <div key={index} className="flex flex-col items-center">
-              <i className={`${stat.icon} text-4xl text-blue-400 mb-4`}></i>
+            <div
+              key={index}
+              className="flex flex-col items-center bg-white border border-gray-100 rounded-xl py-8 shadow-sm hover:shadow-md transition"
+            >
+              <i className={`${stat.icon} text-4xl text-yellow-500 mb-4`}></i>
               <div className="text-4xl font-bold mb-2">{stat.number}</div>
-              <h6 className="text-lg font-medium text-yellow-400">{stat.title}</h6>
+              <h6 className="text-lg font-medium text-gray-700">{stat.title}</h6>
             </div>
           ))}
         </div>

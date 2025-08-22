@@ -19,11 +19,11 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="bg-black text-white py-16">
+    <section className="bg-[#fefcf9] text-black py-16">
       <div className="container mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-12">
-          <div className="uppercase text-sm tracking-widest font-bold text-yellow-400">what clients say</div>
+          <div className="uppercase text-sm tracking-widest font-bold text-yellow-600">what clients say</div>
           <h3 className="text-3xl md:text-4xl font-bold">Testimonials</h3>
         </div>
 
@@ -32,15 +32,15 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-gray-900 p-6 rounded-lg shadow hover:shadow-xl transition duration-300 text-center"
+              className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition duration-300 text-center"
             >
               <div
-                className="w-24 h-24 mx-auto rounded-full bg-cover bg-center mb-4"
+                className="w-24 h-24 mx-auto rounded-full bg-cover bg-center mb-4 border border-gray-300"
                 style={{ backgroundImage: `url(${testimonial.avatar})` }}
               ></div>
-              <p className="text-gray-300 italic mb-4">"{testimonial.quote}"</p>
-              <div className="font-semibold text-white">{testimonial.name}</div>
-              <div className="text-sm text-gray-400">{testimonial.post}</div>
+              <p className="text-gray-700 italic mb-4">"{testimonial.quote}"</p>
+              <div className="font-semibold text-gray-900">{testimonial.name}</div>
+              <div className="text-sm text-yellow-600">{testimonial.post}</div>
             </div>
           ))}
         </div>

@@ -31,7 +31,7 @@ const BannerSlider = () => {
   }, []);
 
   return (
-    <section className="relative h-[100vh] overflow-hidden font-sans">
+    <section className="relative h-[100vh] overflow-hidden font-serif">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center transition-transform duration-[5000ms] scale-105"

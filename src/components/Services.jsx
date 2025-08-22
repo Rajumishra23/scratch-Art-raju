@@ -33,8 +33,8 @@ const Services = () => {
   ];
 
   return (
-    <section className="bg-black py-20 px-6 md:px-16">
-      <h2 className="text-4xl font-bold font-serif text-center mb-14 text-yellow-400">
+    <section className="bg-[#fefcf9] py-20 px-6 md:px-16 text-black">
+      <h2 className="text-4xl font-bold font-serif text-center mb-14 text-yellow-600">
         Our Art Services
       </h2>
 
@@ -46,7 +46,7 @@ const Services = () => {
             whileInView={{ opacity: 1, y: 0 }}
             whileHover={{
               y: -5,
-              boxShadow: "0px 10px 20px rgba(255, 0, 0, 0.2)",
+              boxShadow: "0px 10px 20px rgba(255, 0, 0, 0.1)",
             }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
             viewport={{ once: true }}
@@ -63,13 +63,13 @@ const Services = () => {
                 initial={{ scale: 1 }}
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.5 }}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover border-b border-gray-100"
               />
               <motion.div
                 initial={{ opacity: 0.3 }}
                 whileHover={{ opacity: 0.5 }}
                 transition={{ duration: 0.4 }}
-                className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"
+                className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"
               />
             </motion.div>
 

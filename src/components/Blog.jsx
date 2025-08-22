@@ -1,13 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-
 export default function BlogShowcase() {
   return (
-    <section id="blog" className="relative w-full bg-black text-white py-20">
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-60 z-0" />
-
+    <section id="blog" className="relative w-full bg-[#f3f4f6] text-black py-20">
       <div className="relative z-10 max-w-7xl mx-auto px-4 space-y-24">
         {/* Acrylic Section */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -20,7 +16,7 @@ export default function BlogShowcase() {
             className="flex items-center justify-center"
           >
             <motion.img
-              src='ganesh.png'
+              src="ganesh.png"
               alt="Acrylic Art"
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -43,7 +39,7 @@ export default function BlogShowcase() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-3xl font-serif text-yellow-400"
+              className="text-3xl font-serif text-[#1e3a8a]"
             >
               ACRYLIC
             </motion.h3>
@@ -52,7 +48,7 @@ export default function BlogShowcase() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="text-gray-300"
+              className="text-gray-700"
             >
               Acrylic painting, technique in which pigments are mixed with hot, liquid wax. After all of the colours have been applied to the painting surface, a heating element is passed over them until the individual brush or spatula marks fuse into a uniform film.
             </motion.p>
@@ -62,7 +58,7 @@ export default function BlogShowcase() {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
               href="#gallery"
-              className="inline-block px-6 py-2 bg-pink-600 text-white font-medium rounded hover:bg-pink-700 transition"
+              className="inline-block px-6 py-2 bg-[#1e3a8a] text-white font-medium rounded hover:bg-[#172c6e] transition"
             >
               VIEW GALLERY
             </motion.a>
@@ -84,7 +80,7 @@ export default function BlogShowcase() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-3xl font-serif text-yellow-400"
+              className="text-3xl font-serif text-[#1e3a8a]"
             >
               ENCAUSTIC
             </motion.h3>
@@ -93,7 +89,7 @@ export default function BlogShowcase() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="text-gray-300"
+              className="text-gray-700"
             >
               Encaustic painting involves using heated beeswax to which colored pigments are added. The liquid or paste is then applied to a surface—usually prepared wood, though canvas and other materials are also used.
             </motion.p>
@@ -103,7 +99,7 @@ export default function BlogShowcase() {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
               href="#gallery"
-              className="inline-block px-6 py-2 bg-pink-600 text-white font-medium rounded hover:bg-pink-700 transition"
+              className="inline-block px-6 py-2 bg-[#1e3a8a] text-white font-medium rounded hover:bg-[#172c6e] transition"
             >
               VIEW GALLERY
             </motion.a>
@@ -118,7 +114,7 @@ export default function BlogShowcase() {
             className="flex items-center justify-center"
           >
             <motion.img
-              src='budha.png'
+              src="budha.png"
               alt="Encaustic Art"
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
