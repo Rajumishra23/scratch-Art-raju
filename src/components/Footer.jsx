@@ -13,9 +13,17 @@ const Footer = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
+          {/* 🔹 Logo + ScratchArt Text */}
           <h2 className="text-2xl font-serif font-bold mb-4 flex items-center gap-2">
+            {/* Yaha apna logo image dal do */}
+            <img
+              src="LC1.png" // apna logo path yaha dalna
+              alt="Logo"
+              className="w-10 h-10 object-contain"
+            />
             ScratchArt
           </h2>
+
           <p className="text-sm leading-6 text-gray-200">
             ScratchArt is your creative hub for unique scratch paintings and premium art supplies.
             Discover, create, and share your imagination with the world.
@@ -31,9 +39,12 @@ const Footer = () => {
         >
           <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-2 text-gray-200">
-            {["HOME", "PAGE", "GALLERY", "BLOG", "SHORTCODE", "SHOP", "CONTACT"].map((item, i) => (
+            {["HOME", "Order Portrait", "Order Form", "AboutUs", "Gallery", "Review"].map((item, i) => (
               <li key={i}>
-                <a href={`#${item.toLowerCase()}`} className="hover:text-yellow-400 relative group">
+                <a
+                  href={`#${item.toLowerCase()}`}
+                  className="hover:text-yellow-400 relative group"
+                >
                   {item}
                   <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-yellow-400 transition-all group-hover:w-full"></span>
                 </a>
@@ -53,7 +64,10 @@ const Footer = () => {
           <ul className="space-y-2 text-gray-200">
             {["Custom Art", "Workshops", "Blog", "Support"].map((item, i) => (
               <li key={i}>
-                <a href={`#${item.toLowerCase().replace(" ", "")}`} className="hover:text-yellow-400 relative group">
+                <a
+                  href={`#${item.toLowerCase().replace(" ", "")}`}
+                  className="hover:text-yellow-400 relative group"
+                >
                   {item}
                   <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-yellow-400 transition-all group-hover:w-full"></span>
                 </a>

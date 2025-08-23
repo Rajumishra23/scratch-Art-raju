@@ -11,7 +11,7 @@ const Navbar = () => {
           {/* Logo container with fixed height */}
           <div className="relative h-12 w-12 overflow-visible">
             <img
-              src="LC.png"
+              src="LC1.png"
               alt="Logo"
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-25 w-25 object-contain"
             />
