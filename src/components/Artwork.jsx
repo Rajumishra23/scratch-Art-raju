@@ -1,126 +1,82 @@
-import { motion } from "framer-motion";
+import React, { useEffect, useRef } from "react";
 
-const services = [
-  {
-    title: "Colour Pencil Sketch Portrait",
-    subtitle: "Sketch Artist Online",
-    img: "p1.png",
-    rating: 5,
-    desc: "Friends, getting a colour pencil portrait is very costly because it takes days and canvas work. It also demands more effort...",
-  },
-  {
-    title: "Pencil Sketch",
-    subtitle: "Pencil Sketch Artist Near Me",
-    img: "p2.png",
-    rating: 5,
-    desc: "We make pencil sketches in black and white using cartridge paper with charcoal or color pencil. It’s affordable and quick...",
-  },
-  {
-    title: "Realistic Pencil Portrait Artists",
-    subtitle: "Painting Artist Near Me",
-    img: "p3.png",
-    rating: 4.5,
-    desc: "Realism needs patience and detailing. We try to make realistic eyes, nose, hair, and expressions with depth and texture...",
-  },
-  {
-    title: "Acrylic Colour Painting",
-    subtitle: "Sketchatist",
-    img: "p4.png",
-    rating: 5,
-    desc: "Acrylic dries fast, making it harder than oil painting. We use bold colors and brushwork to create vibrant, expressive art...",
-  },
-];
+const Artwork = () => {
+  const sliderRef = useRef(null);
 
-export default function OurServices() {
+  useEffect(() => {
+    const slider = sliderRef.current;
+    let scrollAmount = 0;
+
+    const slideInterval = setInterval(() => {
+      if (slider) {
+        scrollAmount += slider.offsetWidth; // ek image ki width ke hisaab se slide
+        if (scrollAmount >= slider.scrollWidth) {
+          scrollAmount = 0; // phir se first image pe aa jaaye
+        }
+        slider.scrollTo({
+          left: scrollAmount,
+          behavior: "smooth",
+        });
+      }
+    }, 3000); // har 3 sec baad slide hoga
+
+    return () => clearInterval(slideInterval);
+  }, []);
+
   return (
-    <section className="py-20 bg-[#f3f4f6]">
-      {/* Animated Subheading */}
-      <motion.h4
-        initial={{ opacity: 0, y: -10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-        className="text-center text-sm font-bold uppercase tracking-wide text-[#1e3a8a] mb-2"
+    <section className="bg-white py-16 font-sans text-center border-b border-gray-200">
+      {/* Title */}
+      <h2 className="text-3xl font-bold mb-2">
+        All Available <span className="text-orange-500">Art Types</span>
+      </h2>
+
+      {/* Subtitle */}
+      <p className="italic text-gray-700 mb-8">
+        “Elevate Your Photos to Art: Discover the Beauty of Sketches with Our Professional Service!”
+      </p>
+
+      {/* 🔹 Image Slider */}
+      <div
+        ref={sliderRef}
+        className="mt-6 w-full h-[450px] flex overflow-x-hidden overflow-y-hidden rounded-lg scroll-smooth"
       >
-        Art Work
-      </motion.h4>
+        {/* Image 1 */}
+        <div className="min-w-full flex items-center justify-center">
+          <img
+            src="frame.webp"
+            alt="Charcoal sketch 1"
+            className="w-[500px] h-[400px]  object-cover rounded shadow-lg"
+          />
+        </div>
 
-      {/* Animated Heading */}
-      <motion.h2
-        initial={{ opacity: 0, scale: 0.8 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="text-center text-4xl font-serif text-black font-bold mb-12"
-      >
-        Our Services
-      </motion.h2>
+        {/* Image 2 */}
+        <div className="min-w-full flex items-center justify-center">
+          <img
+            src="frame1.webp"
+            alt="Charcoal sketch 2"
+            className="w-[500px] h-[400px]  object-cover rounded shadow-lg"
+          />
+        </div>
 
-      {/* Animated Grid */}
-      <motion.div
-        className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-4"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={{
-          visible: {
-            transition: {
-              staggerChildren: 0.2,
-            },
-          },
-        }}
-      >
-        {services.map((service, index) => (
-          <motion.div
-            key={index}
-            className="text-center bg-white p-6 rounded-lg shadow-md"
-            variants={{
-              hidden: { opacity: 0, scale: 0.9 },
-              visible: { opacity: 1, scale: 1 },
-            }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-          >
-            {/* Animated Image */}
-            <motion.img
-              src={service.img}
-              alt={service.title}
-              initial={{ y: 30, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="w-full h-80 object-cover rounded-lg shadow-sm mb-4"
-            />
+        {/* Image 3 */}
+        <div className="min-w-full flex items-center justify-center">
+          <img
+            src="frame2.webp"
+            alt="Charcoal sketch 3"
+            className="w-[500px] h-[400px] object-cover rounded shadow-lg"
+          />
+        </div>
+      </div>
 
-            {/* Rating */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.4 }}
-              viewport={{ once: true }}
-              className="flex justify-center mb-2"
-            >
-              {[...Array(Math.floor(service.rating))].map((_, i) => (
-                <span key={i} className="text-orange-400 text-xl">★</span>
-              ))}
-              {service.rating % 1 !== 0 && (
-                <span className="text-orange-400 text-xl">☆</span>
-              )}
-            </motion.div>
-
-            <p className="text-sm text-gray-500 uppercase mb-1">{service.subtitle}</p>
-            <h3 className="text-lg font-semibold text-[#1e3a8a] mb-2">{service.title}</h3>
-            <p className="text-gray-700 text-sm mb-3">{service.desc}</p>
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              href="#"
-              className="text-sm text-[#1e3a8a] font-medium hover:underline inline-block"
-            >
-              Read more
-            </motion.a>
-          </motion.div>
-        ))}
-      </motion.div>
+      {/* CTA */}
+      <div className="mt-10 text-blue-600 text-[17px] font-medium">
+        To know more{" "}
+        <a href="#" className="underline hover:text-blue-800">
+          Click Here
+        </a>
+      </div>
     </section>
   );
-}
+};
+
+export default Artwork;

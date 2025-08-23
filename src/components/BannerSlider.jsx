@@ -1,110 +1,120 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import bg1 from '../assets/portfolio/bg1.webp';
+import React, { useEffect, useRef } from "react";
 
-const BannerSlider = () => {
-  const banners = [
-    {
-      bg: bg1,
-      subTitle: "LUXURY AGENCY",
-      title: `Designed for you<br>Faster, easier and<br>Safer <span class='text-yellow-400'>than ever</span>`,
-    },
-    {
-      bg: "https://promo-theme.com/luxa/wp-content/uploads/2019/03/bg2.jpg",
-      subTitle: "ABOUT US",
-      title: `You push a button,<br>We do <span class='text-yellow-400'>the rest</span>`,
-    },
-    {
-      bg: "https://promo-theme.com/luxa/wp-content/uploads/2019/03/bg3.jpg",
-      subTitle: "CREATIVE DESIGN",
-      title: `Our ultimate reward -<br>Our customer's <span class='text-yellow-400'>smile</span>`,
-    },
-  ];
-
-  const [currentBanner, setCurrentBanner] = useState(0);
+const HeroSection = () => {
+  const sliderRef = useRef(null);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentBanner((prev) => (prev + 1) % banners.length);
-    }, 5000);
-    return () => clearInterval(interval);
+    const slider = sliderRef.current;
+    let scrollAmount = 0;
+
+    const slideInterval = setInterval(() => {
+      if (slider) {
+        scrollAmount += slider.offsetWidth; // ek image ki width ke hisaab se slide
+        if (scrollAmount >= slider.scrollWidth) {
+          scrollAmount = 0; // fir se pehli image pe
+        }
+        slider.scrollTo({
+          left: scrollAmount,
+          behavior: "smooth",
+        });
+      }
+    }, 3000); // 3 sec ke baad slide
+
+    return () => clearInterval(slideInterval);
   }, []);
 
   return (
-    <section className="relative h-[100vh] overflow-hidden font-serif">
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center transition-transform duration-[5000ms] scale-105"
-        style={{ backgroundImage: `url(${banners[currentBanner].bg})` }}
-      >
-        {/* Overlays */}
-        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-        <div className="absolute inset-0 bg-white/5 mix-blend-screen"></div>
-        <div className="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent mix-blend-screen"></div>
-        <div className="absolute inset-0 bg-white/10 mix-blend-overlay"></div>
+    <section className="bg-white py-16 border-b border-gray-200 font-sans">
+      <div className="max-w-5xl mx-auto px-6 text-center space-y-6 text-gray-800">
+        
+        {/* Heading */}
+        <h1 className="text-3xl md:text-4xl font-bold leading-snug">
+          Order Your Personalize{" "}
+          <span className="text-orange-600">Sketch/ Portrait Painting online</span>
+        </h1>
 
-        {/* Text Content */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentBanner}
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -50 }}
-            transition={{ duration: 0.6 }}
-            className="relative z-10 h-full flex flex-col justify-center items-start px-6 md:px-20 text-white"
-          >
-            {/* Subtitle with Accent Line */}
-            <div className="flex items-center gap-3 mb-2">
-              <div className="w-6 h-[1px] bg-yellow-400"></div>
-              <div className="uppercase text-sm tracking-widest text-yellow-400 font-semibold">
-                {banners[currentBanner].subTitle}
-              </div>
-            </div>
+        {/* First List */}
+        <ul className="list-disc pl-6 text-[17px] space-y-2 text-left">
+          <li>
+            Convert Your <strong>Photo to sketch</strong>, <strong>Photo to Pencil Sketch</strong> 
+            or <strong>Photo to Portrait Painting</strong> online, with 
+            <span className="text-gray-900 font-semibold"> free Home delivery </span>all over India. 
+            Price starting <span className="text-blue-600 font-semibold">@1599 only.</span>
+          </li>
+          <li>
+            <strong>Team</strong> of Best Sketch Artist, Best Portrait Drawing Artist and Best Painting Artist in India.
+          </li>
+          <li>
+            A <span className="text-green-600 font-semibold">Perfect, unique and Memorable gift</span> 
+            for your <span className="italic">special-one</span>, surprise him/her with his/her sketch/portrait Painting.
+          </li>
+        </ul>
 
-            {/* Title */}
-            <h2
-              className="text-[1.25rem] md:text-[1.75rem] font-semibold leading-snug max-w-2xl"
-              dangerouslySetInnerHTML={{ __html: banners[currentBanner].title }}
-            ></h2>
+        {/* Quote */}
+        <p className="italic text-gray-700 text-[16px]">
+          “<span className="font-semibold">Sketch Your Story:</span> Turn Ordinary Photos into Extraordinary Art with Our Premium Service!”
+        </p>
 
-            {/* Button */}
-            <div className="mt-8">
-              <div className="w-20 h-[1px] bg-yellow-400 mb-3"></div>
-              <a
-                href="#"
-                className="inline-block border border-white text-white px-6 py-2 uppercase text-sm tracking-wider hover:bg-white hover:text-black transition-transform transform hover:scale-105 duration-300"
-              >
-                Work With Us
-              </a>
-            </div>
-          </motion.div>
-        </AnimatePresence>
-      </div>
+        {/* Second List */}
+        <ul className="list-disc pl-6 text-[17px] space-y-2 text-left">
+          <li>
+            <strong>Picture Perfect Pencil Portraits:</strong> Elevate Your Images with Our Photo to Sketch Expertise!
+          </li>
+          <li>
+            For Any Inquiry feel free to{" "}
+            <span className="font-semibold">Call Us</span> or{" "}
+            <span className=" font-semibold">
+              <strong className="text-indigo-600">WhatsApp</strong> <strong>us on</strong>{" "}
+              <strong className="text-green-600">123346767</strong>
+            </span>{" "}
+            or write us here.
+          </li>
+          <li>
+            Perfect for <em>Birthday Gift, Wedding Gift, Anniversary Gift, Engagement Gift, Retirement Gift, Valentine Gift…</em>
+          </li>
+        </ul>
 
-      {/* Dots */}
-      <div className="absolute bottom-6 left-0 right-0 flex justify-center space-x-3 z-20">
-        {banners.map((_, index) => (
-          <button
-            key={index}
-            aria-label={`Go to slide ${index + 1}`}
-            className={`w-3 h-3 rounded-full transition duration-300 ${
-              index === currentBanner
-                ? 'bg-yellow-400 scale-125'
-                : 'bg-gray-500 hover:bg-yellow-400'
-            }`}
-            onClick={() => setCurrentBanner(index)}
-          ></button>
-        ))}
-      </div>
+        {/* Quote 2 */}
+        <p className="italic text-gray-700 text-[16px]">
+          “<span className="font-semibold">Capturing Moments, Creating Masterpieces:</span> 
+          Your Photos Transformed into <span className="text-green-600 font-semibold">Stunning Sketches!</span>”
+        </p>
 
-      {/* Social Links */}
-      <div className="absolute bottom-6 left-6 z-20 space-y-2 text-white text-sm font-light tracking-wide">
-        <a href="#" className="hover:text-yellow-400">📘 <span className="ml-1">Facebook</span></a>
-        <a href="#" className="hover:text-yellow-400">🐦 <span className="ml-1">Twitter</span></a>
-        <a href="#" className="hover:text-yellow-400">📸 <span className="ml-1">Instagram</span></a>
+        {/* 🔹 Image Slider */}
+        <div
+          ref={sliderRef}
+          className="mt-6 w-full h-72 flex overflow-x-hidden overflow-y-hidden rounded-lg scroll-smooth"
+        >
+          {/* Image 1 */}
+          <div className="min-w-full flex items-center justify-center">
+            <img
+              src="front1.webp"
+              alt="Image 1"
+              className="w-[500px] h-[300px] object-cover"
+            />
+          </div>
+
+          {/* Image 2 */}
+          <div className="min-w-full flex items-center justify-center">
+            <img
+              src="frontS.webp"
+              alt="Image 2"
+              className="w-[500px] h-full object-cover"
+            />
+          </div>
+
+          {/* Image 3 */}
+          <div className="min-w-full flex items-center justify-center">
+            <img
+              src="frontS3.webp"
+              alt="Image 3"
+              className="w-[500px] h-full object-cover"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
 };
 
-export default BannerSlider;
+export default HeroSection;

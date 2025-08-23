@@ -20,6 +20,8 @@ import Gallery from './components/Gallery';
 
 
 import Testimonials from './components/Testimonials';
+import AboutUs from './components/AboutUs';
+import WhatWeDo from './components/WhatWeDo';
 
 const App = () => {
   return (
@@ -39,17 +41,18 @@ const App = () => {
                 >
                 
           <BannerSlider />
-          <Artstyle/>
           <Artwork/>
+          <AboutUs/>
+          <WhatWeDo/>
+           <Testimonials />
+          <Artstyle/>
           <Pricing/>
           <Occasion/>
           <Gallery/>
           <Services />
           <Portfolio />
           <Stats />
-          <Testimonials />
           <Blog/>
-          <Frames/>
           <About/>
           
           
