@@ -34,7 +34,7 @@ const blogPosts = [
     summary: "From hatching to burnishing — learn the secrets to depth and realism.",
     content:
       "Shading turns flat lines into life. Start with light pressure and build layers. Use hatching for structure, cross-hatching for density, and stippling for texture. Try contour shading to follow form, and blending with tissue for smooth transitions. Reserve pure white for highlights and use kneaded erasers to lift light. With HB for sketching and 2B–6B for depth, your portraits and objects will gain convincing volume.",
-    image: "G5.png",
+    image: "G6.png",
     link: "/blog/pencil-shading-techniques",
   },
 ];

@@ -67,7 +67,7 @@ const ShopProducts = [
     title: "Magic Doodle Scratch Notebook",
     price: 399,
     discountPrice: 299,
-    image: "G5.png",
+    image: "G6.png",
   },
 ];
 
