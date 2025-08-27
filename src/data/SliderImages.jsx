@@ -1,8 +1,8 @@
 const sliderImages = [
-  "G1.png",
-  "G2.png",
-  "G3.png",
-  "G4.png",
+  "God1.webp",
+  "God2.webp",
+  "God3.webp",
+  "God4.webp",
 
 ];
 

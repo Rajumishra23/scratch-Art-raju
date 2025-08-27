@@ -7,7 +7,7 @@ const blogPosts = [
     summary: "How scratch art reveals hidden beauty with simple contrasts.",
     content:
       "Scratch art is a fascinating technique where dark surfaces are scratched away to reveal bright colors beneath. This simple yet powerful form of art plays with contrast, light, and negative space. Artists often use it to create dramatic landscapes, portraits, or abstract pieces. The beauty of scratch art lies in its ability to surprise — every stroke reveals something unexpected, making it feel alive.",
-    image: "G1.png",
+    image: "blog4.webp",
     link: "/blog/scratch-art",
   },
   {
@@ -16,7 +16,7 @@ const blogPosts = [
     summary: "Why pencil sketches remain timeless in the digital era.",
     content:
       "Pencil art is considered the foundation of drawing. From soft shading to bold strokes, pencils allow artists to express depth, mood, and fine details with ease. Whether it’s hyper-realistic portraits or simple line sketches, pencil art connects directly with emotions. The raw texture of graphite on paper creates a sense of authenticity that no digital medium can fully replicate.",
-    image: "G2.png",
+    image: "blog5.webp",
     link: "/blog/pencil-art",
   },
   {
@@ -25,7 +25,7 @@ const blogPosts = [
     summary: "Comparing the bold surprises of scratch art with the subtlety of pencil sketches.",
     content:
       "Scratch art and pencil art might seem opposite, but both are rooted in contrast and expression. Scratch art is bold, dramatic, and high in visual impact, while pencil art is soft, detailed, and layered with emotions. Together, they show how artists use different mediums to express similar ideas — light, shadow, and storytelling.",
-    image: "G3.png",
+    image: "blog2.webp",
     link: "/blog/scratch-vs-pencil",
   },
     {
@@ -34,7 +34,7 @@ const blogPosts = [
     summary: "From hatching to burnishing — learn the secrets to depth and realism.",
     content:
       "Shading turns flat lines into life. Start with light pressure and build layers. Use hatching for structure, cross-hatching for density, and stippling for texture. Try contour shading to follow form, and blending with tissue for smooth transitions. Reserve pure white for highlights and use kneaded erasers to lift light. With HB for sketching and 2B–6B for depth, your portraits and objects will gain convincing volume.",
-    image: "G6.png",
+    image: "blog3.webp",
     link: "/blog/pencil-shading-techniques",
   },
 ];

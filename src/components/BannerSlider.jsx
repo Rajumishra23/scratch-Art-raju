@@ -88,7 +88,7 @@ const HeroSection = () => {
           {/* Image 1 */}
           <div className="min-w-full flex items-center justify-center">
             <img
-              src="front1.webp"
+              src="front.webp"
               alt="Image 1"
               className="w-[500px] h-[300px] object-cover"
             />
@@ -97,7 +97,7 @@ const HeroSection = () => {
           {/* Image 2 */}
           <div className="min-w-full flex items-center justify-center">
             <img
-              src="frontS.webp"
+              src="front2.webp"
               alt="Image 2"
               className="w-[500px] h-full object-cover"
             />
@@ -106,7 +106,7 @@ const HeroSection = () => {
           {/* Image 3 */}
           <div className="min-w-full flex items-center justify-center">
             <img
-              src="frontS3.webp"
+              src="front3.webp"
               alt="Image 3"
               className="w-[500px] h-full object-cover"
             />
