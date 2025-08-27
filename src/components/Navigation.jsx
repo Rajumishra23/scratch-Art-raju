@@ -11,9 +11,9 @@ const Navbar = () => {
           {/* Logo container with fixed height */}
           <div className="relative h-12 w-12 overflow-visible">
             <img
-              src="LC1.png"
+              src="scratchLogo.webp"
               alt="Logo"
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-25 w-25 object-contain"
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-15 w-20 object-contain"
             />
           </div>
 
