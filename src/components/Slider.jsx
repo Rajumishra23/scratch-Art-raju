@@ -1,55 +1,36 @@
 import sliderImages from "../data/SliderImages";
 import { useNavigate } from "react-router-dom";
-import { useEffect, useRef } from "react";
 
-const Slider = ({ title }) => {
+const SliderGrid = ({ title }) => {
   const navigate = useNavigate();
-  const scrollRef = useRef(null);
-
-  useEffect(() => {
-    const scrollContainer = scrollRef.current;
-    let scrollAmount = 0;
-
-    const scrollInterval = setInterval(() => {
-      if (scrollContainer) {
-        scrollAmount += 1.5; // speed adjust
-        scrollContainer.scrollLeft = scrollAmount;
-
-        // Infinite scroll effect
-        if (
-          scrollAmount >=
-          scrollContainer.scrollWidth - scrollContainer.clientWidth
-        ) {
-          scrollAmount = 0;
-        }
-      }
-    }, 16); // ~60fps smooth scroll
-
-    return () => clearInterval(scrollInterval);
-  }, []);
 
   return (
     <section className="w-full py-10 bg-white">
       <h2 className="text-3xl font-bold text-center mb-6">{title}</h2>
-      <div
-        ref={scrollRef}
-        className="flex gap-6 px-6 overflow-hidden flex-nowrap"
-      >
-        {sliderImages.concat(sliderImages).map((img, index) => (
-          <img
+      
+      {/* Grid container: 2 columns */}
+      <div className="grid grid-cols-2 gap-6 px-6">
+        {sliderImages.map((img, index) => (
+          <div
             key={index}
-            src={img}
-            alt={`Art ${index + 1}`}
-            className="w-64 h-40 object-cover rounded-lg cursor-pointer hover:scale-105 transition duration-300 shrink-0"
+            className="overflow-hidden rounded-lg cursor-pointer hover:shadow-lg transition-shadow duration-300"
             onClick={() => {
               navigate("/shop");
-              window.scrollTo({ top: 0, });
+              window.scrollTo({ top: 0 });
             }}
-          />
+          >
+            <div className="w-full aspect-[4/3]">
+              <img
+                src={img}
+                alt={`Art ${index + 1}`}
+                className="w-full h-full object-cover transform hover:scale-105 transition duration-300"
+              />
+            </div>
+          </div>
         ))}
       </div>
     </section>
   );
 };
 
-export default Slider;
+export default SliderGrid;
