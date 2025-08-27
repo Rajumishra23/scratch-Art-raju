@@ -1,130 +1,86 @@
-import React from "react";
-import { motion } from "framer-motion";
+import { useState } from "react";
 
-export default function BlogShowcase() {
+const blogPosts = [
+  {
+    id: 1,
+    title: "The Magic of Scratch Art",
+    summary: "How scratch art reveals hidden beauty with simple contrasts.",
+    content:
+      "Scratch art is a fascinating technique where dark surfaces are scratched away to reveal bright colors beneath. This simple yet powerful form of art plays with contrast, light, and negative space. Artists often use it to create dramatic landscapes, portraits, or abstract pieces. The beauty of scratch art lies in its ability to surprise — every stroke reveals something unexpected, making it feel alive.",
+    image: "G1.png",
+    link: "/blog/scratch-art",
+  },
+  {
+    id: 2,
+    title: "Pencil Art: The Power of Shades",
+    summary: "Why pencil sketches remain timeless in the digital era.",
+    content:
+      "Pencil art is considered the foundation of drawing. From soft shading to bold strokes, pencils allow artists to express depth, mood, and fine details with ease. Whether it’s hyper-realistic portraits or simple line sketches, pencil art connects directly with emotions. The raw texture of graphite on paper creates a sense of authenticity that no digital medium can fully replicate.",
+    image: "G2.png",
+    link: "/blog/pencil-art",
+  },
+  {
+    id: 3,
+    title: "Scratch vs Pencil: Two Worlds of Expression",
+    summary: "Comparing the bold surprises of scratch art with the subtlety of pencil sketches.",
+    content:
+      "Scratch art and pencil art might seem opposite, but both are rooted in contrast and expression. Scratch art is bold, dramatic, and high in visual impact, while pencil art is soft, detailed, and layered with emotions. Together, they show how artists use different mediums to express similar ideas — light, shadow, and storytelling.",
+    image: "G3.png",
+    link: "/blog/scratch-vs-pencil",
+  },
+    {
+    id: 4,
+    title: "Mastering Shading: 7 Pencil Techniques",
+    summary: "From hatching to burnishing — learn the secrets to depth and realism.",
+    content:
+      "Shading turns flat lines into life. Start with light pressure and build layers. Use hatching for structure, cross-hatching for density, and stippling for texture. Try contour shading to follow form, and blending with tissue for smooth transitions. Reserve pure white for highlights and use kneaded erasers to lift light. With HB for sketching and 2B–6B for depth, your portraits and objects will gain convincing volume.",
+    image: "G5.png",
+    link: "/blog/pencil-shading-techniques",
+  },
+];
+
+const BlogSection = () => {
+  const [activeBlogId, setActiveBlogId] = useState(null);
+
   return (
-    <section id="blog" className="relative w-full bg-[#f3f4f6] text-black py-20">
-      <div className="relative z-10 max-w-7xl mx-auto px-4 space-y-24">
-        {/* Acrylic Section */}
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left - Image */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="flex items-center justify-center"
+    <section className="max-w-screen-xl mx-auto px-6 py-12">
+      <h2 className="text-4xl font-bold text-center mb-10 text-gray-900">🎨 Scratch Art Blogs</h2>
+
+      <div className="grid md:grid-cols-2 gap-8">
+        {blogPosts.map((post) => (
+          <div
+            key={post.id}
+            className="border rounded-xl p-6 shadow-md hover:shadow-lg transition"
           >
-            <motion.img
-              src="ganesh.png"
-              alt="Acrylic Art"
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="rounded-lg shadow-lg object-cover w-full h-full max-h-[500px]"
+            <img
+              src={post.image}
+              alt={post.title}
+              className="w-full h-56 object-cover rounded-lg mb-4"
             />
-          </motion.div>
+            <h3 className="text-2xl font-semibold text-gray-800">
+              {post.title}
+            </h3>
+            <p className="text-gray-600 mt-2">{post.summary}</p>
 
-          {/* Right - Text */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="space-y-6"
-          >
-            <motion.h3
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-3xl font-serif text-[#1e3a8a]"
+            <button
+              onClick={() =>
+                setActiveBlogId(activeBlogId === post.id ? null : post.id)
+              }
+              className="mt-4 text-blue-600 hover:underline font-medium"
             >
-              ACRYLIC
-            </motion.h3>
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="text-gray-700"
-            >
-              Acrylic painting, technique in which pigments are mixed with hot, liquid wax. After all of the colours have been applied to the painting surface, a heating element is passed over them until the individual brush or spatula marks fuse into a uniform film.
-            </motion.p>
-            <motion.a
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-              href="#gallery"
-              className="inline-block px-6 py-2 bg-[#1e3a8a] text-white font-medium rounded hover:bg-[#172c6e] transition"
-            >
-              VIEW GALLERY
-            </motion.a>
-          </motion.div>
-        </div>
+              {activeBlogId === post.id ? "Hide Blog" : "Read More"}
+            </button>
 
-        {/* Encaustic Section */}
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left - Text */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="space-y-6"
-          >
-            <motion.h3
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-3xl font-serif text-[#1e3a8a]"
-            >
-              ENCAUSTIC
-            </motion.h3>
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="text-gray-700"
-            >
-              Encaustic painting involves using heated beeswax to which colored pigments are added. The liquid or paste is then applied to a surface—usually prepared wood, though canvas and other materials are also used.
-            </motion.p>
-            <motion.a
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-              href="#gallery"
-              className="inline-block px-6 py-2 bg-[#1e3a8a] text-white font-medium rounded hover:bg-[#172c6e] transition"
-            >
-              VIEW GALLERY
-            </motion.a>
-          </motion.div>
-
-          {/* Right - Image */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="flex items-center justify-center"
-          >
-            <motion.img
-              src="budha.png"
-              alt="Encaustic Art"
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="rounded-lg shadow-lg object-cover w-full h-full max-h-[500px]"
-            />
-          </motion.div>
-        </div>
+            {activeBlogId === post.id && (
+              <div className="mt-6 text-gray-700 border-t pt-4">
+                {post.content}
+              </div>
+            )}
+          </div>
+        ))}
       </div>
     </section>
   );
-}
+};
+
+export default BlogSection;
