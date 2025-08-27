@@ -65,7 +65,7 @@ const HeroSection = () => {
         <span className="font-semibold">Call Us</span> or{" "}
         <span className=" font-semibold">
           <strong className="text-indigo-600">WhatsApp</strong> <strong>us on</strong>{" "}
-          <strong className="text-green-600">123346767</strong>
+          <strong className="text-green-600"> +917503602684</strong>
         </span>{" "}
         or write us here.
       </li>
