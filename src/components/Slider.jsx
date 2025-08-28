@@ -12,14 +12,17 @@ const Slider = ({ title }) => {
     window.scrollTo({ top: 0 });
   };
 
-  useEffect(() => {
-    const scrollContainer = scrollRef.current;
-    if (!scrollContainer) return;
+ useEffect(() => {
+  const scrollContainer = scrollRef.current;
+  if (!scrollContainer) return;
 
+  let scrollInterval;
+
+  const startScroll = () => {
     const speed = 1; // scroll speed
     const interval = 20; // ~50fps
 
-    const scrollInterval = setInterval(() => {
+    scrollInterval = setInterval(() => {
       if (scrollContainer) {
         scrollContainer.scrollLeft += speed;
 
@@ -32,9 +35,35 @@ const Slider = ({ title }) => {
         }
       }
     }, interval);
+  };
 
-    return () => clearInterval(scrollInterval);
-  }, []);
+  // check if all images are loaded
+  const images = scrollContainer.querySelectorAll("img");
+  let loadedCount = 0;
+
+  const handleImageLoad = () => {
+    loadedCount++;
+    if (loadedCount === images.length) {
+      startScroll();
+    }
+  };
+
+  images.forEach((img) => {
+    if (img.complete) {
+      handleImageLoad();
+    } else {
+      img.addEventListener("load", handleImageLoad);
+    }
+  });
+
+  return () => {
+    clearInterval(scrollInterval);
+    images.forEach((img) =>
+      img.removeEventListener("load", handleImageLoad)
+    );
+  };
+}, []);
+
 
   return (
     <section
