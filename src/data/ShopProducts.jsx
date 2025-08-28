@@ -5,6 +5,7 @@ const ShopProducts = [
     price: 499,
     discountPrice: 349,
     image: "God1.webp",
+    btn: "Buy Now",
   },
   {
     id: 2,
@@ -12,6 +13,7 @@ const ShopProducts = [
     price: 699,
     discountPrice: 499,
     image: "God2.webp",
+    btn: "Buy Now",
   },
   {
     id: 3,
@@ -19,6 +21,7 @@ const ShopProducts = [
     price: 599,
     discountPrice: 429,
     image: "God3.webp",
+    btn: "Buy Now",
   },
   {
     id: 4,
@@ -26,6 +29,7 @@ const ShopProducts = [
     price: 799,
     discountPrice: 599,
     image: "God4.webp",
+    btn: "Buy Now",
   },
   {
     id: 5,
@@ -33,6 +37,7 @@ const ShopProducts = [
     price: 549,
     discountPrice: 399,
     image: "God.webp",
+    btn: "Buy Now",
   },
   {
     id: 6,
@@ -40,6 +45,7 @@ const ShopProducts = [
     price: 459,
     discountPrice: 329,
     image: "God6.webp",
+    btn: "Buy Now",
   },
   {
     id: 7,
@@ -47,6 +53,7 @@ const ShopProducts = [
     price: 699,
     discountPrice: 499,
     image: "God7.webp",
+    btn: "Buy Now",
   },
   {
     id: 8,
@@ -54,6 +61,7 @@ const ShopProducts = [
     price: 649,
     discountPrice: 479,
     image: "God8.webp",
+    btn: "Buy Now",
   },
   {
     id: 9,
@@ -61,6 +69,7 @@ const ShopProducts = [
     price: 579,
     discountPrice: 419,
     image: "ganesh.png",
+    btn: "Buy Now",
   },
   {
     id: 10,
@@ -68,6 +77,7 @@ const ShopProducts = [
     price: 399,
     discountPrice: 299,
     image: "G6.png",
+    btn: "Buy Now",
   },
 ];
 

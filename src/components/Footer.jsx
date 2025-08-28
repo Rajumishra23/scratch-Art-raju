@@ -6,18 +6,15 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white pt-12 pb-6">
       <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8">
-        {/* Logo + About */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          {/* 🔹 Logo + ScratchArt Text */}
           <h2 className="text-2xl font-serif font-bold mb-4 flex items-center gap-2">
-            {/* Yaha apna logo image dal do */}
             <img
-              src="LC1.png" // apna logo path yaha dalna
+              src="Logo.webp" 
               alt="Logo"
               className="w-10 h-10 object-contain"
             />
@@ -29,8 +26,6 @@ const Footer = () => {
             Discover, create, and share your imagination with the world.
           </p>
         </motion.div>
-
-        {/* Quick Links */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -52,8 +47,6 @@ const Footer = () => {
             ))}
           </ul>
         </motion.div>
-
-        {/* Services */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -75,8 +68,6 @@ const Footer = () => {
             ))}
           </ul>
         </motion.div>
-
-        {/* Social Media + Newsletter */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -90,8 +81,6 @@ const Footer = () => {
             <a href="#" className="hover:text-yellow-400"><FaTwitter /></a>
             <a href="#" className="hover:text-yellow-400"><FaPinterestP /></a>
           </div>
-
-          {/* Newsletter Input */}
           <div className="mt-6">
             <input
               type="email"
@@ -101,8 +90,6 @@ const Footer = () => {
           </div>
         </motion.div>
       </div>
-
-      {/* Copyright */}
       <div className="mt-10 text-center text-sm border-t border-white/30 pt-4 text-gray-200">
         © {new Date().getFullYear()} ScratchArt. All rights reserved.
         <h2 className="mt-1">Designed by Bigdesign Software Technologies</h2>

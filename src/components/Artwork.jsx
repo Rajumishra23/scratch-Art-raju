@@ -9,66 +9,74 @@ const Artwork = () => {
 
     const slideInterval = setInterval(() => {
       if (slider) {
-        scrollAmount += slider.offsetWidth; // ek image ki width ke hisaab se slide
+        scrollAmount += slider.offsetWidth; 
         if (scrollAmount >= slider.scrollWidth) {
-          scrollAmount = 0; // phir se first image pe aa jaaye
+          scrollAmount = 0; 
         }
         slider.scrollTo({
           left: scrollAmount,
           behavior: "smooth",
         });
       }
-    }, 3000); // har 3 sec baad slide hoga
+    }, 3000); 
 
     return () => clearInterval(slideInterval);
   }, []);
 
   return (
     <section className="bg-white py-16 font-sans text-center border-b border-gray-200">
-      {/* Title */}
+      
       <h2 className="text-3xl font-bold mb-2">
         All Available <span className="text-orange-500">Art Types</span>
       </h2>
-
-      {/* Subtitle */}
       <p className="italic text-gray-700 mb-8">
         “Elevate Your Photos to Art: Discover the Beauty of Sketches with Our Professional Service!”
       </p>
 
-      {/* 🔹 Image Slider */}
       <div
         ref={sliderRef}
         className="mt-6 w-full h-[450px] flex overflow-x-hidden overflow-y-hidden rounded-lg scroll-smooth"
       >
-        {/* Image 1 */}
-        <div className="min-w-full flex items-center justify-center">
-          <img
-            src="frame.webp"
-            alt="Charcoal sketch 1"
-            className="w-[500px] h-[400px]  object-cover rounded shadow-lg"
-          />
-        </div>
+      <div className="min-w-full flex items-center justify-center">
+  <div className="relative">
+    <img
+      src="All.webp"
+      alt="Charcoal sketch 1"
+      className="w-[400px] h-[300px] object-cover rounded shadow-lg"
+    />
+    <p className="absolute bottom-2 right-2 text-white text-lg font-bold bg-black bg-opacity-50 px-2 py-1 rounded">
+      Portrait type: charcoal Pencil Sketch
+    </p>
+  </div>
+</div>
 
-        {/* Image 2 */}
-        <div className="min-w-full flex items-center justify-center">
-          <img
-            src="frame1.webp"
-            alt="Charcoal sketch 2"
-            className="w-[500px] h-[400px]  object-cover rounded shadow-lg"
-          />
-        </div>
+<div className="min-w-full flex items-center justify-center">
+  <div className="relative">
+    <img
+      src="All1.webp"
+      alt="Charcoal sketch 2"
+      className="w-[400px] h-[300px] object-cover rounded shadow-lg"
+    />
+    <p className="absolute bottom-2 right-2 text-white text-lg font-bold bg-black bg-opacity-50 px-2 py-1 rounded">
+      Portrait type: Colour Pencil Sketch
+    </p>
+  </div>
+</div>
 
-        {/* Image 3 */}
-        <div className="min-w-full flex items-center justify-center">
-          <img
-            src="frame2.webp"
-            alt="Charcoal sketch 3"
-            className="w-[500px] h-[400px] object-cover rounded shadow-lg"
-          />
-        </div>
+<div className="min-w-full flex items-center justify-center">
+  <div className="relative">
+    <img
+      src="All2.webp"
+      alt="Charcoal sketch 3"
+      className="w-[400px] h-[300px] object-cover rounded shadow-lg"
+    />
+    <p className="absolute bottom-2 right-2 text-white text-lg font-bold bg-black bg-opacity-50 px-2 py-1 rounded">
+      Portrait type: Blood Painting
+    </p>
+  </div>
+</div>
+
       </div>
-
-      {/* CTA */}
       <div className="mt-10 text-blue-600 text-[17px] font-medium">
         To know more{" "}
         <a href="#" className="underline hover:text-blue-800">

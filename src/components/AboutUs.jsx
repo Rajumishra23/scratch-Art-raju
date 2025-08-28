@@ -1,14 +1,11 @@
 import React from 'react';
 
-const AboutUsSection = () => {
+const AboutUs = () => {
   return (
     <section className="bg-white py-16 px-6 text-gray-800 font-sans">
-      {/* Title */}
       <h2 className="text-3xl font-bold text-center mb-8">
         About <span className="text-orange-500">Us</span> ?
       </h2>
-
-      {/* Bullet Content */}
       <div className="max-w-4xl mx-auto text-[17px] leading-relaxed space-y-4">
         <ul className="list-disc list-inside space-y-4 marker:text-orange-500">
           <li>
@@ -29,4 +26,4 @@ const AboutUsSection = () => {
   );
 };
 
-export default AboutUsSection;
+export default AboutUs;

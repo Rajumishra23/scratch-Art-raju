@@ -1,14 +1,11 @@
 import React from 'react';
 
-const WhatWeDoSection = () => {
+const WhatWeDo = () => {
   return (
     <section className="bg-white py-16 px-6 text-gray-800 font-sans">
-      {/* Title */}
       <h2 className="text-3xl font-bold text-center mb-8">
         What <span className="text-orange-500">We Do</span> ?
       </h2>
-
-      {/* Bullet Content */}
       <div className="max-w-5xl mx-auto text-[17px] leading-relaxed space-y-4">
         <ul className="list-disc list-inside space-y-4 marker:text-orange-500">
           <li>
@@ -39,8 +36,6 @@ const WhatWeDoSection = () => {
             <strong>Note:</strong> You may find cheap sketches locally, but their life is short. They’re made on low-quality sheets that turn yellow in a few years.
           </li>
         </ul>
-
-        {/* Guarantee Line */}
         <p className="mt-6 text-gray-700">
           <span className="font-semibold text-orange-600">Guarantee:</span> Our portraits are made to last for decades — with proper care, they retain their charm and richness over time.
         </p>
@@ -49,4 +44,4 @@ const WhatWeDoSection = () => {
   );
 };
 
-export default WhatWeDoSection;
+export default WhatWeDo;

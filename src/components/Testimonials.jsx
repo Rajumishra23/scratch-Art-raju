@@ -28,16 +28,16 @@ const Testimonials = () => {
 
     const slideInterval = setInterval(() => {
       if (slider) {
-        scrollAmount += slider.offsetWidth; // ek testimonial card ki width ke hisaab se slide
+        scrollAmount += slider.offsetWidth; 
         if (scrollAmount >= slider.scrollWidth) {
-          scrollAmount = 0; // reset first testimonial pe
+          scrollAmount = 0; 
         }
         slider.scrollTo({
           left: scrollAmount,
           behavior: "smooth",
         });
       }
-    }, 4000); // 4 sec me slide change hoga
+    }, 4000); 
 
     return () => clearInterval(slideInterval);
   }, []);
@@ -45,17 +45,14 @@ const Testimonials = () => {
   return (
     <section className="bg-[#fefcf9] text-black py-16">
       <div className="container mx-auto px-4">
-        {/* Heading */}
         <div className="text-center mb-12 px-4">
           <h1 className="text-2xl md:text-4xl font-extrabold text-gray-900 tracking-wide mb-4">
             Customer <span className="text-orange-500">Review</span>
           </h1>
           <p className="text-[16px] md:text-[22px] italic text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            “Picture Perfect Pencil Portraits: Elevate Your Images with Our Photo to Sketch Expertise!”
+            “Picture Perfect Pencil Portraits : Elevate Your Images with Our Photo to Sketch Expertise!”
           </p>
         </div>
-
-        {/* 🔹 Testimonials Slider */}
         <div
           ref={sliderRef}
           className="w-full flex overflow-x-hidden overflow-y-hidden scroll-smooth"
