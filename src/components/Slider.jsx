@@ -16,20 +16,20 @@ const Slider = ({ title }) => {
     const scrollContainer = scrollRef.current;
     if (!scrollContainer) return;
 
-    let scrollAmount = 0;
-    const speed = 1.5; // adjust scroll speed
-    const interval = 16; // ~60fps
+    const speed = 1; // scroll speed
+    const interval = 20; // ~50fps
 
     const scrollInterval = setInterval(() => {
-      scrollAmount += speed;
-      scrollContainer.scrollLeft = scrollAmount;
+      if (scrollContainer) {
+        scrollContainer.scrollLeft += speed;
 
-      // Infinite scroll effect
-      if (
-        scrollAmount >=
-        scrollContainer.scrollWidth - scrollContainer.clientWidth
-      ) {
-        scrollAmount = 0;
+        // Infinite scroll effect (reset when reaches half scrollWidth)
+        if (
+          scrollContainer.scrollLeft >=
+          scrollContainer.scrollWidth / 2
+        ) {
+          scrollContainer.scrollLeft = 0;
+        }
       }
     }, interval);
 
@@ -62,28 +62,28 @@ const Slider = ({ title }) => {
       </div>
 
       {/* Horizontal auto-scrolling container */}
-<div
-  ref={scrollRef}
-  className="flex gap-6 px-6 overflow-hidden flex-nowrap"
-  aria-live="off"
->
-  {sliderImages.concat(sliderImages).map((img, index) => (
-    <button
-      key={index}
-      onClick={handleClick}
-      className="w-40 h-40 shrink-0 overflow-hidden rounded-lg focus:outline-none 
-                 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 
-                 hover:shadow-lg transition duration-300"
-      aria-label={`View artwork ${index + 1}`}
-    >
-      <img
-        src={img}
-        alt={`Artwork ${index + 1}`}
-        className="w-full h-full object-cover transform hover:scale-105 transition duration-300"
-      />
-    </button>
-  ))}
-</div>
+      <div
+        ref={scrollRef}
+        className="flex gap-6 px-6 overflow-hidden flex-nowrap"
+        aria-live="off"
+      >
+        {sliderImages.concat(sliderImages).map((img, index) => (
+          <button
+            key={index}
+            onClick={handleClick}
+            className="w-40 h-40 shrink-0 overflow-hidden rounded-lg focus:outline-none 
+                       focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 
+                       hover:shadow-lg transition duration-300"
+            aria-label={`View artwork ${index + 1}`}
+          >
+            <img
+              src={img}
+              alt={`Artwork ${index + 1}`}
+              className="w-full h-full object-cover transform hover:scale-105 transition duration-300"
+            />
+          </button>
+        ))}
+      </div>
     </section>
   );
 };
