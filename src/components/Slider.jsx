@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useRef } from "react";
-import { ChevronDown } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import sliderImages from "../data/SliderImages"; // Array of image URLs
 
 const Slider = ({ title }) => {
@@ -37,28 +37,28 @@ const Slider = ({ title }) => {
 
   return (
     <section
-      className="w-full py-10 bg-white"
+      className="w-full py-10 bg-[#f3f4f6]"
       aria-labelledby="slider-title"
       role="region"
     >
       {/* Heading */}
       <h2
         id="slider-title"
-        className="text-4xl font-extrabold text-center text-gray-900"
+        className="text-4xl font-extrabold text-center text-[#1e3a8a] "
       >
         {title}
       </h2>
 
       {/* Subtext with arrow */}
       <div className="flex flex-col items-center mt-2 mb-6">
-        <p className="text-sm text-gray-600">Click on image for more shops</p>
-        <ChevronDown
+        <p className="text-sm text-gray-600">(Click on any image for shops👇)</p>
+        <ArrowDown
           className="w-6 h-6 text-gray-500 mt-1 animate-bounce"
           aria-hidden="true"
         />
       </div>
 
-      {/* Scrollable container */}
+    {/* Scrollable container */}
       <div
         ref={scrollRef}
         className="flex gap-6 px-6 overflow-hidden flex-nowrap scroll-smooth scrollbar-hide"
@@ -69,7 +69,7 @@ const Slider = ({ title }) => {
           <button
             key={index}
             onClick={handleClick}
-            className="min-w-[160px] w-40 h-40 shrink-0 overflow-hidden rounded-lg focus:outline-none 
+            className="min-w-[160px] w-40 h-40 shrink-0 overflow-hidden aspect-square focus:outline-none 
                        focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 
                        hover:shadow-lg transition duration-300"
             role="listitem"

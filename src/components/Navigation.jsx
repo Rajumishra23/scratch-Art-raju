@@ -26,7 +26,7 @@ const Navbar = () => {
         <nav className="hidden md:flex space-x-6 text-sm font-medium text-gray-700">
           <Link to="/" className="hover:text-red-500 transition">Home</Link>
           <Link to="/order-portrait" className="hover:text-red-500 transition">Order Portrait</Link>
-          <Link to="/order-form" className="hover:text-red-500 transition">Order Form</Link>
+          <Link to="/contacts" className="hover:text-red-500 transition">Order Form</Link>
           <Link to="/about-us" className="hover:text-red-500 transition">About Us</Link>
           <Link to="/gallery" className="hover:text-red-500 transition">Gallery</Link>
           <Link to="/review" className="hover:text-red-500 transition">Review</Link>

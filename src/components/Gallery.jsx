@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
-import { ArrowDown } from "lucide-react"; // 👈 change ArrowRight → ArrowDown
+import { ArrowDown } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function Gallery() {
   const images = [
@@ -13,14 +14,15 @@ export default function Gallery() {
   ];
 
   const scrollRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const scrollContainer = scrollRef.current;
     if (!scrollContainer) return;
 
     let scrollAmount = 0;
-    const speed = 1.2; // scroll speed
-    const interval = 16; // ~60fps
+    const speed = 1.2;
+    const interval = 16;
 
     const scrollInterval = setInterval(() => {
       scrollAmount += speed;
@@ -50,7 +52,7 @@ export default function Gallery() {
         Gallery
       </motion.h2>
 
-      {/* Sub text with arrow */}
+      {/* Subtext with arrow */}
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -58,23 +60,31 @@ export default function Gallery() {
         viewport={{ once: true }}
         className="flex flex-col items-center text-gray-600 mt-2 mb-12"
       >
-        <p className="text-center">Click on image for more gallery image</p>
+        <p className="text-center">(Click on image for more gallery image👇)</p>
         <motion.div
-          animate={{ y: [0, 8, 0] }} // 👈 bounce effect
+          animate={{ y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 1.2 }}
         >
           <ArrowDown className="w-6 h-6 text-[#1e3a8a] mt-2" />
         </motion.div>
       </motion.div>
 
-      {/* Sliding Container */}
+      {/* Sliding Image Container */}
       <div
         ref={scrollRef}
         className="flex gap-8 overflow-hidden flex-nowrap max-w-6xl mx-auto"
       >
         {images.concat(images).map((item, idx) => (
           <div key={idx} className="flex flex-col items-center shrink-0">
-            <div className="w-40 h-40 rounded-full overflow-hidden border border-gray-300 hover:border-[#1e3a8a] transition">
+            <div
+              className="w-40 h-40 rounded-full overflow-hidden border border-gray-300 hover:border-[#1e3a8a] transition cursor-pointer"
+            onClick={() => {
+        window.scrollTo({ top: 0,});
+        navigate("/gallery");
+      }}
+      aria-label={`View full gallery for ${item.title}`}
+    >
+              
               <img
                 src={item.src}
                 alt={item.title}
