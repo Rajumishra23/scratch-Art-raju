@@ -6,12 +6,12 @@ const PortraitTypes = () => {
     { id: 2, src: "G2.png", alt: "Orange Scribble Sketch" },
     { id: 3, src: "G3.png", alt: "Purple Scribble Sketch" },
     { id: 4, src: "G4.png", alt: "Red Scribble Sketch" },
-    { id: 5, src: "G5.png", alt: "Green Scribble Sketch" },
+    { id: 5, src: "G1.png", alt: "Green Scribble Sketch" },
     { id: 6, src: "G6.png", alt: "Pink Scribble Sketch" },
   ];
 
   const happyClients = [
-    { id: 1, src: "testimonial1.webp", alt: "Client Portrait 1" },
+    { id: 1, src: "Testimonial1.webp", alt: "Client Portrait 1" },
     { id: 2, src: "testimonial2.webp", alt: "Client Portrait 2" },
     { id: 3, src: "testimonial3.webp", alt: "Client Portrait 3" },
   ];

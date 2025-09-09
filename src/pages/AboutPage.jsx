@@ -51,9 +51,9 @@ const AboutSection = () => {
         </div>
 
         {/* Services & Offerings */}
-        <div className="mt-12">
+        <div className="mt-12 text-center">
           <h3 className="text-2xl font-bold mb-4 text-center  ">Our Commitments</h3>
-          <ul className="list-disc list-inside space-y-3 text-gray-700 text-sm">
+          <ul className="list-disc list-inside space-y-3 text-gray-700 text-sm text-center">
             <li>
               <strong>Quality 🥇</strong> – We always use premium imported art 
               materials (artist-grade pencils, canvas, acrylic primers, brushes, etc.). 
