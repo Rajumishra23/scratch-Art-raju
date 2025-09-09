@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import ShopProducts from "../data/ShopProducts"; // Array of product objects
+import ShopProducts from "../data/ShopProducts"; 
 
 const containerVariant = {
   hidden: { opacity: 0 },

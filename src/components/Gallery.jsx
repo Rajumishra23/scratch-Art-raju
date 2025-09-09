@@ -47,7 +47,7 @@ export default function Gallery() {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="text-4xl text-[#1e3a8a] font-bold font-serif text-center"
+        className="text-3xl text-[#1e3a8a] font-bold font-serif text-center"
       >
         Gallery
       </motion.h2>

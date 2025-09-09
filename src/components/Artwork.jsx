@@ -26,10 +26,10 @@ const Artwork = () => {
   return (
     <section className="bg-white py-16 font-sans text-center border-b border-gray-200">
       
-      <h2 className="text-3xl font-bold mb-2">
-        All Available <span className="text-orange-500">Art Types</span>
+      <h2 className="text-2xl font-bold mb-2">
+        All Available <span className="text-orange-500 ">Art Types</span>
       </h2>
-      <p className="italic text-gray-700 mb-8">
+      <p className="italic text-gray-700  text-sm mb-8">
         “Elevate Your Photos to Art: Discover the Beauty of Sketches with Our Professional Service!”
       </p>
 

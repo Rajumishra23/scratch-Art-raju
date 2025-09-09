@@ -44,7 +44,7 @@ const Slider = ({ title }) => {
       {/* Heading */}
       <h2
         id="slider-title"
-        className="text-4xl font-extrabold text-center text-[#1e3a8a] "
+        className="text-2xl  font-extrabold text-center text-[#1e3a8a] "
       >
         {title}
       </h2>

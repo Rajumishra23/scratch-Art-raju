@@ -52,10 +52,10 @@ const Testimonials = () => {
       <div className="container mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-12 px-4">
-          <h1 className="text-2xl md:text-4xl font-extrabold text-gray-900 tracking-wide mb-4">
-            Customer <span className="text-orange-500">Review</span>
+          <h1 className="text-2xl md:text-3xl text-sm font-extrabold text-gray-900 tracking-wide mb-4">
+            Customer <span className="text-orange-500 text-2xl">Review</span>
           </h1>
-          <p className="text-[16px] md:text-[22px] italic text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-[10px] md:text-[20px] italic text-gray-700 max-w-3xl mx-auto leading-relaxed">
             “Picture Perfect Pencil Portraits : Elevate Your Images with Our Photo to Sketch Expertise!”
           </p>
         </div>
@@ -108,6 +108,18 @@ const Testimonials = () => {
             </div>
           ))}
         </div>
+
+        {/* ✅ CTA Link below slider */}
+        <div className="text-center mt-8">
+ <a
+  href="https://www.google.com/maps/place/Portraits+Maker+%26+Sketch+Artist+Studio/@28.5797978,77.1987197,17z/data=!3m1!4b1!4m6!3m5!1s0x390ce286cef712b3:0x2ae297432f0c8260!8m2!3d28.5797978!4d77.2012946!16s%2Fg%2F11clvb5xlt?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-sm md:text-base text-blue-600 underline hover:text-blue-800 transition duration-200"
+>
+  Click here to give review
+</a>
+    </div>
       </div>
     </section>
   );

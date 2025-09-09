@@ -16,7 +16,7 @@ const Footer = () => {
             <img
               src="Logo.webp" 
               alt="Logo"
-              className="w-10 h-10 object-contain"
+              className=" h-[120px] w-[120px] object-contain"
             />
             ScratchArt
           </h2>

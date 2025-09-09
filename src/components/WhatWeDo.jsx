@@ -3,10 +3,10 @@ import React from 'react';
 const WhatWeDo = () => {
   return (
     <section className="bg-white py-16 px-6 text-gray-800 font-sans">
-      <h2 className="text-3xl font-bold text-center mb-8">
-        What <span className="text-orange-500">We Do</span> ?
+      <h2 className="text-3xl  text-sm font-bold text-center mb-8">
+        What <span className="text-orange-500 text-sm">We Do</span> ?
       </h2>
-      <div className="max-w-5xl mx-auto text-[17px] leading-relaxed space-y-4">
+      <div className="max-w-5xl mx-auto text-[10px] leading-relaxed space-y-4">
         <ul className="list-disc list-inside space-y-4 marker:text-orange-500">
           <li>
             <strong>We create different paintings</strong> according to your requirement: watercolor portrait painting, color pencil sketch, coffee portrait painting, landscape painting, sentries, abstract paintings, pet painting, oil paintings on canvas, etc.

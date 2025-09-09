@@ -7,12 +7,13 @@ const Navbar = () => {
       <div className="max-w-screen-xl mx-auto px-4 py-3 flex items-center justify-between">
 <div className="flex items-center space-x-3">
   <div className="relative h-12 w-12 overflow-visible">
-    <img
-      src="Logo.webp"
-      alt="Logo"
-      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-70 w-100 object-contain scale-200"
-    />
-  </div>
+   <img
+  src="Logo.webp"
+  alt="Logo"
+  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
+             h-[120px] w-[120px] object-contain scale-125"
+/>
+</div>
 
           <div className="flex flex-col">
             <span className="text-xl font-bold text-black font-serif tracking-wide">
@@ -29,7 +30,7 @@ const Navbar = () => {
           <Link to="/contacts" className="hover:text-red-500 transition">Order Form</Link>
           <Link to="/about-us" className="hover:text-red-500 transition">About Us</Link>
           <Link to="/gallery" className="hover:text-red-500 transition">Gallery</Link>
-          <Link to="/review" className="hover:text-red-500 transition">Review</Link>
+          <Link to="/shop" className="hover:text-red-500 transition">Shop</Link>
         </nav>
       </div>
     </header>
