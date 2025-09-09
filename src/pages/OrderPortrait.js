@@ -176,7 +176,7 @@ const PortraitTypes = () => {
             <strong className="text-black">Delivery is Free</strong>, all across
             India.{" "}
             <span className="text-green-600 font-semibold">
-              Call/ WhatsApp – 7982088153
+              Call/ WhatsApp <span className='text-blue-500'>+91 7503602684</span>
             </span>
           </p>
 
