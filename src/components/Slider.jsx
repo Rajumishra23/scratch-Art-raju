@@ -16,23 +16,26 @@ const Slider = ({ title }) => {
     const scrollContainer = scrollRef.current;
     if (!scrollContainer) return;
 
-    let scrollAmount = 0;
-    const speed = 1.5; // Gallery-style speed
-    const interval = 16; // ~60fps
+    // ✅ Auto scroll only on desktop (md and above)
+    if (window.innerWidth >= 768) {
+      let scrollAmount = 0;
+      const speed = 1.5;
+      const interval = 16;
 
-    const scrollInterval = setInterval(() => {
-      scrollAmount += speed;
-      scrollContainer.scrollLeft = scrollAmount;
+      const scrollInterval = setInterval(() => {
+        scrollAmount += speed;
+        scrollContainer.scrollLeft = scrollAmount;
 
-      if (
-        scrollAmount >=
-        scrollContainer.scrollWidth - scrollContainer.clientWidth
-      ) {
-        scrollAmount = 0; // Reset like Gallery
-      }
-    }, interval);
+        if (
+          scrollAmount >=
+          scrollContainer.scrollWidth - scrollContainer.clientWidth
+        ) {
+          scrollAmount = 0;
+        }
+      }, interval);
 
-    return () => clearInterval(scrollInterval);
+      return () => clearInterval(scrollInterval);
+    }
   }, []);
 
   return (
@@ -44,7 +47,7 @@ const Slider = ({ title }) => {
       {/* Heading */}
       <h2
         id="slider-title"
-        className="text-2xl  font-extrabold text-center text-[#1e3a8a] "
+        className="text-2xl font-extrabold text-center text-[#1e3a8a]"
       >
         {title}
       </h2>
@@ -58,10 +61,13 @@ const Slider = ({ title }) => {
         />
       </div>
 
-    {/* Scrollable container */}
+      {/* Scrollable container */}
       <div
         ref={scrollRef}
-        className="flex gap-6 px-6 overflow-hidden flex-nowrap scroll-smooth scrollbar-hide"
+        className="flex gap-6 px-6 
+                   overflow-x-auto md:overflow-hidden 
+                   flex-nowrap scroll-smooth 
+                   scrollbar-hide"
         role="list"
         aria-live="off"
       >
@@ -69,8 +75,8 @@ const Slider = ({ title }) => {
           <button
             key={index}
             onClick={handleClick}
-            className="min-w-[160px] w-40 h-40 shrink-0 overflow-hidden aspect-square focus:outline-none 
-                       focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 
+            className="min-w-[160px] w-40 h-40 shrink-0 overflow-hidden aspect-square 
+                       focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 
                        hover:shadow-lg transition duration-300"
             role="listitem"
             aria-label={`View artwork ${index + 1}`}
