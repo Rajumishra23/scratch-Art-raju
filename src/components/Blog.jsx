@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const blogPosts = [
   {
@@ -28,7 +29,7 @@ const blogPosts = [
     image: "blog2.webp",
     link: "/blog/scratch-vs-pencil",
   },
-    {
+  {
     id: 4,
     title: "Mastering Shading: 7 Pencil Techniques",
     summary: "From hatching to burnishing — learn the secrets to depth and realism.",
@@ -43,40 +44,63 @@ const BlogSection = () => {
   const [activeBlogId, setActiveBlogId] = useState(null);
 
   return (
-    <section className="max-w-screen-xl mx-auto px-6 py-12">
-      <h2 className="text-4xl font-bold text-center mb-10 text-gray-900">🎨 Scratch Art Blogs</h2>
+    <section className="max-w-screen-xl mx-auto px-4 sm:px-6 py-12">
+      {/* ✅ Heading */}
+      <h2 className="text-2xl sm:text-4xl font-bold text-center mb-10 text-gray-900">
+        🎨 Scratch Art Blogs
+      </h2>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      {/* ✅ Grid layout */}
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {blogPosts.map((post) => (
-          <div
+          <motion.div
             key={post.id}
-            className="border rounded-xl p-6 shadow-md hover:shadow-lg transition"
+            whileHover={{ scale: 1.03 }}
+            transition={{ duration: 0.3 }}
+            className="border rounded-xl p-5 sm:p-6 shadow-md hover:shadow-xl transition bg-white flex flex-col"
           >
+            {/* Image */}
             <img
               src={post.image}
               alt={post.title}
-              className="w-full h-56 object-cover rounded-lg mb-4"
+              className="w-full h-44 sm:h-56 object-cover rounded-lg mb-4"
             />
-            <h3 className="text-2xl font-semibold text-gray-800">
+
+            {/* Title */}
+            <h3 className="text-lg sm:text-2xl font-semibold text-gray-800">
               {post.title}
             </h3>
-            <p className="text-gray-600 mt-2">{post.summary}</p>
 
+            {/* Summary */}
+            <p className="text-gray-600 mt-2 text-sm sm:text-base flex-grow">
+              {post.summary}
+            </p>
+
+            {/* Button */}
             <button
               onClick={() =>
                 setActiveBlogId(activeBlogId === post.id ? null : post.id)
               }
-              className="mt-4 text-blue-600 hover:underline font-medium"
+              className="mt-4 text-blue-600 hover:underline font-medium self-start"
             >
               {activeBlogId === post.id ? "Hide Blog" : "Read More"}
             </button>
 
-            {activeBlogId === post.id && (
-              <div className="mt-6 text-gray-700 border-t pt-4">
-                {post.content}
-              </div>
-            )}
-          </div>
+            {/* Expandable Content with Animation */}
+            <AnimatePresence>
+              {activeBlogId === post.id && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.4 }}
+                  className="mt-4 text-gray-700 text-sm sm:text-base border-t pt-4"
+                >
+                  {post.content}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.div>
         ))}
       </div>
     </section>

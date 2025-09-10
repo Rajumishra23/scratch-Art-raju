@@ -1,17 +1,30 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const AboutSection = () => {
   return (
     <section className="bg-[#fefcf9] py-16 text-gray-800">
       <div className="container mx-auto px-6 max-w-5xl">
         {/* Heading */}
-        <h2 className="text-4xl font-extrabold text-center mb-10">
+        <motion.h2
+          initial={{ opacity: 0, y: -40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="text-4xl font-extrabold text-center mb-10"
+        >
           <span className="text-orange-500">About</span>{" "}
           <span className="text-gray-900">Us</span>
-        </h2>
+        </motion.h2>
 
         {/* About Us */}
-        <div className="space-y-6 text-base leading-relaxed text-gray-700 text-sm">
+        <motion.div
+          initial={{ opacity: 0, x: -60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="space-y-6 text-base leading-relaxed text-gray-700 text-sm"
+        >
           <p>
             This is the official website of <strong>Team SCRATCH ART</strong>, based at Greater Noida. 
             We create paintings and sketches on order and demand. Our artists 
@@ -24,13 +37,19 @@ const AboutSection = () => {
             acrylic, pastel, and more. Our style is mostly <strong>realistic</strong>, 
             and we always use premium quality art material.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="mt-12">
-  <h3 className="text-2xl font-bold mb-4 text-center">
-    <span className="text-orange-500">About</span> SCRATCHART.COM
-  </h3>
-</div>
+        {/* About SCRATCHART.COM */}
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="mt-12"
+        >
+          <h3 className="text-2xl font-bold mb-4 text-center">
+            <span className="text-orange-500">About</span> SCRATCHART.COM
+          </h3>
 
           <p className="mb-4 text-sm">
             Welcome to <strong>SCRATCHART.COM</strong>, where imagination meets artistry! 
@@ -48,51 +67,56 @@ const AboutSection = () => {
             Explore our gallery, order any type of painting, or customize your 
             own masterpiece.
           </p>
-        </div>
+        </motion.div>
 
         {/* Services & Offerings */}
-        <div className="mt-12 text-center">
-          <h3 className="text-2xl font-bold mb-4 text-center  ">Our Commitments</h3>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ staggerChildren: 0.3 }}
+          className="mt-12 text-center"
+        >
+          <h3 className="text-2xl font-bold mb-4">Our Commitments</h3>
           <ul className="list-disc list-inside space-y-3 text-gray-700 text-sm text-center">
-            <li>
-              <strong>Quality 🥇</strong> – We always use premium imported art 
-              materials (artist-grade pencils, canvas, acrylic primers, brushes, etc.). 
-              Our artworks last for decades.
-            </li>
-            <li>
-              <strong>Uniqueness 💎</strong> – Every portrait is a unique masterpiece, 
-              crafted with high-quality materials for long-lasting results.
-            </li>
-            <li>
-              <strong>Affordability 🎨</strong> – 100% handmade paintings starting from{" "}
-              <span className="text-green-600 font-semibold">₹1199/- only</span>.
-            </li>
-            <li>
-              <strong>Service 🏆</strong> – With 9+ years of excellence, we 
-              guarantee satisfaction and personal attention to every order.
-            </li>
-            <li>
-              <strong>Safe & Easy Online Payment 💳</strong> – Pay securely via 
-              Razorpay (Paytm, UPI, PhonePe, Google Pay, Cards, EMI, etc.).
-            </li>
-            <li>
-              <strong>Free Home Delivery ✈️</strong> – All over India within{" "}
-              <span className="text-black font-semibold">5–9 days</span>. 
-              Only pay for the sketch/painting.
-            </li>
+            {[
+              "Quality 🥇 – Premium imported art materials (artist-grade pencils, canvas, brushes, etc.).",
+              "Uniqueness 💎 – Every portrait is a unique masterpiece.",
+              "Affordability 🎨 – Handmade paintings starting at ₹1199/- only.",
+              "Service 🏆 – 9+ years of excellence, guaranteed satisfaction.",
+              "Safe & Easy Online Payment 💳 – Secure via Razorpay, UPI, Paytm, Cards, etc.",
+              "Free Home Delivery ✈️ – Anywhere in India within 5–9 days."
+            ].map((item, i) => (
+              <motion.li
+                key={i}
+                variants={{
+                  hidden: { opacity: 0, y: 30 },
+                  visible: { opacity: 1, y: 0 }
+                }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+              >
+                {item}
+              </motion.li>
+            ))}
           </ul>
-        </div>
+        </motion.div>
 
         {/* CTA */}
-        <div className="text-center mt-10">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="text-center mt-10"
+        >
           <a
             href="#order"
             className="inline-block px-6 py-3 bg-orange-500 text-center text-white text-sm font-bold rounded-lg shadow-md hover:bg-orange-600 transition"
           >
             Order Portrait Now!
           </a>
-        </div>
-      
+        </motion.div>
+      </div>
     </section>
   );
 };
