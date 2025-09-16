@@ -1,9 +1,19 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react"; // hamburger & close icon
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  // ✅ Common Nav Links
+  const navLinks = [
+    { to: "/", label: "Home", end: true },
+    { to: "/order-portrait", label: "Order Portrait" },
+    { to: "/contacts", label: "Order Form" },
+    { to: "/about-us", label: "About Us" },
+    { to: "/gallery", label: "Gallery" },
+    { to: "/shop", label: "Shop" },
+  ];
 
   return (
     <header className="bg-white border-b-[3px] border-red-500 shadow-sm sticky top-0 z-50">
@@ -29,17 +39,25 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Desktop Nav (Center-Right) */}
+        {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-6 text-sm font-medium text-gray-700">
-          <Link to="/" className="hover:text-red-500 transition">Home</Link>
-          <Link to="/order-portrait" className="hover:text-red-500 transition">Order Portrait</Link>
-          <Link to="/contacts" className="hover:text-red-500 transition">Order Form</Link>
-          <Link to="/about-us" className="hover:text-red-500 transition">About Us</Link>
-          <Link to="/gallery" className="hover:text-red-500 transition">Gallery</Link>
-          <Link to="/shop" className="hover:text-red-500 transition">Shop</Link>
+          {navLinks.map((link, i) => (
+            <NavLink
+              key={i}
+              to={link.to}
+              end={link.end}
+              className={({ isActive }) =>
+                `transition hover:text-red-500 ${
+                  isActive ? "text-red-500 font-semibold" : ""
+                }`
+              }
+            >
+              {link.label}
+            </NavLink>
+          ))}
         </nav>
 
-        {/* Mobile Hamburger Button (Right) */}
+        {/* Mobile Hamburger Button */}
         <div className="md:hidden flex items-center">
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -54,12 +72,21 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden bg-white border-t border-gray-200 shadow-sm">
           <nav className="flex flex-col px-4 py-3 space-y-3 text-sm font-medium text-gray-700">
-            <Link to="/" onClick={() => setIsOpen(false)} className="hover:text-red-500 transition">Home</Link>
-            <Link to="/order-portrait" onClick={() => setIsOpen(false)} className="hover:text-red-500 transition">Order Portrait</Link>
-            <Link to="/contacts" onClick={() => setIsOpen(false)} className="hover:text-red-500 transition">Order Form</Link>
-            <Link to="/about-us" onClick={() => setIsOpen(false)} className="hover:text-red-500 transition">About Us</Link>
-            <Link to="/gallery" onClick={() => setIsOpen(false)} className="hover:text-red-500 transition">Gallery</Link>
-            <Link to="/shop" onClick={() => setIsOpen(false)} className="hover:text-red-500 transition">Shop</Link>
+            {navLinks.map((link, i) => (
+              <NavLink
+                key={i}
+                to={link.to}
+                end={link.end}
+                onClick={() => setIsOpen(false)}
+                className={({ isActive }) =>
+                  `transition hover:text-red-500 ${
+                    isActive ? "text-red-500 font-semibold" : ""
+                  }`
+                }
+              >
+                {link.label}
+              </NavLink>
+            ))}
           </nav>
         </div>
       )}

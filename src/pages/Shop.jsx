@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import ShopProducts from "../data/ShopProducts"; 
+import ShopProducts from "../data/ShopProducts";
 
 const containerVariant = {
   hidden: { opacity: 0 },
@@ -39,7 +39,7 @@ const Shop = () => {
         variants={containerVariant}
         initial="hidden"
         animate="visible"
-        className="grid grid-cols-1 sm:grid-cols-2 gap-8"
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
         role="list"
         aria-labelledby="shop-title"
       >
@@ -48,10 +48,13 @@ const Shop = () => {
             key={product.id}
             variants={cardVariant}
             role="listitem"
-            className="bg-white shadow-lg rounded-lg p-4 hover:scale-105 transition duration-300 cursor-pointer flex flex-col"
+            className="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transition duration-300 cursor-pointer flex flex-col"
           >
-            {/* ✅ Image Box */}
-            <div className="w-full h-56 flex items-center justify-center bg-gray-100 rounded-md mb-4 overflow-hidden">
+            {/* ✅ Image Box with BEST SELLER badge */}
+            <div className="relative w-full h-52 bg-gray-100 flex items-center justify-center overflow-hidden">
+              <span className="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded">
+                BEST SELLER
+              </span>
               <img
                 src={product.image}
                 alt={product.title}
@@ -60,28 +63,18 @@ const Shop = () => {
             </div>
 
             {/* ✅ Title */}
-            <h3 className="text-lg font-semibold mb-2 text-center">
+            <h3 className="text-sm font-semibold mt-3 mb-1 text-center px-2">
               {product.title}
             </h3>
 
             {/* ✅ Price Section */}
-            <div className="flex gap-2 items-center justify-center mb-2">
-              <p className="text-gray-500 line-through text-sm">
-                ₹{product.price}
-              </p>
-              <p className="text-green-600 font-semibold text-lg">
-                ₹{product.discountPrice}
-              </p>
-            </div>
+            <p className="text-center text-xs text-gray-600 mb-3">
+              From ₹{product.price}
+            </p>
 
-            {/* ✅ Save Badge */}
-            <span className="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2 py-1 rounded-full mb-4 inline-block self-center">
-              Save ₹{product.price - product.discountPrice}
-            </span>
-
-            {/* ✅ Buy Now Button */}
-            <button className="mt-auto bg-blue-500 text-white font-semibold px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300">
-              Buy Now
+            {/* ✅ Button */}
+            <button className="bg-blue-900 text-white font-semibold py-1.5 text-sm mt-auto w-full hover:bg-blue-800 transition duration-300">
+              SELECT OPTIONS
             </button>
           </motion.div>
         ))}

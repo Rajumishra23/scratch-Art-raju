@@ -3,16 +3,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import Navigation from './components/Navigation';
-import BannerSlider from './components/BannerSlider';
-import Slider from './components/Slider'; 
 import Footer from './components/Footer';
+import Home from './pages/Home';   
 import Blog from './components/Blog';
-import Artwork from './components/Artwork';
-import Testimonials from './components/Testimonials';
-import AboutUs from './components/AboutUs';
-import WhatWeDo from './components/WhatWeDo';
 import Shop from './pages/Shop';
-import Gallery from './components/Gallery';
 import GalleryPage from './pages/GalleryPage';
 import AboutPage from './pages/AboutPage';
 import OrderForm from './pages/OrderForm';
@@ -25,7 +19,6 @@ const App = () => {
         <Navigation />
         <AnimatePresence mode="wait">
           <Routes>
-            {/* ✅ Home Route */}
             <Route
               path="/"
               element={
@@ -35,19 +28,10 @@ const App = () => {
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <BannerSlider />
-                  <Artwork />
-                  <Slider title="Our Shops" />
-                  <AboutUs />
-                  <WhatWeDo />
-                  <Testimonials />
-                  <Gallery />
-                  <Blog />
+                  <Home />  
                 </motion.div>
               }
             />
-
-            {/* ✅ Shop Route */}
             <Route
               path="/shop"
               element={
@@ -61,8 +45,6 @@ const App = () => {
                 </motion.div>
               }
             />
-
-            {/* ✅ Gallery Page */}
             <Route
               path="/gallery"
               element={
@@ -76,17 +58,9 @@ const App = () => {
                 </motion.div>
               }
             />
-
-            {/* ✅ Blog */}
             <Route path="/blog" element={<motion.div><Blog /></motion.div>} />
-
-            {/* ✅ About Us */}
             <Route path="/about-us" element={<motion.div><AboutPage /></motion.div>} />
-
-            {/* ✅ Order Form */}
             <Route path="/contacts" element={<motion.div><OrderForm /></motion.div>} />
-
-            {/* ✅ Order Portrait */}
             <Route path="/order-portrait" element={<motion.div><OrderPortrait /></motion.div>} />
           </Routes>
         </AnimatePresence>

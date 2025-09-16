@@ -184,7 +184,7 @@ const HeroSection = () => {
           transition={{ delay: 1 }}
           className="mt-4 w-full h-48 sm:h-56 md:h-64 flex overflow-x-hidden overflow-y-hidden rounded-lg scroll-smooth"
         >
-          {["front.webp", "front2.webp", "front3.webp"].map((src, idx) => (
+          {["image.webp", "image1.webp", "All2.webp"].map((src, idx) => (
             <div key={idx} className="min-w-full flex items-center justify-center">
               <motion.img
                 whileHover={{ scale: 1.05 }}
