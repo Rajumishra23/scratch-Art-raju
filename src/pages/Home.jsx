@@ -1,9 +1,4 @@
 import React from "react";
-
-// ✅ Components
-
-import Footer from "../components/Footer";
-
 import Gallery from "../components/Gallery";
 import Blog from "../components/Blog";
 import BannerSlider from "../components/BannerSlider";
@@ -26,7 +21,6 @@ const Home = () => {
       <Testimonials/>
       <Gallery />
       <Blog />
-      <Footer />
     </div>
   );
 };
