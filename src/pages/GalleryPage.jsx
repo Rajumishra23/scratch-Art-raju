@@ -16,7 +16,7 @@ const artworks = [
 
 
 const sliderImages = [
-   { src: "Gallery1.webp", title: "CRYSTAL PAINTINGS" },
+   { src:  "Gallery1.webp", title: "CRYSTAL PAINTINGS" },
     { src: "Gallery2.webp", title: "CANVAS PAINTINGS" },
     { src: "Gallery3.webp", title: "PREMIUM WALLPAPER" },
     { src: "Gallery4.webp", title: "HAND PAINTINGS" },
