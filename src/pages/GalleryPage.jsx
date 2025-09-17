@@ -4,15 +4,16 @@ import { ArrowDown } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const artworks = [
-  { title: "SHIVA PANTING", image: "shiva.webp" },
-  { title: "KRISHNA PANTING", image: "krishna.webp" },
-  { title: "Shreenathji Pichwai", image: "shree.webp" },
-  { title: "BUDHA PANTING", image: "budha.webp" },
-  { title: "Divine Ganesha", image: "ganesh.webp" },
-  { title: "Krishna Flute", image: "krish.webp" },
-  { title: "MADHUBANI PAINTING", image: "madhubani.webp" },
-  { title: "Radha in Forest", image: "radha.webp" },
+  { title: "SHIVA PANTING", image: "shiva.webp", oldPrice: 3000, newPrice: 1500 },
+  { title: "KRISHNA PANTING", image: "krishna.webp", oldPrice: 2800, newPrice: 1400 },
+  { title: "Shreenathji Pichwai", image: "shree.webp", oldPrice: 2600, newPrice: 1300 },
+  { title: "BUDHA PANTING", image: "budha.webp", oldPrice: 3200, newPrice: 1600 },
+  { title: "Divine Ganesha", image: "ganesh.webp", oldPrice: 2500, newPrice: 1250 },
+  { title: "Krishna Flute", image: "krish.webp", oldPrice: 2700, newPrice: 1350 },
+  { title: "MADHUBANI PAINTING", image: "madhubani.webp", oldPrice: 3100, newPrice: 1550 },
+  { title: "Radha in Forest", image: "radha.webp", oldPrice: 2900, newPrice: 1450 },
 ];
+
 
 const sliderImages = [
    { src: "Gallery1.webp", title: "CRYSTAL PAINTINGS" },
@@ -147,8 +148,8 @@ export default function GalleryPage() {
 
       {/* Price Section */}
       <div className="flex items-center justify-center gap-2 mb-4">
-        <span className="text-gray-500 line-through text-xs">₹2680</span>
-        <span className="text-green-600 font-semibold text-sm">₹1340</span>
+        <span className="text-gray-500 line-through text-xs">₹{art.oldPrice}</span>
+        <span className="text-green-600 font-semibold text-sm">₹{art.newPrice}</span>
       </div>
 
       {/* Button */}
@@ -158,6 +159,7 @@ export default function GalleryPage() {
     </motion.div>
   ))}
 </div>
+
     </main>
   );
 }

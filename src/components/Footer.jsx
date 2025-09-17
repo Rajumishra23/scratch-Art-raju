@@ -90,7 +90,7 @@ const Footer = () => {
           </div>
         </motion.div>
       </div>
-      <div className="mt-10 text-center text-sm border-t border-white/30 pt-4 text-gray-200">
+      <div className="mt-10 text-center text-sm  pt-4 text-gray-200">
         © {new Date().getFullYear()} ScratchArt. All rights reserved.
         <h2 className="mt-1">Designed by Bigdesign Software Technologies</h2>
       </div>

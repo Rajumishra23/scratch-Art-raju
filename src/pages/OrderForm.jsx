@@ -12,7 +12,7 @@ const PortraitTypes = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center text-2xl sm:text-3xl font-bold"
+          className="text-center text-1xl sm:text-2xl font-bold"
         >
           Order <span className="text-orange-500">Form</span>
         </motion.h2>

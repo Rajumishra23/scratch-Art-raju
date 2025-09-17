@@ -18,8 +18,6 @@ const PortraitTypes = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  // Auto slide
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) =>
@@ -31,10 +29,8 @@ const PortraitTypes = () => {
 
   return (
     <div className="text-xs">
-      {/* 🎨 Portrait Section */}
       <section className="bg-[#fefcf9] py-6 text-gray-800">
         <div className="container mx-auto px-2">
-          {/* Heading */}
           <div className="text-center mb-4 animate-fade-in">
             <h2 className="text-sm font-bold text-gray-900 mb-1 tracking-tight">
               <span className="text-orange-500">Order Portrait Paintings</span> & Custom Pencil Sketches in India
@@ -50,8 +46,6 @@ const PortraitTypes = () => {
               <li>Order <strong>Pencil Sketch</strong>, <strong>Portrait Drawing</strong>, <strong>Custom Painting</strong> etc.</li>
             </ul>
           </div>
-
-          {/* Portrait Grid */}
           <h1 className="text-center text-sm font-bold mb-2">
             <span className="text-black">Portrait</span>{" "}
             <span className="text-orange-500">Type</span>
