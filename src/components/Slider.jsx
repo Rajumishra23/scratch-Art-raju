@@ -44,7 +44,7 @@ const Slider = ({ title }) => {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="text-3xl text-[#1e3a8a] font-bold font-serif text-center mb-4"
+        className="text-1xl text-[#1e3a8a] font-bold font-serif text-center mb-4"
       >
         {title || "Our Shops"}
       </motion.h2>

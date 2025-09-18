@@ -176,24 +176,25 @@ const HeroSection = () => {
         </motion.p>
 
         {/* 🔹 Image Slider */}
-        <motion.div
-          ref={sliderRef}
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 1 }}
-          className="mt-4 w-full h-48 sm:h-56 md:h-64 flex overflow-x-hidden overflow-y-hidden rounded-lg scroll-smooth"
-        >
-          {["image.webp", "image1.webp", "All2.webp"].map((src, idx) => (
-            <div key={idx} className="min-w-full flex items-center justify-center">
-              <motion.img
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.4 }}
-                src={src}
-                alt={`Image ${idx + 1}`}
-                className="w-[240px] sm:w-[280px] md:w-[300px] h-[160px] sm:h-[180px] md:h-[200px] object-cover"
-              />
-            </div>
+<motion.div
+  ref={sliderRef}
+  variants={fadeUp}
+  initial="hidden"
+  animate="visible"
+  transition={{ delay: 1 }}
+  className="mt-4 w-full h-56 sm:h-64 md:h-72 flex overflow-x-hidden overflow-y-hidden rounded-lg scroll-smooth"
+>
+  {["image.webp", "image1.webp", "All2.webp"].map((src, idx) => (
+    <div key={idx} className="min-w-full flex items-center justify-center">
+      <motion.img
+        whileHover={{ scale: 1.05 }}
+        transition={{ duration: 0.4 }}
+        src={src}
+        alt={`Image ${idx + 1}`}
+        className="w-[280px] sm:w-[340px] md:w-[420px] 
+                   h-[190px] sm:h-[220px] md:h-[260px] object-cover"
+      />
+    </div>
           ))}
         </motion.div>
       </div>

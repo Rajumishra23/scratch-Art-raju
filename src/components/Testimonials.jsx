@@ -52,10 +52,10 @@ const Testimonials = () => {
       <div className="container mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-12 px-4">
-          <h1 className="text-2xl md:text-3xl text-sm font-extrabold text-gray-900 tracking-wide mb-4">
+          <h1 className="text-2xl md:text-1xl text-sm font-extrabold text-gray-900 tracking-wide mb-4">
             Customer <span className="text-orange-500 text-2xl">Review</span>
           </h1>
-          <p className="text-[10px] md:text-[20px] italic text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-[10px] md:text-[10px] italic text-gray-700 max-w-3xl mx-auto leading-relaxed">
             “Picture Perfect Pencil Portraits : Elevate Your Images with Our Photo to Sketch Expertise!”
           </p>
         </div>

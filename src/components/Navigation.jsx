@@ -1,29 +1,38 @@
-import React, { useState } from "react";
-import { NavLink, Link } from "react-router-dom"; // Added Link import
-import { Menu, X } from "lucide-react"; // hamburger & close icons
+import React, { useState, useEffect, useRef } from "react";
+import { NavLink, Link, useLocation } from "react-router-dom";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  // ✅ Navigation Links
+  const location = useLocation();
+  const menuRef = useRef(null);
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
+
   const navLinks = [
-    { to: "/", label: "Home", end: true }, // Home needs `end` for exact match
+    { to: "/", label: "Home", end: true },
     { to: "/order-portrait", label: "Order Portrait" },
     { to: "/contacts", label: "Order Form" },
     { to: "/about-us", label: "About Us" },
     { to: "/gallery", label: "Gallery" },
     { to: "/shop", label: "Shop" },
   ];
+
   return (
     <header className="bg-white border-b-[3px] border-red-500 shadow-sm sticky top-0 z-50">
       <div className="max-w-screen-xl mx-auto px-4 py-3 flex items-center justify-between">
-        {/* Logo + Text (Left) - Wrapped in Link for navigation */}
-        <Link to="/" className="flex items-center space-x-3 hover:no-underline focus:no-underline"> {/* Added Link wrapper */}
+        {/* Logo + Text */}
+        <Link
+          to="/"
+          className="flex items-center space-x-3 hover:no-underline focus:no-underline"
+        >
           <div className="relative h-12 w-12 overflow-visible">
             <img
               src="Logo.webp"
               alt="Logo"
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-                         h-[120px] w-[120px] object-contain scale-125"
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[120px] w-[120px] object-contain scale-125"
             />
           </div>
           <div className="flex flex-col">
@@ -35,13 +44,14 @@ const Navbar = () => {
             </span>
           </div>
         </Link>
+
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-6 text-sm font-medium text-gray-700">
           {navLinks.map((link, i) => (
             <NavLink
               key={i}
               to={link.to}
-              end={link.end ?? false} // only true for Home
+              end={link.end ?? false}
               className={({ isActive }) =>
                 `transition hover:text-red-500 ${
                   isActive ? "text-red-500 font-semibold" : ""
@@ -52,8 +62,9 @@ const Navbar = () => {
             </NavLink>
           ))}
         </nav>
+
         {/* Mobile Hamburger Button */}
-        <div className="md:hidden flex items-center">
+        <div className="flex items-center justify-between px-4 py-3 md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="text-gray-700 focus:outline-none"
@@ -62,28 +73,31 @@ const Navbar = () => {
           </button>
         </div>
       </div>
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200 shadow-sm">
-          <nav className="flex flex-col px-4 py-3 space-y-3 text-sm font-medium text-gray-700">
-            {navLinks.map((link, i) => (
-              <NavLink
-                key={i}
-                to={link.to}
-                end={link.end ?? false}
-                onClick={() => setIsOpen(false)} // ✅ closes menu on click
-                className={({ isActive }) =>
-                  `transition hover:text-red-500 ${
-                    isActive ? "text-red-500 font-semibold" : ""
-                  }`
-                }
-              >
-                {link.label}
-              </NavLink>
-            ))}
-          </nav>
-        </div>
-      )}
+
+      {/* Mobile Menu with smooth slide */}
+      <div
+        ref={menuRef}
+        className={`overflow-hidden transition-all duration-300 md:hidden bg-white border-t border-gray-200 shadow-sm ${
+          isOpen ? "max-h-96" : "max-h-0"
+        }`}
+      >
+        <nav className="flex flex-col px-4 py-3 space-y-3 text-sm font-medium text-gray-700">
+          {navLinks.map((link, i) => (
+            <NavLink
+              key={i}
+              to={link.to}
+              end={link.end ?? false}
+              className={({ isActive }) =>
+                `transition hover:text-red-500 ${
+                  isActive ? "text-red-500 font-semibold" : ""
+                }`
+              }
+            >
+              {link.label}
+            </NavLink>
+          ))}
+        </nav>
+      </div>
     </header>
   );
 };

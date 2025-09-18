@@ -46,7 +46,7 @@ const BlogSection = () => {
   return (
     <section className="max-w-screen-xl mx-auto px-4 sm:px-6 py-12">
       {/* ✅ Heading */}
-      <h2 className="text-2xl sm:text-4xl font-bold text-center mb-10 text-gray-900">
+      <h2 className="text-1xl sm:text-2xl font-bold text-center mb-10 text-gray-900">
         🎨 Scratch Art Blogs
       </h2>
 
@@ -67,24 +67,25 @@ const BlogSection = () => {
             />
 
             {/* Title */}
-            <h3 className="text-lg sm:text-2xl font-semibold text-gray-800">
-              {post.title}
-            </h3>
+           <h3 className="text-sm sm:text-base font-semibold text-gray-800">
+  {post.title}
+</h3>
 
-            {/* Summary */}
-            <p className="text-gray-600 mt-2 text-sm sm:text-base flex-grow">
-              {post.summary}
-            </p>
+{/* Summary */}
+<p className="text-gray-600 mt-2 text-xs sm:text-sm flex-grow">
+  {post.summary}
+</p>
 
-            {/* Button */}
-            <button
-              onClick={() =>
-                setActiveBlogId(activeBlogId === post.id ? null : post.id)
-              }
-              className="mt-4 text-blue-600 hover:underline font-medium self-start"
-            >
-              {activeBlogId === post.id ? "Hide Blog" : "Read More"}
-            </button>
+{/* Button */}
+<button
+  onClick={() =>
+    setActiveBlogId(activeBlogId === post.id ? null : post.id)
+  }
+  className="mt-3 text-blue-600 hover:underline font-normal self-start text-xs sm:text-sm"
+>
+  {activeBlogId === post.id ? "Hide Blog" : "Read More"}
+</button>
+
 
             {/* Expandable Content with Animation */}
             <AnimatePresence>

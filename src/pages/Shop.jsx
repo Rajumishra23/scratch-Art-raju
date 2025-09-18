@@ -28,7 +28,7 @@ const Shop = () => {
       className="px-6 py-10 bg-white min-h-screen"
     >
       <h2
-        className="text-4xl font-bold mb-10 text-gray-900 text-center"
+        className="text-2xl font-bold mb-10 text-gray-900 text-center"
         id="shop-title"
       >
         🛍️ Scratch Art Shop

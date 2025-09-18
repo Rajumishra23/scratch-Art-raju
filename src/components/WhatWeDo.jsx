@@ -7,39 +7,42 @@ const WhatWeDo = () => {
         What <span className="text-orange-500 text-sm">We Do</span> ?
       </h2>
       <div className="max-w-5xl mx-auto text-[10px] leading-relaxed space-y-4">
-        <ul className="list-disc list-inside space-y-4 marker:text-orange-500">
-          <li>
-            <strong>We create different paintings</strong> according to your requirement: watercolor portrait painting, color pencil sketch, coffee portrait painting, landscape painting, sentries, abstract paintings, pet painting, oil paintings on canvas, etc.
-          </li>
-          <li>
-            <strong>Convert your precious photographs</strong> into hand-painted original portrait paintings — 100% hand-painted by professional artists.
-          </li>
-          <li>
-            <strong>We also recreate existing artwork</strong> or make paintings from photographs as per your requirement.
-          </li>
-          <li>
-            <strong>Special instructions?</strong> We can join different photos into one oil painting, enhance old or low-quality photos, and add beautiful sentries or custom backgrounds to your images.
-          </li>
-          <li>
-            <strong>Custom sizes available:</strong> Contact us to order any custom size. We can create all art styles in any dimension.
-          </li>
-          <li>
-            <strong>Multiple options available</strong> for portrait sketches and canvas oil paintings. If you still have any query, write to us here.
-          </li>
-          <li>
-            <strong>We use premium quality materials</strong> — most of them Germany-imported: artist-grade pencils, thick sheets, canvas, colors, acrylic primer, charcoal pencils, charcoal powder, brushes, varnish, and more.
-          </li>
-          <li>
-            <strong>Thoughtful process:</strong> Every portrait is crafted to be cherished for a lifetime.
-          </li>
-          <li>
-            <strong>Note:</strong> You may find cheap sketches locally, but their life is short. They’re made on low-quality sheets that turn yellow in a few years.
-          </li>
-        </ul>
-        <p className="mt-6 text-gray-700">
-          <span className="font-semibold text-orange-600">Guarantee:</span> Our portraits are made to last for decades — with proper care, they retain their charm and richness over time.
-        </p>
-      </div>
+  <ul className="list-disc list-inside space-y-4 marker:text-orange-500">
+    <li>
+      <strong>We create a variety of paintings</strong> tailored to your needs: watercolor portrait painting, color pencil sketch, coffee portrait painting, landscape painting, sentries, abstract paintings, pet painting, oil paintings on canvas, and more.
+    </li>
+    <li>
+      <strong>Transform your precious photographs</strong> into 100% hand-painted original portrait sketches and painting drawings, crafted by our skilled sketch artists and artists. At our <strong>Painting Cafe Delhi</strong>, we bring your memories to life with exceptional artistry, whether you’re looking for a sketch artist in Delhi or a sketch artist near me.
+    </li>
+    <li>
+      <strong>We can recreate existing artwork</strong> or craft sketches and caricature drawings from photographs based on your requirements.
+    </li>
+    <li>
+      <strong>Have special instructions?</strong> We can combine multiple photos into a single oil painting, enhance old or low-quality images, and add beautiful sentries or custom backgrounds to your sketches or caricatures.
+    </li>
+    <li>
+      <strong>Custom Sizes Available:</strong> Contact us to order any custom size. We create all art styles in any dimension, offering multiple options for portrait sketches, caricature drawings, and canvas oil paintings. Still have questions? Write to us here.
+    </li>
+    <li>
+      <strong>We use premium-quality materials</strong>, mostly imported from Germany: artist-grade pencils, thick sheets, canvas, colors, acrylic primer, charcoal pencils, charcoal powder, brushes, varnish, and more.
+    </li>
+    <li>
+      <strong>Thoughtful Process:</strong> Every sketch, caricature, and painting drawing is crafted to be cherished for a lifetime.
+    </li>
+    <li>
+      <strong>Note:</strong> You may find cheaper sketches or caricature drawings locally, but their lifespan is short. They’re often made on low-quality sheets that yellow within a few years.
+    </li>
+  </ul>
+
+  <p className="mt-6 text-gray-700">
+    <span className="font-semibold text-orange-600">Guarantee:</span> Our portrait sketches and paintings are designed to last for decades—with proper care, they retain their charm and richness over time.
+  </p>
+
+  <p className="mt-2 text-gray-700">
+    Searching for a <strong>sketch artist</strong> or <strong>sketch artist near me?</strong> At <strong>Painting Cafe Delhi</strong>, we transform your memories into stunning sketches, caricatures, and painting drawings. Contact us today to turn your stories into timeless works of art!
+  </p>
+</div>
+
     </section>
   );
 };

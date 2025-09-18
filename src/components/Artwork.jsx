@@ -24,19 +24,19 @@ const Artwork = () => {
   }, []);
 
   return (
-    <section className="bg-white py-12 sm:py-16 font-sans text-center border-b border-gray-200">
+    <section className="bg-white py-10 sm:py-14 font-sans text-center border-b border-gray-200">
       {/* ✅ Heading */}
-      <h2 className="text-xl sm:text-2xl font-bold mb-2 px-4">
+      <h2 className="text-lg sm:text-xl font-bold mb-2 px-4">
         All Available <span className="text-orange-500">Art Types</span>
       </h2>
-      <p className="italic text-gray-700 text-xs sm:text-sm md:text-base mb-8 px-4">
+      <p className="italic text-gray-700 text-[10px] sm:text-xs md:text-sm mb-6 px-4">
         “Elevate Your Photos to Art: Discover the Beauty of Sketches with Our Professional Service!”
       </p>
 
       {/* ✅ Slider */}
       <div
         ref={sliderRef}
-        className="mt-6 w-full h-[280px] sm:h-[350px] md:h-[450px] flex overflow-x-hidden overflow-y-hidden rounded-lg scroll-smooth"
+        className="mt-6 w-full h-[420px] sm:h-[500px] md:h-[600px] flex overflow-x-hidden overflow-y-hidden rounded-lg scroll-smooth"
       >
         {/* Slide 1 */}
         <div className="min-w-full flex items-center justify-center">
@@ -44,9 +44,9 @@ const Artwork = () => {
             <img
               src="All.webp"
               alt="Charcoal sketch 1"
-              className="w-[250px] h-[180px] sm:w-[320px] sm:h-[240px] md:w-[400px] md:h-[300px] object-cover rounded shadow-lg"
+              className="w-[320px] h-[240px] sm:w-[420px] sm:h-[320px] md:w-[520px] md:h-[400px] object-cover rounded shadow-lg"
             />
-            <p className="absolute bottom-2 right-2 text-[10px] sm:text-sm md:text-lg font-bold text-white bg-black bg-opacity-50 px-2 py-1 rounded">
+            <p className="absolute bottom-2 right-2 text-[8px] sm:text-[10px] md:text-xs font-bold text-white bg-black bg-opacity-50 px-2 py-1 rounded">
               Portrait type: Charcoal Pencil Sketch
             </p>
           </div>
@@ -58,9 +58,9 @@ const Artwork = () => {
             <img
               src="All1.webp"
               alt="Charcoal sketch 2"
-              className="w-[250px] h-[180px] sm:w-[320px] sm:h-[240px] md:w-[400px] md:h-[300px] object-cover rounded shadow-lg"
+              className="w-[320px] h-[240px] sm:w-[420px] sm:h-[320px] md:w-[520px] md:h-[400px] object-cover rounded shadow-lg"
             />
-            <p className="absolute bottom-2 right-2 text-[10px] sm:text-sm md:text-lg font-bold text-white bg-black bg-opacity-50 px-2 py-1 rounded">
+            <p className="absolute bottom-2 right-2 text-[8px] sm:text-[10px] md:text-xs font-bold text-white bg-black bg-opacity-50 px-2 py-1 rounded">
               Portrait type: Colour Pencil Sketch
             </p>
           </div>
@@ -72,9 +72,9 @@ const Artwork = () => {
             <img
               src="All2.webp"
               alt="Charcoal sketch 3"
-              className="w-[250px] h-[180px] sm:w-[320px] sm:h-[240px] md:w-[400px] md:h-[300px] object-cover rounded shadow-lg"
+              className="w-[320px] h-[240px] sm:w-[420px] sm:h-[320px] md:w-[520px] md:h-[400px] object-cover rounded shadow-lg"
             />
-            <p className="absolute bottom-2 right-2 text-[10px] sm:text-sm md:text-lg font-bold text-white bg-black bg-opacity-50 px-2 py-1 rounded">
+            <p className="absolute bottom-2 right-2 text-[8px] sm:text-[10px] md:text-xs font-bold text-white bg-black bg-opacity-50 px-2 py-1 rounded">
               Portrait type: Blood Painting
             </p>
           </div>
@@ -82,7 +82,7 @@ const Artwork = () => {
       </div>
 
       {/* ✅ CTA */}
-      <div className="mt-8 sm:mt-10 text-blue-600 text-sm sm:text-base md:text-[17px] font-medium">
+      <div className="mt-8 sm:mt-10 text-blue-600 text-xs sm:text-sm md:text-base font-medium">
         To know more{" "}
         <a href="#" className="underline hover:text-blue-800">
           Click Here
