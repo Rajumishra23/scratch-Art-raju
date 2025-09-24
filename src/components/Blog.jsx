@@ -47,7 +47,7 @@ const BlogSection = () => {
     <section className="max-w-screen-xl mx-auto px-4 sm:px-6 py-12">
       {/* ✅ Heading */}
       <h2 className="text-1xl sm:text-2xl font-bold text-center mb-10 text-gray-900">
-        🎨 Scratch Art Blogs
+        🎨 Our Blogs
       </h2>
 
       {/* ✅ Grid layout */}

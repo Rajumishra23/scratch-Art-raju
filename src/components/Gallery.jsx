@@ -60,7 +60,7 @@ export default function Gallery() {
         viewport={{ once: true }}
         className="flex flex-col items-center text-gray-600 mt-2 mb-12"
       >
-        <p className="text-center">(Click on image for more gallery image👇)</p>
+        <p className="text-center">(Explore Our Stunning Artworks & Portraits Painting 👇)</p>
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 1.2 }}

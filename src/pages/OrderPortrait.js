@@ -298,9 +298,281 @@ const PortraitTypes = () => {
   <div className="mt-3 text-[10px] text-gray-700 text-center sm:text-left">
     Looking for a portrait maker near me or a photo sketch artist near me? At <strong>PORTRAIT MAKER</strong>, our talented team ensures every pencil sketch drawing near me is crafted with precision and care, using premium materials to create lasting memories. Order now to gift your loved ones a unique, meaningful masterpiece that speaks to the heart!
   </div>
+  <br></br>
+  <hr></hr>
 </section>
+<section className="w-full py-10 bg-white text-black">
+  {/* 🔹 Top Features */}
+  <div className="max-w-3xl mx-auto px-4">
+    <h2 className="text-1xl font-bold mb-4">
+      <span className="text-orange-500">Features</span> of Your Sketch:-
+    </h2>
+    <ul className="list-disc pl-6 space-y-2 text-gray-700">
+  <li>
+    <span className="text-green-600 font-semibold">Home Delivery Across India:</span>{" "}
+    Your pencil sketch drawing near me is conveniently delivered to your doorstep anywhere in India.
+  </li>
+  <li>
+    <span className="text-green-600 font-semibold">Premium Quality Materials:</span>{" "}
+    Crafted by pencil sketch artists near me using top-grade, artist-quality pencils, thick sheets, and premium supplies, ensuring your sketch is vibrant and long-lasting.
+  </li>
+  <li>
+    <span className="text-green-600 font-semibold">100% Handmade by India’s Top Artists:</span>{" "}
+    Every pencil sketch is meticulously handcrafted by the best pencil sketch artists and photo painting artists in India, delivering exceptional artistry and precision.
+  </li>
+  <li>
+    <span className="text-green-600 font-semibold">No Artist Signature or Watermark:</span>{" "}
+    Your photo sketch artist near me creation remains pure and personal, free from any artist signatures or watermarks, making it an ideal keepsake or gift.
+  </li>
+  <li>
+    <span className="text-green-600 font-semibold">Personalized Craftsmanship:</span>{" "}
+    Our sketch makers near me and portrait artists near me transform your photos into stunning pencil sketch drawings, capturing the essence of your memories with care and detail.
+  </li>
+  <li>
+    <span className="text-green-600 font-semibold">Timeless and Unique:</span>{" "}
+    Each pencil sketch drawing near me is a one-of-a-kind masterpiece, crafted to be cherished for a lifetime, perfect for gifting or decorating your space.
+  </li>
+</ul>
+
+<p className="mt-2 text-gray-800 font-semibold">
+  Order now and let our photo sketch artists near me create a custom pencil sketch that brings your vision to life with unparalleled creativity and quality!
+</p>
+
+  </div>
+
+  {/* 🔹 Image / Price Chart Slider */}
+  <div className="relative flex justify-center items-center py-10">
+    {/* Left Arrow */}
+    <button className="absolute left-4 text-gray-500 text-4xl">&#10094;</button>
+
+    {/* Center Image Box (Price Chart Image) */}
+    <div className="border rounded-xl shadow-lg overflow-hidden">
+      <img
+        src="image.webp"
+        alt="Price Chart"
+        className="max-h-[300px] object-contain"
+      />
+    </div>
+
+    {/* Right Arrow */}
+    <button className="absolute right-4 text-gray-500 text-4xl">&#10095;</button>
+  </div>
+
+  {/* 🔹 FAQ Section */}
+  <div className="max-w-3xl mx-auto px-4 mt-8">
+    <h3 className="font-bold mb-3">FAQ:-</h3>
+
+   <p className="font-semibold">How can I track my order?</p>
+<p className="text-gray-700 mb-4">
+  After placing your order for a pencil sketch drawing near me, you will receive an Order Receipt via email. All updates regarding your pencil sketch or portrait drawing will be sent to your email for easy tracking.
+</p>
+
+<p className="font-semibold">Do you also make pet portraits?</p>
+<p className="text-gray-700 mb-4">
+  Yes, our portrait artists near me and photo sketch artists near me can create any type of portrait, including pet portraits, tailored to your requirements. Connect with us freely on WhatsApp to discuss your vision with our sketch makers near me.
+</p>
+
+<p className="font-semibold">Which type and size is perfect for gifting?</p>
+<p className="text-gray-700 mb-4">
+  The Realistic Charcoal Sketch in sizes A2 (16×24 inches) or A1 (24×32 inches) is the most popular and best choice for gifting. These pencil sketch drawings near me, crafted by our pencil sketch artists near me, make for a stunning and memorable gift.
+</p>
+
+<p className="font-semibold">Have more questions?</p>
+<p className="text-gray-700">
+  Contact our photo sketch artists near me or portrait makers near me today to order your custom pencil sketch and bring your memories to life!
+</p>
+
+  </div>
+  <br></br>
+  <hr></hr>
+</section>
+<section className="w-full py-10 bg-white text-center">
+  {/* 🔹 Top small text */}
+  <p className="text-orange-500 text-sm mb-2">
+    # If you find this page useful, please share with your friends : )
+  </p>
+
+  {/* 🔹 Heading */}
+  <h2 className="text-1xl md:text-2xl font-bold mb-6">
+    What <span className="text-orange-500">we do ?</span>
+  </h2>
+
+  {/* 🔹 Description */}
+  <div className="max-w-4xl mx-auto px-4 text-gray-700 space-y-6">
+   <p>
+  Our expert pencil sketch artists near me and portrait artists near me specialize in transforming your cherished photographs into timeless pencil sketch drawings near me, infusing artistic elegance into your precious moments. With meticulous attention to detail and a passion for creativity, our photo sketch artists near me breathe life into every image, capturing the essence of your memories. Whether it’s a beloved memory, a cherished pet, or a dreamy landscape, our sketch makers near me turn your concepts into timeless works of art.
+</p>
+
+<p className="mt-2">
+  We create a variety of portrait drawings and photo sketches tailored to your requirements:
+</p>
+
+<ul className="list-disc pl-6 space-y-1 text-gray-700">
+  <li>Charcoal Pencil Sketch</li>
+  <li>Photo to Watercolor Painting</li>
+  <li>Realistic Portrait Painting</li>
+  <li>Color Pencil Sketch</li>
+  <li>Landscape Painting</li>
+  <li>Sentries</li>
+  <li>Abstract Paintings</li>
+  <li>Pet Painting</li>
+  <li>Acrylic Color Paintings on Canvas</li>
+</ul>
+
+<p className="mt-2">
+  Our portrait makers near me ensure each piece is crafted with precision, making your pencil sketch drawing near me a unique masterpiece. Want to know more about us?{" "}
+  <span className="text-blue-600 underline cursor-pointer">Click Here to Order Your Portrait Now!</span>
+</p>
 
 
+<p className="mt-2">
+  Our portrait makers near me ensure each piece is crafted with precision, making your pencil sketch drawing near me a unique masterpiece. Want to know more about us?{" "}
+  <span className="text-blue-600 underline cursor-pointer">Click Here to Order Your Portrait Now!</span>
+</p>
+
+  </div>
+
+  {/* 🔹 Bottom line */}
+  <div className="max-w-5xl mx-auto mt-6 border-b border-gray-300"></div>
+</section>
+<section className="w-full py-6 bg-white text-center">
+  
+ {/* 🔹 Heading */}
+<h2 className="text-1xl md:text-2xl font-bold mb-8 text-center">
+  <span className="text-green-600">Why You Should</span>{" "}
+  <span className="text-orange-500">Order a Portrait</span>{" "}
+  <span className="text-green-600">from Us?</span>
+</h2>
+<hr className="mb-4" />
+
+<div className="max-w-2xl mx-auto px-6 text-gray-700 space-y-10">
+  {/* Quality */}
+  <div>
+    <h3 className="text-sm font-bold text-blue-900 mb-2">Quality</h3>
+    <p>
+      Our top priority is delivering exceptional quality for your pencil sketch drawing near me. We use only premium-quality materials, most of which are imported from Germany, including artist-grade pencils, thick sheets, canvas, colors, acrylic primer, charcoal pencils, charcoal powder, brushes, varnish, and more. Our thoughtful process ensures that every portrait drawing or pencil sketch created by our pencil sketch artists near me is a masterpiece you’ll cherish for a lifetime.
+    </p>
+    <p className="italic text-gray-600 mt-2">
+      Note: While you may find cheaper sketches locally, their lifespan is short due to low-quality sheets that yellow within a few years. We guarantee that our photo sketches and portrait drawings, crafted by our photo sketch artists near me, will last for decades with proper care.
+    </p>
+  </div>
+
+  {/* Uniqueness */}
+  <div>
+    <h3 className="text-sm font-bold text-blue-900 mb-2">Uniqueness</h3>
+    <p>
+      Each pencil sketch drawing near me is a unique masterpiece, handcrafted by our portrait artists near me and sketch makers near me. We never compromise on quality, ensuring that every portrait drawing is long-lasting, embossed with excellence, and 100% handmade. Our commitment to creating one-of-a-kind artwork makes every piece stand out as a true reflection of your memories.
+    </p>
+  </div>
+
+  {/* Affordability */}
+  <div>
+    <h3 className="text-sm font-bold text-blue-900 mb-2">Affordability</h3>
+    <p>
+      Our pencil sketches and portrait drawings start at just <s>₹2000</s> now only <span className="text-green-600 font-semibold">₹1300/-</span>, making it affordable for everyone to own a masterpiece. Our photo sketch artists near me and portrait makers near me ensure that high-quality, 100% hand-painted portraits are accessible without breaking the bank. Bring home a stunning pencil sketch drawing near me at an unbeatable price!
+    </p>
+  </div>
+
+  {/* Service */}
+  <div>
+    <h3 className="text-sm font-bold text-blue-900 mb-2">Service</h3>
+    <p>
+      Our customers are our priority, and we’ve been providing exceptional service for over 9 years, earning us the top rank on Google for sketch makers near me. Our portrait artists near me offer personalized attention to every order, ensuring you walk away with a piece of art you’ll treasure forever. We stand by our work with a satisfaction guarantee, delivering unmatched quality and care.
+    </p>
+  </div>
+
+  {/* Safe and Easy Payment */}
+  <div>
+    <h3 className="text-sm font-bold text-blue-900 mb-2">Safe and Easy Online Payment</h3>
+    <p>
+      Make payments effortlessly and securely through our trusted payment partners, including <span className="text-blue-600 font-semibold">Razorpay</span> and PayPal. We support all major payment methods like Paytm, BHIM UPI, PhonePe, Google Pay, Card, NEFT, and more, ensuring a seamless experience for ordering your pencil sketch or portrait drawing.
+    </p>
+  </div>
+
+  {/* Home Delivery */}
+  <div>
+    <h3 className="text-sm font-bold text-blue-900 mb-2">Home Delivery</h3>
+    <p>
+      We offer home delivery across India for your pencil sketch drawing near me or portrait drawing. Simply pay for the sketch, and we’ll take care of the rest. Our standard sizes make it easy to frame your artwork at any local market. Expect your pencil sketch or painting, crafted by our photo sketch artists near me, to reach you within 5-9 days.
+    </p>
+  </div>
+
+  {/* Final Call to Action */}
+  <div className="text-center mt-4">
+    <span className="text-blue-600 underline cursor-pointer font-semibold">
+      Order your portrait now and let our pencil sketch artists near me and portrait makers near me create a timeless masterpiece that captures your cherished moments!
+    </span>
+  </div>
+</div>
+</section>
+<section className="w-full bg-white py-10 md:py-14">
+  <div className="max-w-6xl mx-auto px-4">
+    {/* Heading */}
+    <div className="text-center mb-6">
+      <h2 className="text-1xl md:text-4xl font-extrabold">
+        <span className="bg-gradient-to-r from-green-500 to-blue-600 bg-clip-text text-transparent">
+          Testimonials
+        </span>
+      </h2>
+      <div className="mt-3 inline-flex items-center gap-3">
+        <img
+          src="/googlereview.png"
+          alt="Google Reviews"
+          className="h-6 w-auto object-contain"
+        />
+        <div className="flex items-center gap-1">
+          <span className="text-amber-500 text-xl">★</span>
+          <span className="text-amber-500 text-xl">★</span>
+          <span className="text-amber-500 text-xl">★</span>
+          <span className="text-amber-500 text-xl">★</span>
+          <span className="text-amber-500 text-xl">★</span>
+        </div>
+      </div>
+    </div>
+
+    {/* Review Card */}
+    <div className="relative bg-gray-50 rounded-2xl shadow-xl p-6 md:p-8">
+      <p className="text-gray-800 text-base md:text-lg leading-relaxed">
+        “Great Artistic Work has Done Here! Impressive thing is every detail is carefully mentioned.
+        Amazing hand of artist to make the frame live. Thank you, loved it! :)”
+      </p>
+
+      <div className="mt-5 flex items-center justify-between flex-wrap gap-3">
+        <div className="flex items-center gap-3">
+          <div className="h-10 w-10 rounded-full bg-green-100 flex items-center justify-center font-bold text-green-700">
+            SS
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900">Sathya Subha</p>
+            <p className="text-sm text-gray-500">Chennai</p>
+          </div>
+        </div>
+
+        <a
+          href="#"
+          className="text-blue-600 hover:text-blue-800 underline text-sm md:text-base"
+        >
+          Want to see more of our reviews? Click here
+        </a>
+      </div>
+    </div>
+
+    {/* Gift Footer */}
+    <div className="mt-6 text-center">
+      <p className="text-sm md:text-base font-semibold">
+        <span className="bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">
+          Perfect for:
+        </span>{" "}
+        <span className="text-gray-800">
+          Birthday Gift, Valentine Gift, Wedding Gift, Engagement Gift, Anniversary Gift, Retirement Gift
+        </span>
+      </p>
+      <p className="mt-2 text-green-600 text-sm md:text-base">
+        If you like this page, please share with your friends
+      </p>
+    </div>
+  </div>
+</section>
     </div>
   );
 };

@@ -3,9 +3,10 @@ import React from 'react';
 const AboutUs = () => {
   return (
     <section className="bg-white py-16 px-6 text-gray-800 font-sans">
-      <h2 className="text-3xl text-sm font-bold text-center mb-8">
-        About <span className="text-orange-500 text-sm">Us</span> ?
-      </h2>
+      <h2 className="text-base font-bold text-center mb-6">
+  About <span className="text-orange-500">Us</span> ?
+</h2>
+
       <div className="max-w-4xl mx-auto text-[10px] leading-relaxed space-y-4">
   <ul className="list-disc list-inside space-y-4 marker:text-orange-500">
     <li>

@@ -11,94 +11,60 @@ const AboutSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="text-1xl font-extrabold text-center mb-8"
+          className="text-2xl md:text-3xl font-extrabold text-center mb-8"
         >
           <span className="text-orange-500">About</span>{" "}
           <span className="text-gray-900">Us</span>
         </motion.h2>
 
-        {/* About Us */}
+        {/* About Rajesh Kumar */}
         <motion.div
           initial={{ opacity: 0, x: -60 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="space-y-2 text-sm leading-relaxed text-gray-700"
+          className="space-y-4 text-sm leading-relaxed text-gray-700"
         >
           <p>
-            This is the official website of <strong>Team SCRATCH ART</strong>, based at Greater Noida.
-            We create paintings and sketches on order and demand. Our artists
-            have more than <strong>9 years of experience</strong>.
+            Welcome to the Portrait Maker and Sketch Artist Studio, Sarojini Nagar, Delhi, led by Rajesh Kumar, a seasoned pencil sketch artist near me with 29 years of professional experience. My journey began with 15 years of crafting signboards and hoardings across Delhi-NCR, painting vibrant stories on every corner. I then transitioned to live sketching, creating pencil sketch drawings near me in just 10-15 minutes at iconic locations like Delhi Haat, INA, malls, and Pragati Maidan.
           </p>
-          <p>
-            According to our artists, painting is not just colors on a canvas –
-            it’s like music which gives us hope, like a book carrying deep
-            messages. We paint in oil colors, watercolors, pencil colors,
-            acrylic, pastel, and more. Our style is mostly <strong>realistic</strong>,
-            and we always use premium quality art material.
-          </p>
-        </motion.div>
 
-        {/* About SCRATCHART.COM */}
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="mt-8"
-        >
-          <h3 className="text-sm font-bold mb-3 text-center">
-            <span className="text-orange-500">About</span> SCRATCHART.COM
+          <p>
+            Now, at my studio in Sarojini Nagar, I run Portrait Maker and Sketch Artist Studio, where I bring memories to life through commissioned artwork. As a photo sketch artist near me, I specialize in portrait drawings, charcoal sketches, oil paintings, color pencil portraits, watercolor paintings, and even unique blood paintings. My work is fast, precise, and backed by glowing Google reviews, reflecting the satisfaction of countless clients.
+          </p>
+
+          <h3 className="text-sm font-bold mt-6 mb-3 text-center">
+            What We Do
           </h3>
 
-          <p className="mb-3 text-xs">
-            Welcome to <strong>SCRATCHART.COM</strong>, where imagination meets artistry!
-            We transform your photos into captivating sketches and timeless
-            paintings. From cherished memories to beloved pets, our custom
-            sketches add individuality and charm to your space.
+          <p>
+            At Portrait Maker and Sketch Artist Studio, we transform your cherished moments into 100% handmade portraits and sketches. Whether it’s a pencil sketch drawing near me, a portrait painting, or a custom masterpiece, our sketch makers near me and portrait artists near me use premium, artist-grade materials—many imported from Germany, including pencils, thick sheets, canvas, colors, acrylic primer, charcoal, brushes, and varnish. From realistic charcoal sketches to vibrant oil paintings, we cater to all your artistic needs, including pet portraits, landscape paintings, and rare blood paintings.
           </p>
-          <p className="mb-3 text-xs">
-            With commitment to quality and a seamless ordering process, we make
-            your journey from inspiration to creation smooth and delightful.
-          </p>
-          <p className="mb-3 text-xs">
-            SCRATCHART.COM is an online marketplace helping art lovers all over
-            India order customized portraits and sketches with free delivery.
-            Explore our gallery, order any type of painting, or customize your
-            own masterpiece.
-          </p>
-        </motion.div>
 
-        {/* Services & Offerings */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ staggerChildren: 0.3 }}
-          className="mt-8 text-center"
-        >
-          <h3 className="text-sm font-bold mb-3">Our Commitments</h3>
-          <ul className="list-disc list-inside space-y-2 text-gray-700 text-xs text-center">
-            {[
-              "Quality 🥇 – Premium imported art materials (artist-grade pencils, canvas, brushes, etc.).",
-              "Uniqueness 💎 – Every portrait is a unique masterpiece.",
-              "Affordability 🎨 – Handmade paintings starting at ₹1199/- only.",
-              "Service 🏆 – 9+ years of excellence, guaranteed satisfaction.",
-              "Safe & Easy Online Payment 💳 – Secure via Razorpay, UPI, Paytm, Cards, etc.",
-              "Free Home Delivery ✈️ – Anywhere in India within 5–9 days."
-            ].map((item, i) => (
-              <motion.li
-                key={i}
-                variants={{
-                  hidden: { opacity: 0, y: 30 },
-                  visible: { opacity: 1, y: 0 }
-                }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-              >
-                {item}
-              </motion.li>
-            ))}
+          <h3 className="text-sm font-bold mt-6 mb-3 text-center">
+            Our Commitments
+          </h3>
+
+          <ul className="list-disc list-inside space-y-2 text-gray-700 text-xs text-left">
+            <li>Quality 🥇: We use only premium, imported materials to ensure your pencil sketch or portrait drawing lasts for decades, unlike local sketches that fade on low-quality sheets.</li>
+            <li>Uniqueness 💎: Every portrait drawing is a one-of-a-kind masterpiece, crafted with precision by our photo sketch artists near me.</li>
+            <li>Affordability 🎨: Stunning, handmade sketches and paintings start at just ₹1300/-, making art accessible to all.</li>
+            <li>Service 🏆: With 29 years of expertise, our portrait makers near me guarantee satisfaction, backed by top Google ratings.</li>
+            <li>Safe & Easy Online Payment 💳: Secure transactions via Razorpay, Paytm, UPI, Google Pay, cards, NEFT, and more.</li>
+            <li>Home Delivery ✈️: Your pencil sketch drawing near me or portrait painting is delivered across India within 5-9 days, ready to be framed in standard sizes.</li>
           </ul>
+
+          <h3 className="text-sm font-bold mt-6 mb-3 text-center">
+            Why Choose Us?
+          </h3>
+
+          <p>
+            With a legacy of 29 years, I, Rajesh Kumar, blend traditional craftsmanship with modern creativity at Portrait Maker and Sketch Artist Studio. From my early days as a signboard painter to mastering live sketching at Delhi’s busiest hubs, I now create custom portraits that capture the essence of your memories. My sketch makers near me team delivers fast, high-quality artwork, ensuring every client leaves with a smile and a masterpiece. Check our Google reviews for proof of our excellence.
+          </p>
+
+          <p>
+            Explore our gallery, order your pencil sketch, charcoal portrait, or custom painting today, and let us transform your photos into timeless art. Visit Portrait Maker and Sketch Artist Studio, Sarojini Nagar, Delhi, or order online for a seamless experience.
+          </p>
         </motion.div>
 
         {/* CTA */}
@@ -111,7 +77,7 @@ const AboutSection = () => {
         >
           <a
             href="#order"
-            className="inline-block px-4 py-2 bg-orange-500 text-center text-white text-xs font-bold rounded-lg shadow-md hover:bg-orange-600 transition"
+            className="inline-block px-4 py-2 bg-orange-500 text-white text-xs font-bold rounded-lg shadow-md hover:bg-orange-600 transition"
           >
             Order Portrait Now!
           </a>

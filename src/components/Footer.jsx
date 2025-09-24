@@ -18,12 +18,11 @@ const Footer = () => {
               alt="Logo"
               className=" h-[120px] w-[120px] object-contain"
             />
-            ScratchArt
+            Portraits Maker & Sketch Artist Studio
           </h2>
 
           <p className="text-sm leading-6 text-gray-200">
-            ScratchArt is your creative hub for unique scratch paintings and premium art supplies.
-            Discover, create, and share your imagination with the world.
+            Order 101% Handmade Portrait Pantings
           </p>
         </motion.div>
         <motion.div

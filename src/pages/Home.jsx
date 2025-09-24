@@ -7,6 +7,8 @@ import AboutUs from "../components/AboutUs";
 import WhatWeDo from "../components/WhatWeDo";
 import Testimonials from "../components/Testimonials";
 import Slider from "../components/Slider";
+import PrivacyPolicy from "../components/PrivacyPolicy";
+
 
 
 const Home = () => {
@@ -21,6 +23,7 @@ const Home = () => {
       <Testimonials/>
       <Gallery />
       <Blog />
+      <PrivacyPolicy/>
     </div>
   );
 };

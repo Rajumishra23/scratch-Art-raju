@@ -3,7 +3,7 @@ import React from 'react';
 const WhatWeDo = () => {
   return (
     <section className="bg-white py-16 px-6 text-gray-800 font-sans">
-      <h2 className="text-3xl  text-sm font-bold text-center mb-8">
+      <h2 className="text-1xl  text-sm font-bold text-center mb-8">
         What <span className="text-orange-500 text-sm">We Do</span> ?
       </h2>
       <div className="max-w-5xl mx-auto text-[10px] leading-relaxed space-y-4">

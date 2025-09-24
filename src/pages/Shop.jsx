@@ -31,7 +31,7 @@ const Shop = () => {
         className="text-2xl font-bold mb-10 text-gray-900 text-center"
         id="shop-title"
       >
-        🛍️ Scratch Art Shop
+        🛍️Our Shops
       </h2>
 
       {/* ✅ Products Grid */}

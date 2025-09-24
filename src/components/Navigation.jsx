@@ -36,11 +36,11 @@ const Navbar = () => {
             />
           </div>
           <div className="flex flex-col">
-            <span className="text-xl font-bold text-black font-serif tracking-wide">
-              Scratch Art
+            <span className="text-sm font-bold text-black font-serif tracking-wide">
+              Portraits Maker & Sketch Artist Studio
             </span>
             <span className="text-sm text-gray-600">
-              Order 100% Handmade Portraits
+              Order 101% Handmade Portrait Pantings
             </span>
           </div>
         </Link>
