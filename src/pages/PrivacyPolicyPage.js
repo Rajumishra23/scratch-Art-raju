@@ -17,7 +17,7 @@ const PrivacyPolicyPage = () => {
           <p>
             <strong>1.2</strong> We have adopted this Privacy Policy in compliance with applicable laws, including the Information Technology Act 2000 (“IT Act”) and the Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011 (“SPDI Rules”), to inform you about the information we collect, how we collect it, how we use it, and the measures we take to protect it.
           </p>
-          <p>
+          <p> just for nobody and just for anybody and jjstnjjdgrkiuggs jfwjoijigdalgtkbigejf
             <strong>1.3</strong> This Privacy Policy outlines:
             <br />a) The type of data or information you share with or we collect from you;
             <br />b) The purpose of collecting such data or information;

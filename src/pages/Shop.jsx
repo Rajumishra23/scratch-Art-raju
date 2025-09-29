@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";   // ✅ import navigate
 import ShopProducts from "../data/ShopProducts";
 
 const containerVariant = {
@@ -16,6 +17,8 @@ const cardVariant = {
 };
 
 const Shop = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     window.scrollTo({ top: 0 });
   }, []);
@@ -31,7 +34,7 @@ const Shop = () => {
         className="text-2xl font-bold mb-10 text-gray-900 text-center"
         id="shop-title"
       >
-        🛍️Our Shops
+        🛍️ Our Shops
       </h2>
 
       {/* ✅ Products Grid */}
@@ -49,6 +52,11 @@ const Shop = () => {
             variants={cardVariant}
             role="listitem"
             className="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transition duration-300 cursor-pointer flex flex-col"
+            onClick={() =>
+              navigate(`/shopdetails/${product.id}`, {
+                state: { product, allProducts: ShopProducts },
+              })
+            }
           >
             {/* ✅ Image Box with BEST SELLER badge */}
             <div className="relative w-full h-52 bg-gray-100 flex items-center justify-center overflow-hidden">

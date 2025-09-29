@@ -12,7 +12,8 @@ import AboutPage from './pages/AboutPage';
 import OrderForm from './pages/OrderForm';
 import OrderPortrait from './pages/OrderPortrait';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';  // ✅ import kiya
-
+import GalleryDetails from './pages/GalleryDetails';
+import ShopDetails from './pages/ShopDetails';
 // ✅ ScrollToTop Component
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -62,6 +63,9 @@ const App = () => {
             <Route path="/about-us" element={<motion.div><AboutPage /></motion.div>} />
             <Route path="/contacts" element={<motion.div><OrderForm /></motion.div>} />
             <Route path="/order-portrait" element={<motion.div><OrderPortrait /></motion.div>} />
+              <Route path="/gallerydetails/:id" element={<GalleryDetails />} />
+               <Route path="/shopdetails/:id" element={<ShopDetails />} />
+
             
             {/* ✅ Privacy Policy Route */}
             <Route 
