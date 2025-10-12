@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaFacebookF, FaInstagram, FaTwitter, FaPinterestP } from "react-icons/fa";
+import { Link } from "react-router-dom"; // ✅ Link import kiya
 
 const Footer = () => {
   return (
@@ -33,15 +34,22 @@ const Footer = () => {
         >
           <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-2 text-gray-200">
-            {["HOME", "Order Portrait", "Order Form", "AboutUs", "Gallery", "Shop"].map((item, i) => (
+            {[
+              { name: "HOME", path: "/" },
+              { name: "Order Portrait", path: "/order-portrait" },
+              { name: "Order Form", path: "/contacts" },
+              { name: "AboutUs", path: "/about-us" },
+              { name: "Gallery", path: "/gallery" },
+              { name: "Shop", path: "/shop" },
+            ].map((item, i) => (
               <li key={i}>
-                <a
-                  href={`#${item.toLowerCase()}`}
+                <Link
+                  to={item.path}
                   className="hover:text-yellow-400 relative group"
                 >
-                  {item}
+                  {item.name}
                   <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-yellow-400 transition-all group-hover:w-full"></span>
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
