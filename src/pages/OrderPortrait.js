@@ -548,12 +548,8 @@ const PortraitTypes = () => {
           </div>
         </div>
 
-        <a
-          href="#"
-          className="text-blue-600 hover:text-blue-800 underline text-sm md:text-base"
-        >
-          Want to see more of our reviews? Click here
-        </a>
+        <button onClick={yourFunction}>Want to see more Reviews?  Click Here</button>
+
       </div>
     </div>
 
