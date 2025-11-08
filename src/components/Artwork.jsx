@@ -12,19 +12,18 @@ const Artwork = () => {
     },
     {
       src: "All1.webp",
-      alt: "Charcoal sketch 2",
+      alt: "Colour sketch 2",
       label: "Portrait type: Colour Pencil Sketch",
     },
     {
       src: "All2.webp",
-      alt: "Charcoal sketch 3",
+      alt: "Blood painting 3",
       label: "Portrait type: Blood Painting",
     },
   ];
 
   useEffect(() => {
     const slider = sliderRef.current;
-
     const slideInterval = setInterval(() => {
       const nextIndex = (currentIndex + 1) % slides.length;
       setCurrentIndex(nextIndex);
@@ -35,7 +34,6 @@ const Artwork = () => {
         });
       }
     }, 3000);
-
     return () => clearInterval(slideInterval);
   }, [currentIndex, slides.length]);
 
@@ -50,7 +48,7 @@ const Artwork = () => {
   };
 
   return (
-    <section className="bg-white py-2 sm:py-4 font-sans text-center border-b border-gray-200">
+    <section className="bg-white py-4 sm:py-6 font-sans text-center border-b border-gray-200">
       {/* Heading */}
       <h2 className="text-lg sm:text-xl font-bold mb-1">
         All Available <span className="text-orange-500">Art Types</span>
@@ -62,19 +60,16 @@ const Artwork = () => {
       {/* Slider */}
       <div
         ref={sliderRef}
-        className="mt-2 w-full h-[220px] sm:h-[280px] md:h-[340px] flex overflow-x-hidden overflow-y-hidden rounded-lg scroll-smooth"
+        className="mt-2 w-full h-[220px] sm:h-[280px] md:h-[340px] flex overflow-x-hidden rounded-lg scroll-smooth"
       >
         {slides.map((slide, idx) => (
           <div key={idx} className="min-w-full flex items-center justify-center">
             <div className="relative">
               <img
-  src={slide.src}
-  alt={slide.alt}
-  className="w-[350px] h-[300px] 
-             sm:w-[360px] sm:h-[300px] 
-             md:w-[440px] md:h-[350px] 
-             object-cover rounded shadow-lg"
-/>
+                src={slide.src}
+                alt={slide.alt}
+                className="w-[350px] h-[300px] sm:w-[360px] sm:h-[300px] md:w-[440px] md:h-[350px] object-cover rounded shadow-lg"
+              />
               <p className="absolute bottom-1 right-1 text-[7px] sm:text-[9px] md:text-[11px] font-bold text-white bg-black bg-opacity-50 px-1 py-0.5 rounded">
                 {slide.label}
               </p>
@@ -86,20 +81,24 @@ const Artwork = () => {
       {/* Dots Navigation */}
       <div className="flex justify-center mt-2 space-x-2">
         {slides.map((_, idx) => (
-<button
+          <button
             key={idx}
             onClick={() => goToSlide(idx)}
             className={`w-2 h-2 rounded-full transition ${
               idx === currentIndex ? "bg-orange-500" : "bg-gray-300 hover:bg-gray-400"
             }`}
+            aria-label={`Go to slide ${idx + 1}`}
           ></button>
         ))}
       </div>
 
       {/* CTA */}
-      <div className="mt-2 text-black text-xs sm:text-sm md:text-base font-medium">
+      <div className="mt-3 text-black text-xs sm:text-sm md:text-base font-medium">
         To know more{" "}
-        <a href="#" className="underline hover:text-blue-500 text-indigo-500">
+        <a
+          href="/order-portrait"
+          className="underline hover:text-blue-500 text-indigo-500"
+        >
           Click Here
         </a>
       </div>
