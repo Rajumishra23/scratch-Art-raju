@@ -8,6 +8,7 @@ import WhatWeDo from "../components/WhatWeDo";
 import Testimonials from "../components/Testimonials";
 import Slider from "../components/Slider";
 import PrivacyPolicy from "../components/PrivacyPolicy";
+import DemoSlider from "../components/DemoSlider";
 
 
 
@@ -19,6 +20,7 @@ const Home = () => {
       <Artwork/>
       <Slider/>
       <AboutUs/>
+      <DemoSlider/>
       <WhatWeDo/>
       <Testimonials/>
       <Gallery />

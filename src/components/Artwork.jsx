@@ -70,9 +70,9 @@ const Artwork = () => {
               <img
   src={slide.src}
   alt={slide.alt}
-  className="w-[200px] h-[140px] 
-             sm:w-[260px] sm:h-[200px] 
-             md:w-[340px] md:h-[250px] 
+  className="w-[350px] h-[300px] 
+             sm:w-[360px] sm:h-[300px] 
+             md:w-[440px] md:h-[350px] 
              object-cover rounded shadow-lg"
 />
               <p className="absolute bottom-1 right-1 text-[7px] sm:text-[9px] md:text-[11px] font-bold text-white bg-black bg-opacity-50 px-1 py-0.5 rounded">
@@ -86,7 +86,7 @@ const Artwork = () => {
       {/* Dots Navigation */}
       <div className="flex justify-center mt-2 space-x-2">
         {slides.map((_, idx) => (
-          <button
+<button
             key={idx}
             onClick={() => goToSlide(idx)}
             className={`w-2 h-2 rounded-full transition ${

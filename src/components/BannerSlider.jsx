@@ -191,8 +191,8 @@ const HeroSection = () => {
         transition={{ duration: 0.4 }}
         src={src}
         alt={`Image ${idx + 1}`}
-        className="w-[280px] sm:w-[340px] md:w-[420px] 
-                   h-[190px] sm:h-[220px] md:h-[260px] object-cover"
+        className="w-[380px] sm:w-[440px] md:w-[520px] 
+                   h-[290px] sm:h-[320px] md:h-[360px] object-cover"
       />
     </div>
           ))}

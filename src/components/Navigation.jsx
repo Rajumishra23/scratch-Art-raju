@@ -18,6 +18,7 @@ const Navbar = () => {
     { to: "/about-us", label: "About Us" },
     { to: "/gallery", label: "Gallery" },
     { to: "/shop", label: "Shop" },
+    { to: "/contact", label: "contact" },
   ];
 
   return (
