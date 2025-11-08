@@ -548,7 +548,8 @@ const PortraitTypes = () => {
           </div>
         </div>
 
-        <button onClick={yourFunction}>Want to see more Reviews?  Click Here</button>
+       <button>Want to see more Reviews? Click Here</button>
+
 
       </div>
     </div>
