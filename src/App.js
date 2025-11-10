@@ -15,9 +15,11 @@ import PrivacyPolicyPage from './pages/PrivacyPolicyPage';  // ✅ import kiya
 import GalleryDetails from './pages/GalleryDetails';
 import ShopDetails from './pages/ShopDetails';
 import Contact from './pages/Contact';
+import RefundPolicy from './pages/RefundPolicy';
 // ✅ ScrollToTop Component
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import TermsConditions from './pages/TermsConditions';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -76,6 +78,24 @@ const App = () => {
               element={
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}>
                   <PrivacyPolicyPage />
+                </motion.div>
+              } 
+            />
+
+            <Route 
+              path="/refund-policy" 
+              element={
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}>
+                  <RefundPolicy />
+                </motion.div>
+              } 
+            />
+
+             <Route 
+              path="/terms" 
+              element={
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}>
+                  <TermsConditions  />
                 </motion.div>
               } 
             />

@@ -32,7 +32,7 @@ const DemoSlider = () => {
     return () => clearInterval(interval);
   }, [images.length]);
 
-  // handle manual click to jump to a slide
+  // Manual slide navigation
   const goTo = (index) => {
     const slider = sliderRef.current;
     if (!slider) return;
@@ -41,7 +41,7 @@ const DemoSlider = () => {
   };
 
   return (
-    <section>
+    <section className="overflow-hidden"> {/* ✅ Prevents vertical scrollbars */}
       {/* 🔹 Image Slider */}
       <motion.div
         ref={sliderRef}
@@ -49,7 +49,7 @@ const DemoSlider = () => {
         initial="hidden"
         animate="visible"
         transition={{ delay: 0.2 }}
-        className="mt-4 w-full h-56 sm:h-64 md:h-72 flex overflow-x-hidden rounded-lg scroll-smooth"
+        className="mt-4 w-full h-56 sm:h-64 md:h-72 flex overflow-x-hidden overflow-y-hidden rounded-lg scroll-smooth"
       >
         {images.map((src, idx) => (
           <div key={idx} className="min-w-full flex items-center justify-center">
@@ -58,13 +58,13 @@ const DemoSlider = () => {
               transition={{ duration: 0.4 }}
               src={src}
               alt={`Image ${idx + 1}`}
-              className="w-[380px] sm:w-[440px] md:w-[520px] h-[390px] sm:h-[320px] md:h-[360px] object-cover rounded"
+              className="w-[380px] sm:w-[440px] md:w-[520px] h-[300px] sm:h-[320px] md:h-[360px] object-cover rounded"
             />
           </div>
         ))}
       </motion.div>
 
-      {/* Dots */}
+      {/* 🔹 Dots Navigation */}
       <div className="flex justify-center mt-3 space-x-2">
         {images.map((_, idx) => (
           <button

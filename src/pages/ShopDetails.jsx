@@ -67,7 +67,7 @@ const ShopDetails = () => {
 
           {/* ✅ WhatsApp Order Button */}
           <a
-            href={`https://wa.me/919876543210?text=Hi%20I%20want%20to%20order%20this%20product:%20${encodeURIComponent(
+            href={`https://wa.me/917503602684?text=Hi%20I%20want%20to%20order%20this%20product:%20${encodeURIComponent(
               product.title
             )}`}
             target="_blank"

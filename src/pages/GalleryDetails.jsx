@@ -64,7 +64,7 @@ const GalleryDetails = () => {
 
           {/* ✅ WhatsApp Order Button */}
 <a
-  href="https://wa.me/919876543210?text=Hi%20I%20want%20to%20order%20this%20product:%20{product.title}"
+  href="https://wa.me/917503602684?text=Hi%20I%20want%20to%20order%20this%20product:%20{product.title}"
   target="_blank"
   rel="noopener noreferrer"
   className="flex items-center justify-center gap-3 border border-green-500 bg-white text-green-600 font-semibold px-5 py-3 rounded-lg shadow-md hover:bg-green-50 transition duration-300 w-fit mb-6"

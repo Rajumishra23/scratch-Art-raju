@@ -58,10 +58,11 @@ const Artwork = () => {
       </p>
 
       {/* Slider */}
-      <div
-        ref={sliderRef}
-        className="mt-2 w-full h-[220px] sm:h-[280px] md:h-[340px] flex overflow-x-hidden rounded-lg scroll-smooth"
-      >
+     <div
+  ref={sliderRef}
+  className="mt-2 w-full h-[220px] sm:h-[280px] md:h-[340px] flex overflow-x-hidden overflow-y-hidden rounded-lg scroll-smooth"
+>
+
         {slides.map((slide, idx) => (
           <div key={idx} className="min-w-full flex items-center justify-center">
             <div className="relative">
