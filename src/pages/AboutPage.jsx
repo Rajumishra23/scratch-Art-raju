@@ -68,7 +68,7 @@ const AboutSection = () => {
           >
             <div className="w-full sm:w-3/4 lg:w-2/3 rounded-lg overflow-hidden border border-gray-300 shadow-md min-h-32 sm:min-h-48 lg:min-h-64">
               <img
-                src="ALL2.webp"
+                src="All2.webp"
                 alt="Our Commitment"
                 className="w-full h-full object-cover"
               />
