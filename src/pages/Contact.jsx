@@ -9,191 +9,164 @@ const Contact = () => {
     artType: "",
     message: "",
   });
-  const [status, setStatus] = useState(null);
 
   const handleChange = (e) =>
-    setForm((s) => ({ ...s, [e.target.name]: e.target.value }));
+    setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!form.name || !form.email || !form.message) {
-      setStatus({ type: "error", text: "Name, email and message are required." });
-      return;
-    }
-    setStatus({ type: "loading", text: "Sending..." });
-    setTimeout(() => {
-      setStatus({ type: "success", text: "Message sent. We will contact you soon." });
-      setForm({
-        name: "",
-        email: "",
-        phone: "",
-        subject: "",
-        artType: "",
-        message: "",
-      });
-    }, 1000);
+    alert("Message sent successfully!");
+    setForm({
+      name: "",
+      email: "",
+      phone: "",
+      subject: "",
+      artType: "",
+      message: "",
+    });
   };
 
   return (
-    <section className="max-w-7xl mx-auto px-4 py-12 bg-gradient-to-br from-yellow-50 to-white">
-      <div className="mb-10 text-center">
-        <h2 className="text-3xl font-bold text-gray-800">Contact_Us</h2>
-        <p className="text-sm text-gray-500 mt-2">
-          For commissions, collaborations, or queries — send us a message. We respond within 24 hours.
+    <section className="max-w-7xl mx-auto px-4 py-12 bg-gradient-to-br from-blue-50 to-orange-50">
+      {/* Header */}
+      <div className="text-center mb-12">
+        <h2 className="text-4xl font-extrabold text-gray-900 mb-3">Get In Touch</h2>
+        <p className="text-gray-600 text-base font-medium max-w-2xl mx-auto">
+          Have questions about our art or want to commission a custom piece? We'd love to hear from you. Our team responds within 24 hours.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-        {/* Left: Contact Form */}
-        <div className="bg-white shadow-xl rounded-xl p-6">
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <label className="flex flex-col">
-                <span className="text-sm font-medium text-gray-700">Name *</span>
+      {/* Layout */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+        {/* Contact Form */}
+        <div className="bg-white shadow-2xl rounded-2xl p-8 border-t-4 border-blue-900">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
+          <form onSubmit={handleSubmit} className="space-y-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Name *</label>
                 <input
                   name="name"
                   value={form.name}
                   onChange={handleChange}
-                  className="mt-1 px-3 py-2 border rounded-md focus:ring-2 focus:ring-yellow-400"
-                  placeholder="Your name"
+                  placeholder="Your full name"
                   required
+                  className="border-2 border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:border-blue-900 focus:ring-2 focus:ring-blue-200 w-full transition"
                 />
-              </label>
-
-              <label className="flex flex-col">
-                <span className="text-sm font-medium text-gray-700">Email *</span>
+              </div>
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Email *</label>
                 <input
                   name="email"
                   type="email"
                   value={form.email}
                   onChange={handleChange}
-                  className="mt-1 px-3 py-2 border rounded-md focus:ring-2 focus:ring-yellow-400"
-                  placeholder="you@example.com"
+                  placeholder="your@email.com"
                   required
+                  className="border-2 border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:border-blue-900 focus:ring-2 focus:ring-blue-200 w-full transition"
                 />
-              </label>
+              </div>
             </div>
 
-            <label className="flex flex-col">
-              <span className="text-sm font-medium text-gray-700">Phone *</span>
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">Phone</label>
               <input
                 name="phone"
                 value={form.phone}
                 onChange={handleChange}
-                className="mt-1 px-3 py-2 border rounded-md focus:ring-2 focus:ring-yellow-400"
                 placeholder="+91 98765 43210"
+                className="border-2 border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:border-blue-900 focus:ring-2 focus:ring-blue-200 w-full transition"
               />
-            </label>
+            </div>
 
-            <label className="flex flex-col">
-              <span className="text-sm font-medium text-gray-700">Subject</span>
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">Subject</label>
               <input
                 name="subject"
                 value={form.subject}
                 onChange={handleChange}
-                className="mt-1 px-3 py-2 border rounded-md focus:ring-2 focus:ring-yellow-400"
-                placeholder="Project / query"
+                placeholder="What is this about?"
+                className="border-2 border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:border-blue-900 focus:ring-2 focus:ring-blue-200 w-full transition"
               />
-            </label>
+            </div>
 
-            <label className="flex flex-col">
-              <span className="text-sm font-medium text-gray-700">Art Type</span>
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">Art Type</label>
               <select
                 name="artType"
                 value={form.artType}
                 onChange={handleChange}
-                className="mt-1 px-3 py-2 border rounded-md focus:ring-2 focus:ring-yellow-400"
+                className="border-2 border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:border-blue-900 focus:ring-2 focus:ring-blue-200 w-full transition"
               >
-                <option value="">Select type</option>
+                <option value="">Select art type...</option>
                 <option value="portrait">Portrait</option>
                 <option value="sketch">Sketch</option>
-                <option value="mural">Mural</option>
                 <option value="digital">Digital Art</option>
+                <option value="painting">Painting</option>
+                <option value="other">Other</option>
               </select>
-            </label>
+            </div>
 
-            <label className="flex flex-col">
-              <span className="text-sm font-medium text-gray-700">Message *</span>
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">Message *</label>
               <textarea
                 name="message"
                 value={form.message}
                 onChange={handleChange}
-                className="mt-1 px-3 py-2 border rounded-md min-h-[120px] focus:ring-2 focus:ring-yellow-400"
-                placeholder="Tell us about your idea..."
+                placeholder="Tell us about your project or idea..."
                 required
+                className="border-2 border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:border-blue-900 focus:ring-2 focus:ring-blue-200 w-full min-h-[140px] resize-none transition"
               />
-            </label>
-
-            <div className="flex flex-wrap items-center gap-3">
-              <button
-                type="submit"
-                className="bg-blue-900 text-white px-5 py-2 rounded-md hover:bg-blue-800 transition"
-              >
-                Send Message
-              </button>
-              <button
-                type="button"
-                onClick={() =>
-                  setForm({
-                    name: "",
-                    email: "",
-                    phone: "",
-                    subject: "",
-                    artType: "",
-                    message: "",
-                  })
-                }
-                className="border px-4 py-2 rounded-md hover:bg-gray-100 transition"
-              >
-                Reset
-              </button>
-              {status && (
-                <span
-                  className={`text-sm ${
-                    status.type === "error"
-                      ? "text-red-600"
-                      : status.type === "loading"
-                      ? "text-gray-600 animate-pulse"
-                      : "text-green-600"
-                  }`}
-                >
-                  {status.text}
-                </span>
-              )}
             </div>
+
+            <button
+              type="submit"
+              className="bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105 shadow-lg w-full text-base"
+            >
+              Send Message ✉️
+            </button>
           </form>
 
-          <div className="mt-6 text-sm text-gray-700 space-y-1">
-            <p><strong>Studio:</strong> Portraits Maker & Sketch Artist Studio</p>
-            <p><strong>Phone:</strong> +91 7503602684</p>
-            <p><strong>Email:</strong> india8833@gmail.com</p>
-            <div className="flex gap-4 mt-2 text-blue-600 text-sm">
-              <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
-              <a href="https://behance.net" target="_blank" rel="noreferrer">Behance</a>
-              <a href="https://wa.me/917503602684" target="_blank" rel="noreferrer">WhatsApp</a>
-            </div>
+          {/* Contact Info */}
+          <div className="mt-8 pt-8 border-t-2 border-gray-200 space-y-3">
+            <h4 className="font-bold text-gray-900 text-base mb-4">Contact Details</h4>
+            <p className="flex items-center text-gray-700"><span className="font-semibold text-blue-900 mr-3">Studio:</span> Portraits Maker & Sketch Artist</p>
+            <p className="flex items-center text-gray-700"><span className="font-semibold text-blue-900 mr-3">📞 Phone:</span> <a href="tel:+917503602684" className="text-blue-600 hover:underline">+91 7503602684</a></p>
+            <p className="flex items-center text-gray-700"><span className="font-semibold text-blue-900 mr-3">✉️ Email:</span> <a href="mailto:india8833@gmail.com" className="text-blue-600 hover:underline">india8833@gmail.com</a></p>
           </div>
         </div>
 
-        {/* Right: Map + Visit Info */}
-        <div className="flex flex-col gap-4">
-          <div className="bg-white shadow-lg rounded-lg overflow-hidden h-80">
+        {/* Map + Address */}
+        <div className="flex flex-col gap-6">
+          {/* Google Map */}
+          <div className="h-96 w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-gray-200">
             <iframe
-              title="studio-map"
-              src="https://www.google.com/maps?q=Delhi,India&output=embed"
+              title="Studio Location"
+              src="https://www.google.com/maps?q=P-2%20First%20Floor,%20Pilanji,%20Sarojini%20Nagar,%20New%20Delhi,%20Delhi%20110023&output=embed"
               className="w-full h-full border-0"
               loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
 
-          <div className="bg-white shadow-md rounded-lg p-4">
-            <h3 className="font-semibold mb-2">Visit Us</h3>
-            <p className="text-sm text-gray-600">
-              P-2 First Floor, Pilanji, Sarojini Nagar, New Delhi, Delhi 110023
-            </p>
-            <p className="text-sm text-gray-600 mt-2">
-              Opening Hours: Mon - Sat, 10:00 AM - 7:00 PM
-            </p>
+          {/* Address Card */}
+          <div className="bg-white shadow-2xl rounded-2xl p-6 border-l-4 border-orange-500">
+            <h3 className="font-bold text-xl text-gray-900 mb-4">Visit Our Studio</h3>
+
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=P-2+First+Floor,+Pilanji,+Sarojini+Nagar,+New+Delhi,+Delhi+110023"
+              target="_blank"
+              rel="noreferrer"
+              className="text-blue-600 hover:text-blue-800 hover:underline text-base font-semibold block mb-4 flex items-center gap-2"
+            >
+              📍 P-2 First Floor, Pilanji, Sarojini Nagar, New Delhi, Delhi 110023
+            </a>
+
+            <div className="bg-blue-50 rounded-lg p-4 border-l-4 border-blue-900">
+              <p className="text-gray-700 font-semibold text-base">⏰ Opening Hours</p>
+              <p className="text-gray-600 mt-2">Monday – Saturday: 10:00 AM – 7:00 PM</p>
+              <p className="text-gray-600">Sunday: Closed</p>
+            </div>
           </div>
         </div>
       </div>

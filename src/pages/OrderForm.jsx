@@ -31,6 +31,23 @@ const PortraitTypes = () => {
     </div>
   </motion.div>
 
+  {/* Landscape Image Placeholder */}
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.7 }}
+    viewport={{ once: true }}
+    className="flex justify-center mt-4"
+  >
+    <div className="w-full sm:w-3/4 lg:w-1/3 bg-gray-200 rounded-md overflow-hidden border border-gray-300 min-h-32 sm:min-h-48 lg:min-h-64">
+      <img
+        src="/All.webp"
+        alt="Order form landscape"
+        className="w-full h-full object-cover"
+      />
+    </div>
+  </motion.div>
+
   {/* Form Grid */}
   <motion.div
     initial={{ opacity: 0, y: 40 }}

@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import Home from './pages/Home';   
@@ -11,12 +10,11 @@ import GalleryPage from './pages/GalleryPage';
 import AboutPage from './pages/AboutPage';
 import OrderForm from './pages/OrderForm';
 import OrderPortrait from './pages/OrderPortrait';
-import PrivacyPolicyPage from './pages/PrivacyPolicyPage';  // ✅ import kiya
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';  
 import GalleryDetails from './pages/GalleryDetails';
 import ShopDetails from './pages/ShopDetails';
 import Contact from './pages/Contact';
 import RefundPolicy from './pages/RefundPolicy';
-// ✅ ScrollToTop Component
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import TermsConditions from './pages/TermsConditions';
@@ -32,8 +30,7 @@ const ScrollToTop = () => {
 const App = () => {
   return (
     <BrowserRouter>
-      <ScrollToTop />  {/* ✅ Scroll reset on route change */}
-
+      <ScrollToTop />  
       <div className="font-poppins relative">
         <Navigation />
         <AnimatePresence mode="wait">
@@ -70,9 +67,6 @@ const App = () => {
             <Route path="/order-portrait" element={<motion.div><OrderPortrait /></motion.div>} />
               <Route path="/gallerydetails/:id" element={<GalleryDetails />} />
                <Route path="/shopdetails/:id" element={<ShopDetails />} />
-
-            
-            {/* ✅ Privacy Policy Route */}
             <Route 
               path="/privacy-policy" 
               element={
@@ -81,7 +75,6 @@ const App = () => {
                 </motion.div>
               } 
             />
-
             <Route 
               path="/refund-policy" 
               element={
@@ -90,7 +83,6 @@ const App = () => {
                 </motion.div>
               } 
             />
-
              <Route 
               path="/terms" 
               element={

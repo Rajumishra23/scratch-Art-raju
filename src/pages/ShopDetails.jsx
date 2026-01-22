@@ -102,36 +102,7 @@ const ShopDetails = () => {
             </span>
           </div>
 
-          {/* Offers & Discounts Slider */}
-          <div className="mb-6">
-            <p className="font-semibold mb-2">Offers & Discounts:</p>
-            <div className="flex gap-4 overflow-x-auto scrollbar-hide max-w-full">
-              <div className="min-w-[220px] bg-yellow-50 border border-yellow-300 rounded-lg p-4 shadow-sm">
-                <h4 className="font-bold text-yellow-800 mb-1">
-                  Save Extra 10%
-                </h4>
-                <p className="text-sm text-gray-700">
-                  Use Coupon Code <span className="font-bold">SHOP100</span>
-                </p>
-              </div>
-              <div className="min-w-[220px] bg-green-50 border border-green-300 rounded-lg p-4 shadow-sm">
-                <h4 className="font-bold text-green-800 mb-1">Bank Offer</h4>
-                <p className="text-sm text-gray-700">
-                  Get <span className="font-bold">5% Instant Discount</span> on
-                  Prepaid Orders
-                </p>
-              </div>
-              <div className="min-w-[220px] bg-blue-50 border border-blue-300 rounded-lg p-4 shadow-sm">
-                <h4 className="font-bold text-blue-800 mb-1">
-                  Festival Special
-                </h4>
-                <p className="text-sm text-gray-700">
-                  Flat <span className="font-bold">₹200 OFF</span> on orders
-                  above ₹2000
-                </p>
-              </div>
-            </div>
-          </div>
+         
 
           {/* Size Options */}
           <div className="mb-6">

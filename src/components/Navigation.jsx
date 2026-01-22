@@ -24,7 +24,6 @@ const Navbar = () => {
   return (
     <header className="bg-white border-b-[3px] border-red-500 shadow-sm sticky top-0 z-50">
       <div className="max-w-screen-xl mx-auto px-4 py-3 flex items-center justify-between">
-        {/* Logo + Text */}
         <Link
           to="/"
           className="flex items-center space-x-3 hover:no-underline focus:no-underline"
@@ -46,24 +45,23 @@ const Navbar = () => {
           </div>
         </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex space-x-6 text-sm font-medium text-gray-700">
-          {navLinks.map((link, i) => (
-            <NavLink
-              key={i}
-              to={link.to}
-              end={link.end ?? false}
-              className={({ isActive }) =>
-                `transition hover:text-red-500 ${
-                  isActive ? "text-red-500 font-semibold" : ""
-                }`
-              }
-            >
-              {link.label}
-            </NavLink>
-          ))}
-        </nav>
-
+       {/* Desktop Nav */}
+      <nav className="hidden md:flex space-x-4 text-sm font-medium text-gray-700">
+      {navLinks.map((link, i) => (
+      <NavLink
+      key={i}
+      to={link.to}
+      end={link.end ?? false}
+      className={({ isActive }) =>
+        `px-3 py-1 border border-gray-400 rounded-md transition 
+         hover:text-red-500 hover:border-red-500 
+         ${isActive ? "text-red-500 border-red-500 font-semibold" : ""}`
+      }
+    >
+      {link.label}
+    </NavLink>
+  ))}
+</nav>
         {/* Mobile Hamburger Button */}
         <div className="flex items-center justify-between px-4 py-3 md:hidden">
           <button

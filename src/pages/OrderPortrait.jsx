@@ -58,17 +58,17 @@ const PortraitTypes = () => {
     <span className="text-orange-500">Type</span>
   </h1>
 
-  <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-2 sm:gap-3">
     {portraits.map((portrait, index) => (
       <div
         key={portrait.id}
-        className="bg-white border border-gray-200 rounded p-2 flex flex-col items-center hover:scale-105 hover:shadow-md transition duration-300"
+        className="bg-white border border-gray-200 rounded p-1 sm:p-2 flex flex-col items-center hover:scale-105 hover:shadow-md transition duration-300"
         style={{ animationDelay: `${index * 0.1}s` }}
       >
         <img
           src={portrait.src}
           alt={portrait.alt}
-          className="w-24 h-32 object-cover rounded border border-gray-300"
+          className="w-full h-auto aspect-[6/6] object-cover rounded border border-gray-300"
         />
         <p className="mt-2 text-[10px] text-gray-600 font-medium text-center">
           Scribble Pen Sketch · Custom Colors
@@ -97,7 +97,7 @@ const PortraitTypes = () => {
           </div>
 
           {/* Auto Sliding Clients */}
-          <div className="relative w-full max-w-[180px] mx-auto overflow-hidden">
+          <div className="relative w-full max-w-[140px] sm:max-w-[180px] lg:max-w-[220px] mx-auto overflow-hidden">
             <div
               className="flex transition-transform duration-700 ease-in-out"
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -107,7 +107,7 @@ const PortraitTypes = () => {
                   <img
                     src={client.src}
                     alt={client.alt}
-                    className="w-32 h-32 object-cover rounded border border-gray-300"
+                    className="w-full h-auto aspect-square object-cover rounded border border-gray-300"
                   />
                   <p className="mt-2 text-[10px] text-gray-600 font-medium">
                     Client Artwork · Custom Sketch

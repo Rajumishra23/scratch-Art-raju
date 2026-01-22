@@ -26,8 +26,6 @@ const sliderImages = [
 export default function GalleryPage() {
   const scrollRef = useRef(null);
   const navigate = useNavigate();
-
-  // Auto-scroll for slider
   useEffect(() => {
     const scrollContainer = scrollRef.current;
     if (!scrollContainer) return;
@@ -116,7 +114,7 @@ export default function GalleryPage() {
       </section>
 
       {/* Artworks Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mt-12">
         {artworks.map((art, index) => (
           <motion.div
             key={art.id}
@@ -131,25 +129,19 @@ export default function GalleryPage() {
                 -50%
               </span>
               <img
-  src={art.image}
-  alt={art.title}
-  className="w-full h-full object-cover cursor-pointer"
-  onClick={() => navigate(`/gallerydetails/${art.id}`, { state: art })} 
-/>
+              src={art.image}
+              alt={art.title}
+              className="w-full h-full object-cover cursor-pointer"
+              onClick={() => navigate(`/gallerydetails/${art.id}`, { state: art })} 
+             />
             </div>
-
-            {/* Title */}
             <h3 className="text-sm font-semibold mt-4 mb-1 text-center px-2">
               {art.title}
             </h3>
-
-            {/* Price Section */}
             <div className="flex items-center justify-center gap-2 mb-4">
               <span className="text-gray-500 line-through text-xs">₹{art.oldPrice}</span>
               <span className="text-green-600 font-semibold text-sm">₹{art.newPrice}</span>
             </div>
-
-            {/* Button */}
             <button
               onClick={() => navigate(`/gallerydetails/${art.id}`)}
               className="bg-blue-900 text-white font-semibold py-2 text-sm mt-auto w-full hover:bg-blue-800 transition duration-300"
