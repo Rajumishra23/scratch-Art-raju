@@ -31,7 +31,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <ScrollToTop />  
-      <div className="font-poppins relative">
+      <div className="font-poppins relative pt-24">
         <Navigation />
         <AnimatePresence mode="wait">
           <Routes>
