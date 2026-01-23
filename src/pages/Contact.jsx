@@ -75,6 +75,7 @@ const Contact = () => {
                 value={form.phone}
                 onChange={handleChange}
                 placeholder="+91 98765 43210"
+                required
                 className="border-2 border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:border-blue-900 focus:ring-2 focus:ring-blue-200 w-full transition"
               />
             </div>
@@ -96,6 +97,7 @@ const Contact = () => {
                 name="artType"
                 value={form.artType}
                 onChange={handleChange}
+                required
                 className="border-2 border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:border-blue-900 focus:ring-2 focus:ring-blue-200 w-full transition"
               >
                 <option value="">Select art type...</option>
