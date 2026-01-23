@@ -15,6 +15,14 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!form.phone.trim()) {
+      alert("Please enter your phone number.");
+      return;
+    }
+    if (!form.artType.trim()) {
+      alert("Please select an art type.");
+      return;
+    }
     alert("Message sent successfully!");
     setForm({
       name: "",
@@ -69,7 +77,7 @@ const Contact = () => {
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">Phone</label>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">Phone *</label>
               <input
                 name="phone"
                 value={form.phone}
@@ -92,7 +100,7 @@ const Contact = () => {
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">Art Type</label>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">Art Type *</label>
               <select
                 name="artType"
                 value={form.artType}
