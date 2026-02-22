@@ -32,7 +32,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative bg-white pt-3 pb-6 border-b border-gray-200 font-sans">
+    <section className="relative bg-orange-100 pt-3 pb-6 border-b border-gray-200 font-sans">
 
       {/* Decorative Left Element */}
       <motion.div
