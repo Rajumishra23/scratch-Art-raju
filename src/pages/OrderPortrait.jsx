@@ -37,7 +37,7 @@ const PortraitTypes = () => {
     <span className="text-orange-500  ">Order Portrait Paintings</span> & Custom Pencil Sketches in India
   </h2>
 
-  <p className="text-xs text-gray-700 max-w-md mx-auto italic mb-2  ">
+  <p className="text-[10px] text-gray-700 max-w-md mx-auto italic mb-2  ">
     Transform your cherished memories into stunning works of art with our 100% handmade pencil sketches, portrait drawings, and custom paintings! At our studio, home to the best sketch artists and painting artists in India, we specialize in turning your photos into breathtaking photo to sketch or painting drawings, starting at just{" "}
     <strong className="text-green-500">₹1300/-</strong> with home delivery across India.
   </p>
@@ -108,7 +108,7 @@ const PortraitTypes = () => {
                   <img
                     src={client.src}
                     alt={client.alt}
-                    className="w-full h-auto aspect-square object-cover rounded border border-gray-300"
+                    className="w-full h-[300px] aspect-square object-cover rounded border border-gray-300"
                   />
                   <p className="mt-2 text-[10px] text-gray-600 font-medium">
                     Client Artwork · Custom Sketch
@@ -132,7 +132,7 @@ const PortraitTypes = () => {
       Discover the perfect gift with <strong>PORTRAIT MAKER</strong>, where we transform your cherished photos into stunning pencil sketch drawings near me and custom portraits, crafted by the best portrait artists near me. Our expert sketch makers near me and pencil sketch artists near me specialize in turning your memories into timeless works of art, ideal for gifting or cherishing forever. Whether you’re searching for a photo sketch artist near me or portrait makers near me, we deliver heartfelt, handmade creations that capture the essence of your moments.
     </p>
 
-    <h2 className="text-[11px] font-bold mb-2">
+    <h2 className="text-[10px] font-bold mb-2">
       How to <span className="text-orange-500">Place Your Order?</span>
     </h2>
 
@@ -193,7 +193,7 @@ const PortraitTypes = () => {
   >
     {/* Number of Faces */}
     <div>
-      <h3 className="font-bold text-[11px]">
+      <h3 className="font-bold text-[10px]">
         Number of Face(s) <span className="text-red-500">*</span>
       </h3>
       <div className="mt-1 space-y-0.5">
@@ -204,14 +204,14 @@ const PortraitTypes = () => {
           <input type="radio" name="faces" /> Two Faces
         </label>
       </div>
-      <p className="text-[9px] mt-1">
+      <p className="text-[10px] mt-1">
         For more than 2 faces sketch, WhatsApp us
       </p>
     </div>
 
     {/* Art Type */}
     <div>
-      <h3 className="font-bold text-[11px]">
+      <h3 className="font-bold text-[10px]">
         Choose Your Art Type <span className="text-red-500">*</span>
       </h3>
       <motion.div
@@ -228,12 +228,12 @@ const PortraitTypes = () => {
         <button className="w-full py-1">Scribble Pen Sketch</button>
         <button className="w-full py-1">Charcoal Sketch on Wood</button>
       </motion.div>
-      <p className="text-[9px] mt-1">*Trending</p>
+      <p className="text-[10px] mt-1">*Trending</p>
     </div>
 
     {/* Art Size */}
     <div>
-      <h3 className="font-bold text-[11px]">
+      <h3 className="font-bold text-[10px]">
         Choose Your Art Size (In Inches) <span className="text-red-500">*</span>
       </h3>
       <motion.div
@@ -252,7 +252,7 @@ const PortraitTypes = () => {
 
     {/* Orientation */}
     <div>
-      <h3 className="font-bold text-[11px]">
+      <h3 className="font-bold text-[10px]">
         Orientation <span className="text-red-500">*</span>
       </h3>
       <div className="flex flex-wrap gap-1.5 mt-1 text-[10px]">
@@ -266,7 +266,7 @@ const PortraitTypes = () => {
 
     {/* Upload Photo */}
     <div>
-      <h3 className="font-bold text-[11px]">
+      <h3 className="font-bold text-[10px]">
         Upload Your Photo <br />
         <span className="text-[9px]">(Photo which you want in Sketch/Painting)</span>
       </h3>
@@ -449,7 +449,7 @@ const PortraitTypes = () => {
 <div className="max-w-2xl mx-auto px-6 text-gray-700 space-y-10">
   {/* Quality */}
   <div>
-    <h3 className="text-sm font-bold text-blue-900 mb-2">Quality</h3>
+    <h3 className="text-[10px] font-bold text-blue-900 mb-2">Quality</h3>
     <p>
       Our top priority is delivering exceptional quality for your pencil sketch drawing near me. We use only premium-quality materials, most of which are imported from Germany, including artist-grade pencils, thick sheets, canvas, colors, acrylic primer, charcoal pencils, charcoal powder, brushes, varnish, and more. Our thoughtful process ensures that every portrait drawing or pencil sketch created by our pencil sketch artists near me is a masterpiece you’ll cherish for a lifetime.
     </p>
@@ -460,7 +460,7 @@ const PortraitTypes = () => {
 
   {/* Uniqueness */}
   <div>
-    <h3 className="text-sm font-bold text-blue-900 mb-2">Uniqueness</h3>
+    <h3 className="text-[10px] font-bold text-blue-900 mb-2">Uniqueness</h3>
     <p>
       Each pencil sketch drawing near me is a unique masterpiece, handcrafted by our portrait artists near me and sketch makers near me. We never compromise on quality, ensuring that every portrait drawing is long-lasting, embossed with excellence, and 100% handmade. Our commitment to creating one-of-a-kind artwork makes every piece stand out as a true reflection of your memories.
     </p>
@@ -468,7 +468,7 @@ const PortraitTypes = () => {
 
   {/* Affordability */}
   <div>
-    <h3 className="text-sm font-bold text-blue-900 mb-2">Affordability</h3>
+    <h3 className="text-[10px] font-bold text-blue-900 mb-2">Affordability</h3>
     <p>
       Our pencil sketches and portrait drawings start at just <s>₹2000</s> now only <span className="text-green-600 font-semibold">₹1300/-</span>, making it affordable for everyone to own a masterpiece. Our photo sketch artists near me and portrait makers near me ensure that high-quality, 100% hand-painted portraits are accessible without breaking the bank. Bring home a stunning pencil sketch drawing near me at an unbeatable price!
     </p>
@@ -476,7 +476,7 @@ const PortraitTypes = () => {
 
   {/* Service */}
   <div>
-    <h3 className="text-sm font-bold text-blue-900 mb-2">Service</h3>
+    <h3 className="text-[10px] font-bold text-blue-900 mb-2">Service</h3>
     <p>
       Our customers are our priority, and we’ve been providing exceptional service for over 9 years, earning us the top rank on Google for sketch makers near me. Our portrait artists near me offer personalized attention to every order, ensuring you walk away with a piece of art you’ll treasure forever. We stand by our work with a satisfaction guarantee, delivering unmatched quality and care.
     </p>
@@ -484,7 +484,7 @@ const PortraitTypes = () => {
 
   {/* Safe and Easy Payment */}
   <div>
-    <h3 className="text-sm font-bold text-blue-900 mb-2">Safe and Easy Online Payment</h3>
+    <h3 className="text-[10px] font-bold text-blue-900 mb-2">Safe and Easy Online Payment</h3>
     <p>
       Make payments effortlessly and securely through our trusted payment partners, including <span className="text-blue-600 font-semibold">Razorpay</span> and PayPal. We support all major payment methods like Paytm, BHIM UPI, PhonePe, Google Pay, Card, NEFT, and more, ensuring a seamless experience for ordering your pencil sketch or portrait drawing.
     </p>
@@ -492,7 +492,7 @@ const PortraitTypes = () => {
 
   {/* Home Delivery */}
   <div>
-    <h3 className="text-sm font-bold text-blue-900 mb-2">Home Delivery</h3>
+    <h3 className="text-[10px] font-bold text-blue-900 mb-2">Home Delivery</h3>
     <p>
       We offer home delivery across India for your pencil sketch drawing near me or portrait drawing. Simply pay for the sketch, and we’ll take care of the rest. Our standard sizes make it easy to frame your artwork at any local market. Expect your pencil sketch or painting, crafted by our photo sketch artists near me, to reach you within 5-9 days.
     </p>
@@ -557,7 +557,7 @@ const PortraitTypes = () => {
 
     {/* Gift Footer */}
     <div className="mt-6 text-center">
-      <p className="text-sm md:text-base font-semibold">
+      <p className="text-[10px] md:text-base font-semibold">
         <span className="bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">
           Perfect for:
         </span>{" "}

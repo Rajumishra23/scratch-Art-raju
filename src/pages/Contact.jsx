@@ -38,8 +38,8 @@ const Contact = () => {
     <section className="max-w-7xl mx-auto px-4 py-12 bg-gradient-to-br from-blue-50 to-orange-50">
       {/* Header */}
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-extrabold text-gray-900 mb-3">Get In Touch</h2>
-        <p className="text-gray-600 text-base font-medium max-w-2xl mx-auto">
+        <h2 className="text-3xl font-extrabold text-gray-900 mb-3">Get In Touch</h2>
+        <p className="text-gray-600 text-[10px] font-medium max-w-2xl mx-auto">
           Have questions about our art or want to commission a custom piece? We'd love to hear from you. Our team responds within 24 hours.
         </p>
       </div>

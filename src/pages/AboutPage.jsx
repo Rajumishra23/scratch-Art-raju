@@ -37,7 +37,7 @@ const AboutSection = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="space-y-4 text-[9px] sm:text-xs md:text-sm leading-relaxed text-gray-700 border-2 border-gray-300 rounded-lg shadow-md p-4"
+          className="space-y-4 text-[10px] sm:text-xs md:text-sm leading-relaxed text-gray-700 border-2 border-gray-300 rounded-lg shadow-md p-4"
         >
           <p>
             Welcome to the Portrait Maker and Sketch Artist Studio, Sarojini Nagar, Delhi, led by Rajesh Kumar, a seasoned pencil sketch artist with 29 years of professional experience. From signboards and hoardings to live sketching at Delhi Haat, malls, and Pragati Maidan, his journey reflects true artistry.
@@ -65,8 +65,8 @@ const AboutSection = () => {
             </div>
           </motion.div>
 
-          <h3 className="text-xs font-bold mt-6 mb-3 text-center">Our Commitments</h3>
-          <ul className="list-disc list-inside space-y-2 text-gray-700 text-[9px] sm:text-[10px] md:text-xs">
+          <h3 className="text-[10px] font-bold mt-6 mb-3 text-center">Our Commitments</h3>
+          <ul className="list-disc list-inside space-y-2 text-gray-700 text-[10px] sm:text-[10px] md:text-xs">
             <li>Quality 🥇: Premium imported materials ensure durability.</li>
             <li>Uniqueness 💎: Every portrait is one-of-a-kind.</li>
             <li>Affordability 🎨: Handmade sketches start at just ₹1300/-.</li>
@@ -75,7 +75,7 @@ const AboutSection = () => {
             <li>Home Delivery ✈️: Delivered across India within 5-9 days.</li>
           </ul>
 
-          <h3 className="text-xs font-bold mt-6 mb-3 text-center">Why Choose Us?</h3>
+          <h3 className="text-[10px] font-bold mt-6 mb-3 text-center">Why Choose Us?</h3>
           <p>
             With a legacy of 29 years, Rajesh Kumar blends traditional craftsmanship with modern creativity. From signboard painting to live sketching, now delivering custom portraits that capture memories with precision. Fast, high-quality artwork ensures every client leaves with a masterpiece.
           </p>

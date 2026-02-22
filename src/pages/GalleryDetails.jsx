@@ -21,10 +21,7 @@ const GalleryDetails = () => {
   return (
     <div className="p-6 max-w-6xl mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-        
-        {/* Left: Main Image + Thumbnails */}
         <div className="flex flex-col items-center">
-          {/* Main Image */}
           <div className="w-full max-w-md mb-4">
             <img
               src={`/${mainImage}`}
@@ -32,8 +29,6 @@ const GalleryDetails = () => {
               className="w-full rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"
             />
           </div>
-
-          {/* Thumbnails */}
           <div className="flex gap-3">
             {thumbnails.map((thumb, idx) => (
               <img
@@ -48,8 +43,6 @@ const GalleryDetails = () => {
             ))}
           </div>
         </div>
-
-        {/* Right: Product Description */}
         <div className="flex flex-col justify-start">
           {/* Title */}
           <h1 className="text-3xl font-bold text-gray-900 mb-4">
@@ -61,8 +54,6 @@ const GalleryDetails = () => {
             <span className="text-yellow-500">★★★★★</span>
             <span className="ml-2 text-sm text-gray-500">(100+ reviews)</span>
           </div>
-
-          {/* ✅ WhatsApp Order Button */}
 <a
   href="https://wa.me/917503602684?text=Hi%20I%20want%20to%20order%20this%20product:%20{product.title}"
   target="_blank"
@@ -93,8 +84,6 @@ const GalleryDetails = () => {
               -50%
             </span>
           </div>
-
-         
 
           {/* Size Options */}
           <div className="mb-6">
