@@ -56,7 +56,7 @@ const HeroSection = () => {
 
       {/* Content Box */}
       <div className="relative flex justify-center items-center py-6 px-4">
-        <div className="relative max-w-3xl mx-auto px-4 sm:px-6 text-center text-gray-800 space-y-3 border-4 border-orange-600 rounded-lg shadow-lg bg-white">
+        <div className="relative max-w-3xl mx-auto px-4 sm:px-6 text-center text-gray-800 space-y-3 border-2 border-orange-600 rounded-lg shadow-lg bg-white">
 
           {/* Heading */}
           <motion.h1
