@@ -6,7 +6,9 @@ const WhatWeDo = () => {
       <h2 className="text-1xl  text-sm font-bold text-center mb-8">
         What <span className="text-orange-500 text-sm">We Do</span> ?
       </h2>
-      <div className="max-w-5xl mx-auto text-[10px] leading-relaxed space-y-4">
+      <div className="max-w-4xl mx-auto text-[10px] leading-relaxed space-y-4 
+                      border-2 border-orange-500 rounded-lg shadow-lg p-6 bg-white">
+
   <ul className="list-disc list-inside space-y-4 marker:text-orange-500">
     <li>
       <strong>We create a variety of paintings</strong> tailored to your needs: watercolor portrait painting, color pencil sketch, coffee portrait painting, landscape painting, sentries, abstract paintings, pet painting, oil paintings on canvas, and more.

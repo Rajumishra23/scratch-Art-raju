@@ -29,14 +29,15 @@ const PortraitTypes = () => {
 
   return (
     <div className="text-xs">
-      <section className="bg-[#fefcf9] py-6 text-gray-800">
-        <div className="container mx-auto px-2">
-          <div className="text-center mb-4 animate-fade-in">
+      <section className="bg-[#fefcf9] py-6 text-gray-800 border ">
+        <div className="container mx-auto px-2 space-y-4 
+                      border-2 border-gray-300">
+          <div className="text-center mb-4 animate-fade-in ">
             <h2 className="text-sm font-bold text-gray-900 mb-1 tracking-tight">
-    <span className="text-orange-500">Order Portrait Paintings</span> & Custom Pencil Sketches in India
+    <span className="text-orange-500  ">Order Portrait Paintings</span> & Custom Pencil Sketches in India
   </h2>
 
-  <p className="text-xs text-gray-700 max-w-md mx-auto italic mb-2">
+  <p className="text-xs text-gray-700 max-w-md mx-auto italic mb-2  ">
     Transform your cherished memories into stunning works of art with our 100% handmade pencil sketches, portrait drawings, and custom paintings! At our studio, home to the best sketch artists and painting artists in India, we specialize in turning your photos into breathtaking photo to sketch or painting drawings, starting at just{" "}
     <strong className="text-green-500">₹1300/-</strong> with home delivery across India.
   </p>

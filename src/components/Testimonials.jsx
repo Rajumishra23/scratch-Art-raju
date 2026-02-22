@@ -59,8 +59,11 @@ const Testimonials = () => {
             “Picture Perfect Pencil Portraits : Elevate Your Images with Our Photo to Sketch Expertise!”
           </p>
         </div>
+        </div>
 
         {/* Slider */}
+        <div className="relative max-w-3xl mx-auto px-4 sm:px-6 text-center text-gray-800 space-y-3 border-2 border-gray-600 rounded-lg shadow-lg bg-white">
+
         <div
           ref={sliderRef}
           className="w-full flex overflow-x-hidden overflow-y-hidden scroll-smooth"
@@ -70,16 +73,6 @@ const Testimonials = () => {
               key={index}
               className="min-w-full flex items-center justify-center px-4"
             >
-              {/* Card with Sketch Background */}
-              <div
-                className="relative bg-white p-6 max-w-md rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition duration-300 text-center"
-                style={{
-                  backgroundImage: `url('bg.webp')`, // ✅ Replace with your actual image path
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                }}
-              >
                 {/* Optional Overlay for readability */}
                 <div className="absolute inset-0 bg-white/80 rounded-lg z-0"></div>
 
@@ -105,8 +98,9 @@ const Testimonials = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            
           ))}
+        </div>
         </div>
 
         {/* ✅ CTA Link below slider */}
@@ -120,7 +114,7 @@ const Testimonials = () => {
   Click here to give review
 </a>
     </div>
-      </div>
+      
     </section>
   );
 };
