@@ -94,7 +94,7 @@ const AboutSection = () => {
           className="text-center mt-8"
         >
           <a
-            href="#order"
+            href="/order-portrait"
             className="inline-block px-4 py-2 bg-orange-500 text-white text-xs font-bold rounded-lg shadow-md hover:bg-orange-600 transition"
           >
             Order Portrait Now!
