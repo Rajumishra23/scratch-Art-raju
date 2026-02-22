@@ -4,28 +4,29 @@ import { ArrowDown } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const artworks = [
-  { id: 1, title: "SHIVA PANTING", image: "shiva.webp", oldPrice: 3000, newPrice: 1500 },
-  { id: 2, title: "KRISHNA PANTING", image: "krishna.webp", oldPrice: 2800, newPrice: 1400 },
+  { id: 1, title: "SHIVA PAINTING", image: "shiva.webp", oldPrice: 3000, newPrice: 1500 },
+  { id: 2, title: "KRISHNA PAINTING", image: "krishna.webp", oldPrice: 2800, newPrice: 1400 },
   { id: 3, title: "Shreenathji Pichwai", image: "shree.webp", oldPrice: 2600, newPrice: 1300 },
-  { id: 4, title: "BUDHA PANTING", image: "budha.webp", oldPrice: 3200, newPrice: 1600 },
+  { id: 4, title: "BUDDHA PAINTING", image: "budha.webp", oldPrice: 3200, newPrice: 1600 },
   { id: 5, title: "Divine Ganesha", image: "ganesh.webp", oldPrice: 2500, newPrice: 1250 },
   { id: 6, title: "Krishna Flute", image: "krish.webp", oldPrice: 2700, newPrice: 1350 },
-  { id: 7, title: "MADHUBANI PAINTING", image: "madhubani.webp", oldPrice: 3100, newPrice: 1550 },
+  { id: 7, title: "Madhubani Painting", image: "madhubani.webp", oldPrice: 3100, newPrice: 1550 },
   { id: 8, title: "Radha in Forest", image: "radha.webp", oldPrice: 2900, newPrice: 1450 }
 ];
 
 const sliderImages = [
-  { src: "Gallery1.webp", title: "CRYSTAL PAINTINGS" },
-  { src: "Gallery2.webp", title: "CANVAS PAINTINGS" },
-  { src: "Gallery3.webp", title: "PREMIUM WALLPAPER" },
-  { src: "Gallery4.webp", title: "HAND PAINTINGS" },
-  { src: "Gallery5.webp", title: "GALLERY ART" },
-  { src: "Gallery6.webp", title: "METAL ART" },
+  { src: "Gallery1.webp", title: "Crystal Paintings" },
+  { src: "Gallery2.webp", title: "Canvas Paintings" },
+  { src: "Gallery3.webp", title: "Premium Wallpaper" },
+  { src: "Gallery4.webp", title: "Hand Paintings" },
+  { src: "Gallery5.webp", title: "Gallery Art" },
+  { src: "Gallery6.webp", title: "Metal Art" },
 ];
 
 export default function GalleryPage() {
   const scrollRef = useRef(null);
   const navigate = useNavigate();
+
   useEffect(() => {
     const scrollContainer = scrollRef.current;
     if (!scrollContainer) return;
@@ -69,7 +70,7 @@ export default function GalleryPage() {
       </motion.p>
 
       {/* Slider Section */}
-      <section className="py--1">
+      <section>
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -87,18 +88,15 @@ export default function GalleryPage() {
           className="flex gap-8 overflow-hidden flex-nowrap max-w-6xl mx-auto"
           role="list"
         >
-          {sliderImages.concat(sliderImages).map((img, idx) => (
+          {sliderImages.map((img, idx) => (
             <div
               key={idx}
-              className="flex flex-col items-center shrink-0"
+              className="flex flex-col items-center shrink-0 cursor-pointer"
               role="listitem"
-              onClick={() => {
-                window.scrollTo({ top: 0 });
-                navigate("/gallery");
-              }}
+              onClick={() => navigate("/gallery")}
               aria-label={`View full gallery for ${img.title}`}
             >
-              <div className="w-40 h-40 rounded-full overflow-hidden border border-gray-300 hover:border-[#1e3a8a] transition cursor-pointer">
+              <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-orange-400 shadow-md hover:border-[#1e3a8a] transition">
                 <img
                   src={img.src}
                   alt={img.title}
@@ -121,23 +119,21 @@ export default function GalleryPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-            className="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden flex flex-col hover:scale-105 transition duration-300"
+            className="bg-white border-2 border-orange-500 rounded-lg shadow-lg overflow-hidden flex flex-col hover:scale-105 transition duration-300"
           >
             {/* Image with Discount Badge */}
-            <div className="relative w-full h-56 bg-gray-100 flex items-center justify-center overflow-hidden">
+            <div className="relative w-full h-56 bg-gray-100 flex items-center justify-center overflow-hidden border-b border-gray-200">
               <span className="absolute top-3 left-3 bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full">
                 -50%
               </span>
               <img
-              src={art.image}
-              alt={art.title}
-              className="w-full h-full object-cover cursor-pointer"
-              onClick={() => navigate(`/gallerydetails/${art.id}`, { state: art })} 
-             />
+                src={art.image}
+                alt={art.title}
+                className="w-full h-full object-cover cursor-pointer"
+                onClick={() => navigate(`/gallerydetails/${art.id}`, { state: art })}
+              />
             </div>
-            <h3 className="text-sm font-semibold mt-4 mb-1 text-center px-2">
-              {art.title}
-            </h3>
+            <h3 className="text-sm font-semibold mt-4 mb-1 text-center px-2">{art.title}</h3>
             <div className="flex items-center justify-center gap-2 mb-4">
               <span className="text-gray-500 line-through text-xs">₹{art.oldPrice}</span>
               <span className="text-green-600 font-semibold text-sm">₹{art.newPrice}</span>

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";   // ✅ import navigate
+import { useNavigate } from "react-router-dom";   
 import ShopProducts from "../data/ShopProducts";
 
 const containerVariant = {
@@ -34,15 +34,15 @@ const Shop = () => {
         className="text-2xl font-bold mb-10 text-gray-900 text-center"
         id="shop-title"
       >
-        🛍️ Our Shops
+        🛍️ OUR SHOPS
       </h2>
 
-      {/* ✅ Products Grid */}
+      {/* Products Grid */}
       <motion.div
         variants={containerVariant}
         initial="hidden"
         animate="visible"
-        className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6"
+        className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8"
         role="list"
         aria-labelledby="shop-title"
       >
@@ -51,15 +51,15 @@ const Shop = () => {
             key={product.id}
             variants={cardVariant}
             role="listitem"
-            className="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transition duration-300 cursor-pointer flex flex-col"
+            className="bg-white border-2 border-orange-500 shadow-lg rounded-lg overflow-hidden hover:scale-105 transition duration-300 cursor-pointer flex flex-col"
             onClick={() =>
               navigate(`/shopdetails/${product.id}`, {
                 state: { product, allProducts: ShopProducts },
               })
             }
           >
-            {/* ✅ Image Box with BEST SELLER badge */}
-            <div className="relative w-full h-52 bg-gray-100 flex items-center justify-center overflow-hidden">
+            {/* Image Box with BEST SELLER badge */}
+            <div className="relative w-full h-52 bg-gray-100 flex items-center justify-center overflow-hidden border-b border-gray-200">
               <span className="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded">
                 BEST SELLER
               </span>
@@ -70,17 +70,17 @@ const Shop = () => {
               />
             </div>
 
-            {/* ✅ Title */}
+            {/* Title */}
             <h3 className="text-sm font-semibold mt-3 mb-1 text-center px-2">
               {product.title}
             </h3>
 
-            {/* ✅ Price Section */}
+            {/* Price Section */}
             <p className="text-center text-xs text-gray-600 mb-3">
               From ₹{product.price}
             </p>
 
-            {/* ✅ Button */}
+            {/* Button */}
             <button className="bg-blue-900 text-white font-semibold py-1.5 text-sm mt-auto w-full hover:bg-blue-800 transition duration-300">
               SELECT OPTIONS
             </button>
